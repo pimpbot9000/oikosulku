@@ -1,0 +1,30 @@
+
+#set page(
+  header: none,
+  footer: none,
+)
+
+
+
+//#include "cover.typ"
+
+#set text(font: "IBM Plex Sans", weight: "regular")
+#outline(title: [
+  Sisällysluettelo
+  
+  \
+])
+
+#pagebreak()
+#counter(page).update(1)
+#set page(numbering: "1")
+#import "template.typ": *
+#show: oikosulku
+
+//#include "lukijalle.typ"
+
+#include "chapters/fysiikka luonnontieteenä.typ"
+#include "chapters/liike.typ"
+#include "circuits.typ"
+#include "power and energy.typ"
+//#include "appendix.typ"
