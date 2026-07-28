@@ -252,9 +252,9 @@ Tässä osiossa esitellään matemaattinen määritelmä resistanssille. Jotta m
   $
     y/x="vakio"
   $
-  Tätä vakiota kutsutaan nimellä *verrannollisuuskerroin*.
+  Tätä vakiota kutsutaan nimellä *verrannollisuuskerroin*. Merkitään tätä tunnuksella $k$.
 
-- Jos yllä olevaa vakiota eli verrannollisuuskerrointa merkitään muuttujakirjaimella $k$, voidaan suureiden $x$ ja $y$ välinen riippuvuus esittää muodossa
+- Kun yllä olevaa vakiota eli verrannollisuuskerrointa merkitään muuttujakirjaimella $k$, voidaan suureiden $x$ ja $y$ välinen riippuvuus esittää muodossa
 
   $
     y = k dot x.
@@ -281,8 +281,12 @@ Tässä osiossa esitellään matemaattinen määritelmä resistanssille. Jotta m
         ((2, 4),),
         mark: "*",
         mark-fill: blue,
-        mark-size: 0.15,
+        mark-size: 0.1,
       ),
+
+      line-plot(
+          ((2,0), (2, 4), (0, 4)), mark-size: 0, stroke: (paint: black, dash: "dashed")
+        ),
       width: 6,
       height: 6
       
@@ -394,7 +398,6 @@ Vastuksen jännitehäviön ja sen läpi kulkevan sähkövirran välistä riippuv
 
   
   #context{
-    set text(size: 10pt)
     extra[
       *Extra:* Miten yksiköstä näkee, että kyseessä on resistanssi?
       

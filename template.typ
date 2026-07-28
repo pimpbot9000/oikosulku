@@ -108,18 +108,23 @@
 )
 
 #let extra_border_color = rgb("#9bc4a6")
-#let extra = block.with(
-  fill: rgb("#d5f0dc"),
-  stroke: (
-    left: 0.5pt + extra_border_color,
-    right: 1pt + extra_border_color,
-    top: 0.5pt + extra_border_color,
-    bottom: 1.5pt + extra_border_color
-  ),
-  radius: 1pt,
-  inset: 10pt,
-  width: 100%
-)
+#let extra(body) = {
+  set text(size:9.5pt)
+
+  block(
+    fill: rgb("#d5f0dc"),
+    stroke: (
+      left: 0.5pt + extra_border_color,
+      right: 1pt + extra_border_color,
+      top: 0.5pt + extra_border_color,
+      bottom: 1.5pt + extra_border_color,
+    ),
+    radius: 1pt,
+    inset: 10pt,
+    width: 100%,
+    body,
+  )
+}
 
 #let example-counter = counter("example")
 

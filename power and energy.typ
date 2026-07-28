@@ -38,7 +38,6 @@ Sähkövirran avulla voidaan siirtää energiaa. Virtapiirissä energia siirtyy 
 
 #extra[
   *Historian siipien havinaa: Sähkösota, Nikola Tesla ja Suomen sähköistyminen*
-    #set text(size:10pt)
     #columns(2)[
     *Nikola Tesla* ja George Westinghouse, joka osti Teslan tärkeimmät vaihtovirtapatentit, voittivat niin sanotun sähkösodan (War of the Currents), jota käytiin Yhdysvalloissa 1880-luvun lopulla ja 1890-luvun alussa. Vastapuolella oli *Thomas Edison*, joka tunnetaan erityisesti siitä, että hän kehitti hehkulampun käytännölliseksi ja massatuotantoon soveltuvaksi. 
     

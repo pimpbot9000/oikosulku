@@ -25,6 +25,8 @@
 
 #include "chapters/fysiikka luonnontieteenä.typ"
 #include "chapters/liike.typ"
+#include "chapters/vuorovaikutus ja voima.typ"
+#include "chapters/energia.typ"
 #include "circuits.typ"
 #include "power and energy.typ"
 //#include "appendix.typ"

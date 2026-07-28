@@ -102,7 +102,7 @@
     )
 
     #figure(
-      image("../images/intro to physics/CERN.jpg", width: history_images_width), caption: [Euroopan hiukkastutkimuskeskuksen (CERN) hiukkaskiihdyttimessä törmäytetään alkeishiukkasia lähes valonnopeudella toisiinsa. Näin pyritään tutkimaan hiukkasten välisiä perusvuorovaikutuksia ja niiden koostumusta.]
+      image("../images/intro to physics/CERN.jpg", width: history_images_width), caption: [Euroopan hiukkastutkimuskeskuksen (CERN) hiukkaskiihdyttimessä törmäytetään alkeishiukkasia lähes valonnopeudella toisiinsa. Näin pyritään tutkimaan alkeishiukkasten välisiä perusvuorovaikutuksia ja niiden koostumusta.]
     )
   ]
 )
@@ -127,15 +127,13 @@
 
     Jotta suureiden välinen riippuvuus voitaisiin paremmin hahmottaa, mittauspisteet piirretään koordinaatistoon.
 
-    #important[Kun mittauspisteet piirretään koordinaatistoon, pisteisiin *sovitetaan* jonkinlainen *käyrä* tai suora.
-
-    Käyrä kuvaa suureiden välistä riippuvuutta.
+    #important[Kun mittauspisteet piirretään koordinaatistoon, pisteisiin *sovitetaan* jonkinlainen *käyrä* tai suora. Käyrä kuvaa suureiden välistä riippuvuutta.
     ]
     Käyrän sovittamisen ideaa käydään tarkemmin läpi myöhemmin.
 
     #underlined[*Entä sitten?*]
 
-    Nyt kun tiedetään miten jousi "käyttäytyy", jousen avulla voidaan esimerkiksi punnita esineitä. Mikäli jouseen laitetaan roikkumaan esine ja jousen venymä on 9 cm, voidaan kuvaajasta lukea esineen massa (n. 125 g).
+    Nyt kun tiedetään miten jousi _käyttäytyy_, voidaan jousen avulla esimerkiksi "punnita" esineitä. Mikäli jouseen laitetaan roikkumaan esine ja jousen venymä on 9 cm, voidaan kuvaajasta lukea esineen massa (n. 125 g). *Pohdi voidaanko tätä soveltaa riippumatta kappaleen massasta!*
 
     #let spring_data = (
       (0, 0),
@@ -169,7 +167,7 @@
         ((125,0), (125, 9), (0, 9)), mark-size: 0, stroke: (paint: black, dash: "dashed")
       ),
       width: 5,
-      height: 4.9
+      height: 4.7
       
     ), caption: [Kuvaajan avulla voidaan tehdä ennusteita.] )
   ],[
@@ -179,7 +177,7 @@
       caption: [Tutkittava jousi venyy sitä enemmän, mitä raskaampi paino jousesta roikkuu.]
     )
 
-    #align(center)[*2. Mittaustulosten taulukointi*]
+    #align(center)[*2. Mittaustulosten kirjaaminen*]
     #context{
       set text(size: 8pt)
       figure(
@@ -231,7 +229,7 @@
     ), caption: [Mittauspisteet piirretään koordinaatistoon. Tässä mittauspisteisiin on sovitettu suora.] )
     *4. Riippuvuuden esittäminen matemaattisesti.*
     
-    Viimeisen vaiheen jätämme käsittelemättä. Kuvaaja riittää meille tällä erää.
+    Viimeisen vaiheen jätämme käsittelemättä. Kuvaaja riittää meille tällä erää. _To be continued!_
   ])
 
   
@@ -248,7 +246,7 @@
   gutter: 1em,
   [
 
-Fysiikan laki kuvaa jonkinlaista luonnossa esiintyvää säännönmukaisuutta. Fysiikan lait esitetään matemaattisesti ja lakien avulla voidaan tehdä ennusteita.
+*Fysiikan laki* kuvaa jonkinlaista luonnossa esiintyvää säännönmukaisuutta. Fysiikan lait esitetään matemaattisesti ja lakien avulla voidaan tehdä ennusteita.
 
 Voimmeko tietää kuvaavatko fysiikan lait absoluuttisen tarkasti havaittuja ilmiöitä?
 
@@ -329,14 +327,15 @@ Mallien avulla pyritään kuvaamaan luonnon toimintaa mahdollisimman tarkasti. M
     )
   ])
 #extra[
-  *Extra: Laki, teoria vai hypoteesi?*
+  *Laki, teoria vai hypoteesi?*
+  
 Teorialla usein tarkoitetaan laajasti hyväksyttyä selitysmallia jollekin ilmiölle tai ilmiöjoukolle. Lain voidaan ajatella tarkoittavan yksittäiseen tilanteeseen tai ilmiöön liittyvää säännönmukaisuutta.  Hypoteesi on taas jonkinlainen oletus tai ehdotettu selitys jollekin ilmiölle.
 
 ]
 #pagebreak()
 == Kontrolloitu koejärjestely
 
-Tarkastellaan esimerkkinä ilmiötä nimeltä _heittoliike_. Esimerkkinä heittoliikkeestä on eräästä suositusta mobiilipelistä tuttu tilanne (ks. alla oleva kuva).
+Tarkastellaan esimerkkinä ilmiötä nimeltä _heittoliike_. Esimerkkinä heittoliikkeestä on eräästä suositusta mobiilipelistä tuttu tilanne, kuva #fig_num(<angry_birds>).
 
 #figure(
   image("../images/intro to physics/Angry birds.png", width: 70%), caption: [Linnun lentomatkan pituuteen vaikuttaa useita eri tekijöitä.]
@@ -563,12 +562,13 @@ SI-järjestelmän yksiköistä muodostetaan uusia yksiköitä, eli *johdannaisyk
 
 
 #extra[
-  *Extra: Kuinka paljon on yksi kilogramma?*
+  
   #grid(
   columns: (4fr, 1.2fr),
   gutter: 1em, [
   
-
+  *Kuinka paljon on yksi kilogramma?*
+  
   Ennen nykyistä määritelmää yksikkö kilogramma oli määritelty tietyn kappaleen avulla. Tätä kappaletta kutsutaan kilogramman prototyypiksi. Oli siis sovittu, että kyseisen kappaleen massa on täsmälleen 1 kilogramma. 
   
   Vuonna 2019 tämä määritelmä korvattiin uudella määritelmällä, joka ei ole enää kytköksissä ihmisen valmistamaan kappaleeseen.
@@ -576,13 +576,13 @@ SI-järjestelmän yksiköistä muodostetaan uusia yksiköitä, eli *johdannaisyk
   Aiemmin oli käytössä myös metrin prototyyppi (metallitanko), joka toimi metrin määritelmänä mutta metrin prototyypin käytöstä luovuttiin jo vuonna 1960.
   ],[
   #figure(
-    image("../images/intro to physics/kilogram prototype.jpg"), caption: [Kilogramman prototyyppi eli the kilogramma.]
+    image("../images/intro to physics/kilogram prototype.jpg"), caption: [Kilogramman prototyyppi eli The kilogramma.]
   )
 ])
 ]
 
 #extra[
-  *Extra: SI-järjestelmän yksiköt kytketään muuttumattomiin luonnonilmiöihin*
+  *SI-järjestelmän yksiköt kytketään muuttumattomiin luonnonilmiöihin*
 
   Metrin nykyinen määritelmä:
 
