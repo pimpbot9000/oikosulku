@@ -207,9 +207,9 @@ Kun kappaleen liike on tasaista, _aika-matka_–koordinaatistosta voidaan määr
 #grid(columns: (1fr, 1fr), gutter: 1em, [
 Mikäli kappaleen liikettä halutaan kuvata täsmällisesti, ollaan kiinnostuneita siitä mikä kappaleen *sijainti* on tietyllä ajanhetkellä.
 
-#important[Kappaleen sijainnin määrittämiseksi täytyy määritellä nollapiste eli *origo*, jonka suhteen kappaleen *sijainti* ilmoitetaan. ]
+#important[Kappaleen *sijainnin* määrittämiseksi täytyy määritellä nollapiste eli *origo*, jonka suhteen kappaleen sijainti ilmoitetaan. ]
 
-Kappaleen sijainti on siis koordinaatti jonkinlaisessa valitussa koordinaatistossa. Matematiikan tunneilla koordinaatisto leijuu jonkinlaisessa abstraktiomaailmassa, fysiikan sovelluksissa koordinaatisto "liimataan" fysikaalisen systeemin päälle tarkoituksenmukaisesti. 
+Kappaleen sijainti on siis koordinaatti jonkinlaisessa valitussa koordinaatistossa. Matematiikan tunneilla koordinaatisto leijuu jonkinlaisessa abstraktiomaailmassa, fysiikan sovelluksissa koordinaatisto "lätkäistään" fysikaalisen systeemin päälle tarkoituksenmukaisesti. 
 
 
 
@@ -222,7 +222,7 @@ Kappaleen sijainti on siis koordinaatti jonkinlaisessa valitussa koordinaatistos
 Jos liike on 2-ulotteista, kappaleen sijainnin määrittämiseksi tarvitaan kaksi koordinaattiarvoa. Kolmiulotteisen liikkeen tapauksessa tarvittaan kolme koordinaattiarvoa.
 Tyydymme kuitenkin tarkastelemaan 1-ulotteista liikettä, eli suoraviivaista liikettä. Tällöin kappaleen koordinaatti ilmaisee kappaleen sijainnin ”lukusuoralla”.
 
-Alla on vielä esimerkkinä kahden leppäkertun juoksukilpailu. Kuvattaessa ilmiötä on luontevaa päättää, että *origo* on punaisen leppäkertun lähtöpiste.
+Alla on esimerkkinä 1-ulotteisesta liikkeestä kahden leppäkertun juoksukilpailu. Kuvattaessa ilmiötä on luontevaa päättää, että *origo* on punaisen leppäkertun lähtöpiste.
 
 #figure(pad(right: 3em,
   image("../images/motion/uniform motion two lady bugs.png",width: 100%),), caption: [Kaksi leppäkerttua ottaa juoksukilpailun. Kuvassa on leppäkerttujen sijainnit *sekunnin välein* ensimmäisen 5 sekunnin aikana. Punaisen leppäkertun lähtöpiste on valittu *origoksi*.]
@@ -360,7 +360,7 @@ Tarkastellaan vielä miten nopeus tietyllä aikavälillä määritetään kuvaaj
       ),
 
       line-plot(((2, 4.5),),mark-size: 0, label: $Delta t = 3 "s"$),
-      line-plot(((4.2, 8.5),),mark-size: 0, label: $Delta s = 3 "s"$),
+      line-plot(((4.2, 8.5),),mark-size: 0, label: $Delta s = 6 "m"$),
       width: 6,
       height: 6
     )],[
@@ -674,7 +674,7 @@ $
   #grid(columns: (3fr, 1fr), gutter: 1em, [
   Miksi $Delta$, eli kreikan kielen iso d, on valittu aikoinaan kuvaamaan suureen muutosta#footnote[...älä sekoita tätä suomalaiseen laulajalegendaan (Danny)]? Oletettavasti, koska jonkin suureen muutos on yhtä suuri kuin kahden suuren arvon erotus, joka on englanniksi _difference_ ja latinaksi _differentia_. 
   
-  Delta taas tarkoittaa monessa kielessä _suistoa_, eli maamuodostelmaa jonka isot joet tekevät laskeutuessaan mereen. Suisto on nimettu kreikan kielen kirjaimen mukaan. Kuvasta ehkä huomaat samankaltaisuuden kirjaimen ja luonnonmuodostelman välillä.], [
+  Delta taas tarkoittaa monessa kielessä _suistoa_, eli jokimuodostelmaa jonka isot joet tekevät laskeutuessaan mereen. Suisto on nimettu kreikan kielen kirjaimen mukaan. Kuvasta ehkä huomaat samankaltaisuuden kirjaimen ja luonnonmuodostelman välillä.], [
 
 
   #image("../images/motion/delta river.png", width: 100%)])
