@@ -10,7 +10,7 @@
 
 #set text(font: "IBM Plex Sans", weight: "regular")
 #outline(title: [
-  Sisällysluettelo
+  Fysiikka luonnontieteenä
   
   \
 ])
@@ -23,10 +23,12 @@
 
 //#include "lukijalle.typ"
 
+
 #include "chapters/fysiikka luonnontieteenä.typ"
-#include "chapters/liike.typ"
-#include "chapters/vuorovaikutus ja voima.typ"
-#include "chapters/energia.typ"
-#include "circuits.typ"
-#include "power and energy.typ"
+#include "exercises/fysiikka luonnontieteenä/fysiikka luonnontieteenä.typ"
+//#include "chapters/liike.typ"
+//#include "chapters/vuorovaikutus ja voima.typ"
+//#include "chapters/energia.typ"
+//#include "circuits.typ"
+//#include "power and energy.typ"
 //#include "appendix.typ"

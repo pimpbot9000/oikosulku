@@ -17,19 +17,22 @@
     == Tieteellinen menetelmä
     Fysiikan ja muiden luonnontieteiden synty perustuu ajattelutapaan, jonka avulla voidaan hankkia luotettavasti uutta tietoa. Tätä menetelmää ja ajattelutapaa kutsutaan tieteelliseksi menetelmäksi.
     
+    #important[
+    *Tieteellinen menetelmä* on järjestelmällinen tapa hankkia uutta tietoa. Tieteellisen menetelmän ydin on luonnon ilmiöiden tutkiminen havaintojen, mittausten ja kokeiden avulla.]
     
-    *Tieteellinen menetelmä* on järjestelmällinen tapa hankkia uutta tietoa. Yksinkertaistaen voidaan sanoa, että tieteellinen menetelmä syntyi vuosina 1500–1700 Euroopassa. Tätä ajanjaksoa, jolloin menetelmä kehittyi, kutsutaan nimellä *tieteellinen vallankumous*. Ajanjaksolla ihmisen tapa ymmärtää luontoa ja maailmaa muuttui perusteellisesti.
+    Yksinkertaistaen voidaan sanoa, että tieteellinen menetelmä syntyi vuosina 1500–1700 Euroopassa. Tätä ajanjaksoa, jolloin menetelmä kehittyi, kutsutaan nimellä *tieteellinen vallankumous*. Ajanjaksolla ihmisen tapa ymmärtää luontoa ja maailmaa muuttui perusteellisesti.
+
+    Viereisissä kuvissa on tieteellisen menetelmän kehittymiseen voimakkaasti vaikuttaneita henkilöitä. 
     
-    Alla on lueteltu muutama tieteellisen menetelmän periaate.
+    #extra[
+    Tieteellisen menetelmän periaatteita:
     
     
     1.	*Kokeellisuus ja havainnot*: Tieto perustuu havaintoihin, mittauksiin ja systemaattiseen tutkimukseen.
     2.	*Kriittisyys*: Mikään tieto ei ole kiveen hakattu totuus!
     3.	*Objektiivisuus*: Tieteellinen tieto ei ole mielipidekysymys.
     4.	*Toistettavuus*: Tutkimusprosessin tulee olla kuvattu niin, että muut tutkijat voivat toistaa tutkimuksen ja arvioida sen tuloksia.
-    5.	*Ennustaminen ja mallit*: Tieteelliset teoriat ja mallit mahdollistavat ennusteiden tekemisen.
-
-    Viereisissä kuvissa on tieteellisen menetelmän kehittymiseen voimakkaasti vaikuttaneita henkilöitä. 
+  ]
     
 ],[
   #let portrait_width = 70%
@@ -133,7 +136,7 @@
 
     #underlined[*Entä sitten?*]
 
-    Nyt kun tiedetään miten jousi _käyttäytyy_, voidaan jousen avulla esimerkiksi "punnita" esineitä. Mikäli jouseen laitetaan roikkumaan esine ja jousen venymä on 9 cm, voidaan kuvaajasta lukea esineen massa (n. 125 g). *Pohdi voidaanko tätä soveltaa riippumatta kappaleen massasta!*
+    Nyt kun tiedetään miten jousi _käyttäytyy_, voidaan jousen avulla esimerkiksi "punnita" esineitä. Mikäli jouseen laitetaan roikkumaan esine ja jousen venymä on 9 cm, voidaan kuvaajasta lukea esineen massa (n. 125 g). *Pohdi* voidaanko jousen avulla punnita mikä tahansa kappale.
 
     #let spring_data = (
       (0, 0),
@@ -265,7 +268,7 @@ Toiseksi  maailma on useimmissa tilanteissa melko monimutkainen, joten usein jou
   
 ])
 #important[
-  Fysiikan lait ja teoriat ovat pohjimmiltaan malleja. *Malli* on yksinkertaistettu kuvaus todellisuudesta.
+  Fysiikan lait ovat pohjimmiltaan malleja. *Malli* on yksinkertaistettu kuvaus todellisuudesta.
 ]
 Mallien avulla pyritään kuvaamaan luonnon toimintaa mahdollisimman tarkasti. Mallin käyttökelpoisuuden määrittää se, kuinka hyvin sen avulla voidaan tehdä havaintoja vastaavia ennusteita. Malleilla on yleensä jonkinlainen pätevyysalue. 
 #important[

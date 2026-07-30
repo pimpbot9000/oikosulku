@@ -36,8 +36,8 @@ Edellä esitetty määritelmä kappaleen nopeudelle voidaan esittää käyttäm�
   Yllä olevassa yhtälössä $v$ = nopeus, $t$ = aika ja $s$ = matka.
 ]
 
-#important[*Tärkeää!*
-Älä sekoita keskenään suureen tunnuksia ja yksiköitä. Tässä kirjassa noudatetaan standardin mukaista merkintätapaa: suureen tunnukset kirjoitetaan _kursiivilla_, kun taas yksiköt kirjoitetaan tavallisella kirjasintyylillä.
+#important[
+*Älä sekoita keskenään suureen tunnuksia ja yksiköitä*! Tässä kirjassa noudatetaan standardin mukaista merkintätapaa: suureen tunnukset kirjoitetaan _kursiivilla_, kun taas yksiköt kirjoitetaan tavallisella kirjasintyylillä.
   
 ]
 
@@ -320,7 +320,7 @@ nopeus:
 $
   v = frac(Delta s, Delta t) = frac(6 "cm", 4 "cm") =1.5 med "m"/"s"  
 $
-Nokkela lukija saattaa huomata että leppäkertun liike on tasaista, joten tässä tilanteessa ei ole merkitystä millä aikavälillä nopeus määritetään.
+Nokkela lukija huomaaa, että leppäkertun liike on tasaista, joten tässä tilanteessa ei ole merkitystä millä aikavälillä nopeus määritetään.
 ]
 
 #extra[

@@ -33,7 +33,7 @@ Energian säilymislaki yleisessä muodossaan on fysiikassa vakiintunut vasta 180
 
 *Noetherin teoreema*
 
-1900-luvun alun fysiikan uusien teorioiden (kvanttimekaniikka ja  suhteellisuusteoria) myötä syntyi tarve ymmärtää tarkemmin fysiikassa esiintyviä säilymislakeja#footnote[Fysiikassa on muitakin säilymislakeja, kuten esimerkiksi liikemäärän säilymislaki.].
+1900-luvun alun fysiikan uusien teorioiden (kvanttimekaniikka ja  suhteellisuusteoria) myötä syntyi tarve ymmärtää tarkemmin fysiikassa esiintyviä säilymislakeja#footnote[Fysiikassa on muitakin säilymislakeja kuin energian säilymislaki, kuten esimerkiksi _liikemäärän_ säilymislaki.].
 
 Vuonna 1918 *Emmy Noether* julkaisi teorian, jota nykyään kutsutaan Noetherin teoreemaksi. Noetherin teoreeman mukaan energian säilymislaki on seurausta luonnon aikasymmetriasta: fysiikan lait eivät muutu ajan myötä.
 
@@ -161,15 +161,13 @@ Alla on vielä esitettynä yksinkertaistettu energiakaavio polttomoottorille.
 #extra[
   *Mitä on kemiallinen energia?*
   
-  Useimmiten potentiaalienergialla viitataan siihen, että kysymys on jonkin kappaleen potentiaalienergiasta maapallon painovoimakentässä.
+  Useimmiten potentiaalienergialla viitataan siihen, että kysymys on jonkin kappaleen potentiaalienergiasta maapallon painovoimakentässä. Mutta yhtä lailla myös esimerkiksi jännitettyyn jouseen on varastoitunut potentiaalienergiaa.
   
-  Mutta yhtä lailla myös esimerkiksi jännitettyyn jouseen on varastoitunut potentiaalienergiaa.
-  
-  Myös mysteerinen *kemiallinen energia on potentiaalienergiaa*. Omenan tapauksessa potentiaalienergia on kytköksissä omenan ja maapallon väliseen gravitaatio-vuorovaikutukseen. 
+  Myös mysteerinen *kemiallinen energia on potentiaalienergiaa*. Omenan tapauksessa potentiaalienergia on kytköksissä omenan ja maapallon väliseen gravitaatiovuorovaikutukseen. 
    
-  Kemiallisen energian tapauksessa potentiaalienergia liittyy atomiydinten ja elektronien väliseen sähköiseen vuorovaikutukseen. Muistathan että atomiytimien protoneilla on positiivinen sähkövaraus ja elektroneilla negatiivinen varaus. Erimerkkisesti varautuneet hiukkaset vetävät toisiaan puoleensa samoin kuin maapallo ja omena vetävät toisiaan puoleensa.
+  Kemiallisen energian tapauksessa potentiaalienergia liittyy atomiydinten ja elektronien väliseen sähköiseen vuorovaikutukseen. Muistathan että atomiytimien protoneilla on positiivinen sähkövaraus ja elektroneilla negatiivinen varaus. Erimerkkisesti varautuneet hiukkaset vetävät toisiaan puoleensa samoin kuin maapallo ja omena vetävät toisiaan puoleensa. Elektronien sijaintiin atomiytimien suhteen liittyy siis potentiaalienergiaa.
   
-  Eksotermisissä#footnote[Eksoterminen reaktio on reaktio, jossa vapautuu energiaa.] kemiallisissa reaktioissa tämä potentiaalienergia vapautuu ja muuttuu aineen rakenneosien liike-energiaksi#footnote[lämpö on aineen rakenneosien satunnaista liikettä.] eli lämpöenergiaksi vrt. omena putoaminen puusta.
+  Eksotermisissä#footnote[Eksoterminen reaktio on reaktio, jossa vapautuu energiaa.] kemiallisissa reaktioissa elektronien järjestäytyessä uudelleen niiden potentiaalienergia pienenee, jolloin vapautuva energia muuttuu atomien ja molekyylien liike-energiaksi eli lämpöenergiaksi.
 
 ]
 #pagebreak()
@@ -181,16 +179,18 @@ Tarkastellaan esimerkkinä ampuma-aseen toimintaa (kuva #fig_num(<bullet>)). Ase
 
 
 
-Palokaasut kohdistavat luotiin voiman, joka vaikuttaa luotiin aseen piipun pituisen matkan, jonka seurauksena osa kemiallisessa reaktiossa vapautuvasta lämpöenergiasta muuttuu luodin liike-energiaksi.
+Palokaasujen luotiin kohdistama voima vaikuttaa luotiin aseen piipun pituisen matkan, jonka seurauksena osa kemiallisessa reaktiossa vapautuvasta energiasta muuttuu luodin liike-energiaksi.
 
 #extra[
-  Ensimmäinen ihmisen rakentama laite, joka muutti lämpöenergian liike-energiaksi oli *tykki* ja myöhemmin ampuma-ase.
+  *Miksi näin sotaisa esimerkki?*
+  
+  Ensimmäinen ihmisen keksimä kone, joka muutti lämpöenergian liike-energiaksi oli *tykki* ja myöhemmin ampuma-ase.
 ]
 #colbreak()
 #important[
   *Prosessia*, jossa energia siirtyy tai muuttuu muodosta toiseen, kun kappaleeseen vaikuttava voima vaikuttaa kappaleeseen tietyn pituisen matkan, kutsutaan fysiikassa nimellä *työ*. 
 ]
-
+#v(0.5em)
 #figure(
   image("../images/energy/bullet exploding.png", width: 100%), caption: [Ampuma-aseessa osa kemiallisen reaktion tuotteena syntyvästä lämpöenergia muuttuu liike-energiaksi. ]
 )<bullet>
@@ -331,9 +331,9 @@ Lämpö on aineen rakenneosien (atomien ja molekyylien) satunnaista liikettä. T
 #columns(2)[
 Lämpötilan (tunnus: $T$) ilmoittamiseksi fysiikassa käytetään kahta eri yksikköä: celsiusaste ($degree"C"$) ja kelvin ($"K"$). Nämä kaksi lämpötila-asteikkoa ovat hyvin samankaltaiset: jos lämpötila kasvaa yhden celsiusasteen, lämpötila nousee yhden kelvinin. Erona lämpötila-asteikoilla on ainoastaan nollapiste.
 
-Celsiusasteikon nollapiste on veden sulamispiste#footnote[normaalipaineessa]. On siis päätetty, että #colbreak()olkoon lämpötila, jossa vesi jäätyy $0 thin degree"C"$.  Lämpötila-asteikon määrittelemiseksi tarvitaan toinenkin piste: On päätetty, että olkoon lämpötila, jossa vesi kiehuu $100 thin degree"C"$.
+Celsiusasteikon nollapiste on veden sulamispiste#footnote[normaalipaineessa, kiitos erään oppilaan insinööri-iskälle huomautuksesta :)]. On siis päätetty, että #colbreak()olkoon lämpötila, jossa vesi jäätyy $0 thin degree"C"$.  Lämpötila-asteikon määrittelemiseksi tarvitaan toinenkin piste: On päätetty, että olkoon lämpötila, jossa vesi kiehuu $100 thin degree"C"$.
 
-Kelvinit eroavat celsiusasteista siten että kelvinasteikon nollapiste on pienin mahdollinen lämpötila#footnote[Täsmällisempää olisi sanoa että mahdollisen lämpötilan alaraja, sillä absoluuttista nollapistettä ei voi saavuttaa: ei käytännössä eikä myöskään teoriassa. ], joka on n. $-273 thin  degree"C"$. Tämä lämpötila on nimeltään absoluuttinen nollapiste.
+Kelvinit eroavat celsiusasteista siten että kelvinasteikon nollapiste on pienin mahdollinen lämpötila#footnote[Täsmällisempää olisi sanoa että lämpötilan alaraja, sillä absoluuttista nollapistettä ei voi saavuttaa: ei käytännössä eikä myöskään teoriassa. ], joka on n. $-273 thin  degree"C"$. Tämä lämpötila on nimeltään absoluuttinen nollapiste.
 ]
 \
 #figure(

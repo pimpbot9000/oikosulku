@@ -1,0 +1,436 @@
+#import "../../template.typ": *
+#let q(body) = block(below: 0.75em)[body]
+#set enum(
+  spacing: 1.2em,
+)
+#let h2(body) = heading(
+  level: 2,
+  numbering: none,
+  outlined: false,
+  body,
+)
+
+#let l(length) = [#box[#line(length: length)] #h(0.0em) ]
+
+= Tehtävät
+
+#h2[ Fysiikka on kokeellinen luonnontiede]
+
+#enum(
+  [Mihin fysiikan tieto perustuu?],
+  [Minkä avulla luonnonlait pyritään kuvaamaan?],
+  [Miksi sanotaan, että fysiikka on eksakti eli täsmällinen tiede?],
+  [Miksi matematiikka on tärkeä osa fysiikkaa?],
+  [Mitä muita luonnontieteitä fysiikan lisäksi on olemassa?],
+  
+)
+
+#h2[Tieteellinen menetelmä]
+
+#enum(
+  [Toistettavuus on tärkeä osa tieteellistä menetelmää. Kerro omin sanoin, mitä tämä tarkoittaa.],
+  [Mitä objektiivisuus tarkoittaa tieteellisen menetelmän tapauksessa?],
+  [Pohdi, miksi kriittisyys (kaikki väitteet tulee voida asettaa kyseenalaisiksi ja testata) oli melko radikaali ajatus aikoinaan.],
+  [Mitä ajanjaksoa kutsutaan nimellä _tieteellinen vallankumous_?],
+)
+
+#h2[Fysiikan lyhyt historia]
+
+#enum(
+  [Mikä on eksoplaneetta?],
+  [Kuka keksi ensimmäiset yleispätevät lait kappaleen liikkeelle?],
+  [Mikä on energian säilymislaki?],
+  [Miksi energian ymmärtäminen oli tärkeää 1800-luvulla?],
+  [Yhdistä henkilö ja kuvailu.
+
+
+#grid(
+  columns: (0.43fr, 0.57fr),
+  gutter: 14mm,
+  align: top,
+  [
+     #let l = [#box[#line(length: 2em)] #h(0.4em) ]
+     \
+
+     \
+
+     \
+     
+     #l Galileo Galilei
+
+     #l Isaac Newton
+
+     #l Marie Curie
+
+     #l James Clerk Maxwell
+
+     #l Heinrich Hertz
+
+     #l Albert Einstein
+
+  ],
+  [ 
+    *A.* Osoitti, että luontoa voidaan tutkia systemaattisilla kokeilla ja mittauksilla ja kuvata ilmiöitä matematiikan avulla.
+
+    *B.* Osoitti, että aika ja avaruus eivät ole absoluuttisia (suhteellisuusteoria).
+
+    *C.* Ennusti sähkömagneettisen aaltoliikkeen olemassaolon.
+
+    *D.* Teki merkittävää tutkimustyötä radioaktiivisuuteen liittyen.
+
+    *E.* Löysi universaalit liikkeen lait, joita noudattavat sekä planeetat että kappaleet maan päällä.
+
+    *F.* Onnistui ensimmäisenä kokeellisesti osoittamaan sähkömagneettisen aaltoliikkeen olemassaolon.
+  ],
+)
+
+])
+
+#pagebreak()
+
+#h2[Fysiikan lait ovat malleja]
+
+#enum(
+  [ Yhdistä termi ja selitys
+  #table(
+    columns: (0.30fr, 0.70fr),
+    inset: 7pt,
+    stroke: 0.0pt + rgb("999999"),
+    align: left,
+    table.header(
+      [*Termi*], [*Selitys*],
+    ),
+    [Laki], [Ehdotettu selitys jollekin ilmiölle],
+    [Teoria], [Kuvaa säännönmukaisuutta yksittäisessä tilanteessa],
+    [Malli], [Laajasti hyväksytty selitys jollekin ilmiöjoukolle],
+    [Hypoteesi], [Yksinkertaistettu kuvaus jollekin ilmiölle],
+  )],
+  [
+    Kaikki fysiikan laita ovat pohjimmiltaan #box[#line(length: 10em)] #h(0.4em)  
+  ], [
+    Mikä on mallin pätevyysalue?
+  ], [
+    Osassa 2.1 on esitetty, miten jousen venymä riippuu siitä roikkuvan punnuksen massasta. Tuloksena saatiin kuvaaja. Pohdi, mikä tämän mallin pätevyysalue on.
+  ]
+
+)
+
+#h2[Kontrolloitu koejärjestely]
+
+#enum(
+  [
+    Oppilaan oli tarkoitus tutkia veden suolapitoisuuden ja sähkönjohtavuuden välistä riippuvuutta. Sähkönjohtavuutta tutkittiin laittamalla kaksi elektrodia (metallisauvaa) veteen ja mittaamalla vedessä kulkevan sähkövirran suuruus, kun veden suolapitoisuudet olivat eri suuret.
+
+    Oppilas suoritti kolme mittausta kuvan osoittamalla tavalla. Mikä mittauksessa meni pieleen?
+
+    #align(center)[#image("current vs salinity.png", width: 70%)]
+
+    
+  ],
+  [
+    Oppilas vertaili kolmen eri aineen (grafiitti, teräs ja kupari) sähkönjohtavuutta mittaamalla erilaisten kappaleiden läpi kulkevan sähkövirran suuruuden. Oppilas suoritti kolme mittausta kuvan osoittamalla tavalla. 
+    
+    Mikä koejärjestelyssä on pielessä?
+    
+    #align(center)[#image("conductivity.png", width: 70%)]
+    
+  ],
+  [Oppilas tutkii kokeellisesti, miten pallon putoamisaika riippuu pallon massasta, kun pallo tiputetaan 10 metrin korkeudelta. Minkälaisia palloja oppilaan on käytettävä tutkimuksessa, jotta mittaus olisi suoritettu *kontrolloidusti*?],
+
+  [
+    #grid(
+      columns: (2.5fr, 1fr), gutter: 2em,[
+    
+    Heilurin jaksonaikaan (yksi edestakainen heilahdus) vaikuttavat heilahduskulma $alpha$ ja heilurin pituus $L$.
+    
+    Alice haluaa tutkia, miten heilurin pituus vaikuttaa edestakaiseen heilahdukseen kuluvaan aikaan. 
+    
+    Miten tutkimus suoritetaan *kontrolloidusti*?],
+    [#image("pendulum.png", width: 80%)]
+  )
+  ], [
+    Bob tutki ilmiötä, johon liittyvät suureet A, B, C ja D. Suureet A, B ja C vaikuttavat suureeseen D. Alice haluaa tutkia, miten suure B vaikuttaa suureeseen D. Miten tutkimus tulee suorittaa, jotta kyseessä olisi *kontrolloitu koe*?
+  ]
+)
+#h2[Kuvaajakin on malli]
+
+#enum(
+  [ Alice ja Bob tutkivat radio-ohjattavan auton liikettä. He mittasivat, kuinka pitkä aika radio-ohjattavalla autolla kuluu eri pituisiin matkoihin.
+
+  a) Piirrä mittauspisteet koordinaatistoon
+  
+  b) Sovita pisteisiin origon kautta kulkeva sora.
+
+  c) sovitettu suora on #l(10em), jonka avulla suureiden välistä riippuvuutta kuvataan.
+
+  d) Valitse suoralta mikä tahansa piste ja laske sen avulla nopeus yksikössä m/s.
+    #grid(
+      columns: (0.5fr, 1fr),
+      gutter: 2mm,
+      align: top,
+      [
+        
+        #table(
+          columns: (5em, 5em),
+          inset: 5pt,
+          align: center,
+          stroke: 0.6pt,
+          table.header([aika  \ 
+          (s)], [matka \ 
+          (m)]),
+          [0], [0],
+          [1,2], [1],
+          [2,0], [2],
+          [3,0], [3],
+          [4,2], [4],
+          [4,8], [5],
+        )
+      ],
+  [
+
+    #plot(
+      xmin: 0, xmax: 5,
+      ymin: 0, ymax: 6,
+      xtick-step: 1,
+      xlabel: "aika (s)",
+      ylabel: "matka (m)",
+      show-grid: "both",
+      minor-grid-step: 5,
+      axis-x-pos: "bottom",
+      axis-y-pos: "left",
+      //(fn: x => 3*x, stroke: blue + 1.5pt),
+      scatter(
+        (),
+        mark: "*",
+        mark-fill: red,
+        mark-stroke: red,
+        mark-size: 0.15,
+      ),
+      width: 8.5,
+      height: 8.6
+      
+    )
+    
+  ],
+)
+    
+  ]
+)
+#h2[Fysiikan perussuureet]
+
+#enum(
+  [
+    a) Mikä on suure?
+
+    b) Luettele kolme SI-järjestelmän suuretta ja niiden yksikköä.
+  ],
+  [Kuinka monen eri suureen yksiköt SI-järjestelmä määrittelee?],
+  [Ota selvää, mitä yksiköt _vaaksa_, _kyynärä_, _syli_ ja _poronkusema_ ovat ja miten ne on määritelty. Mikä näissä yksiköissä on ongelmana?\ \ ],
+  [
+    
+    *Suure vai yksikkö?*
+
+    #grid(
+      columns: (1fr, 1fr),
+      gutter: 12mm,
+      [
+        a) koulumatkan pituus  
+        
+        b) kilometri  
+        
+        c) kilogramma  
+        
+        d) kappaleen paino 
+        
+        e) kahvikupin tilavuus 
+        
+        f) polkupyöräilijän nopeus 
+        
+      ],
+      [
+        g) km/h 
+        
+        h) litra  
+        
+        i) pinta-ala 
+        
+        j) m²  
+        
+        k) maili  
+        
+        l) kuutiometri
+      ],
+    )
+  ],
+  [
+    *Yhdistä suure ja yksikkö.*
+
+    #grid(
+      columns: (1fr, 1fr),
+      gutter: 12mm,[
+        pinta-ala
+
+        tilavuus
+
+        Coca-colan litrahinta
+
+        energia
+
+        muurahaisen juoksunopeus
+
+        Coca-colan energiatiheys
+
+        kankaan hinta
+        
+      ],[
+        cm/s
+
+        L
+
+        m²
+
+        cal (kalori)
+
+        cal/g
+
+        €/L
+
+        €/m
+        
+      ])
+  ],
+)
+
+#h2[Johdannaissuureet ja -yksiköt]
+
+#enum(
+  [Jos auto ajaa 180 km pituisen matkan kahdessa tunnissa, laske auton nopeus. Merkitse laskutoimitus yksiköineen!],
+  [Jos auton polttoaineenkulutus on 0,05 L/km, kuinka paljon polttoainetta auto kuluttaa 50 kilometrin matkalla?],
+  [Miten yksikkö g/mL sanotaan?],
+  [Jos 38 millilitraa etanolia painaa 30 grammaa, laske etanolin tiheys (yksikkö: g/mL). Ilmoita vastaus kahden desimaalin tarkkuudella.],
+  [Jos aurinkopaneeli, jonka pinta-ala on 5 m², tuottaa energiaa 2500 watin (W) teholla, laske energiantuotto yhtä neliömetriä kohti (yksikkö: W/m²).],
+  [
+    a) Laske kuvan luokkahuoneen tilavuus (yksikkö: m³).
+
+    b) Jos ilman tiheys on 1,3 kg/m³, laske luokkahuoneessa olevan ilman massa.
+  ],
+
+  [Vedenkeittimellä kului 40 sekuntia (40 s) lämmittää 20 °C:n vesi kiehuvaksi (100 °C). Laske veden lämpenemisnopeus eli kuinka monta celsiusastetta veden lämpötila nousi sekunnissa.],
+  [Aurinkopaneelin valmistaja ilmoittaa, että heidän valmistamiensa aurinkopaneelien energiantuotto on 150 W/m². Valmistajalta tilataan aurinkopaneeli, jonka mitat ovat 1,5 m × 2,0 m. Laske, kuinka monta wattia (W) kyseisen aurinkopaneelin energiantuotto on.],
+  [Vesi maksaa 2,30 €/m³. Suihkussa käynti kuluttaa vettä nopeudella 12 L/min. Henkilö on 5 min suihkussa vuoden jokaisena päivänä. Kuinka paljon suihkussa käynti maksaa vuodessa?
+
+  _Vinkki:_ 1 m³ = 1000 L]
+)
+
+#h2[Kerrannaisyksiköt ja etuliitteet]
+
+#enum(
+  [
+    Mitä lukuarvoja seuraavat yksiköiden etuliitteet tarkoittavat?
+
+    #grid(
+      columns: (1fr, 1fr, 1fr),
+      gutter: 8mm,
+      [a) kilo \    b) giga],
+      [c) mega \ d) milli],
+      [e) mikro  \ f) tera],
+    )
+  ],
+  [Pohdi, miksi etuliitteitä tarvitaan.],
+  [
+    Muunna ilmoitettuun yksikköön:
+    #let l = [#box[#line(length: 8em)] #h(0.0em) ]
+    #grid(
+      columns: (1fr, 0fr),
+      gutter: 16mm,
+      [
+        #set text(
+          size: 12pt
+          )
+        2 km = #l m 
+        
+        150 cm = #l m 
+        
+        3 kg = #l g  
+        
+        120 000 J = #l kJ
+        
+        2 kV = #l V
+        
+        6 000 000 W = #l MW
+        
+        20 000 000 b = #l Mb
+        
+        3 kg = #l g
+
+        110 kV = #l V 
+        
+        30 mm = #l cm  
+        
+        2 mL = #l L 
+        
+        6,5 MW = #l W  
+        
+        4,5 k€ = #l €  
+        
+        2 900 000 000 W = #l GW  
+        
+        0,000 012 m =  #l μm  
+        
+        500 000 000 J = #l GJ
+        
+        \
+        
+      ],
+      [
+        
+      ],
+    )
+  ],
+  [
+    a) Ota selvää, kuinka monta bittiä (b = bit) yksi tavu (B = byte) on.
+
+    b) Kuinka monta tavua on 32 bittiä?
+
+    c) Mitä tarkoittaa, jos internetyhteyden nopeus on 100 Mbs?
+  ],
+)
+
+
+
+/*
+#pagebreak()
+
+= 7. Kuvaaja
+
+#q[
+  *10.1.* Alice ja Bob tutkivat radio-ohjattavan auton liikettä. He mittasivat, kuinka pitkä aika radio-ohjattavalla autolla kuluu eri pituisiin matkoihin.
+
+  a) Piirrä mittauspisteet koordinaatistoon.  
+  b) Sovita mittauspisteisiin suora.
+]
+
+#grid(
+  columns: (0.25fr, 0.75fr),
+  gutter: 12mm,
+  align: top,
+  [
+    #table(
+      columns: (1fr, 1fr),
+      inset: 5pt,
+      align: center,
+      stroke: 0.6pt,
+      table.header([aika  
+      (s)], [matka  
+      (m)]),
+      [0], [0],
+      [1,2], [1],
+      [2,0], [2],
+      [3,0], [3],
+      [4,2], [4],
+      [4,8], [5],
+    )
+  ],
+  [#image("assets/koordinaatisto.png", width: 100%)],
+)
+*/
