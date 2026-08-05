@@ -1,5 +1,5 @@
 #import "../../template.typ": *
-#let q(body) = block(below: 0.75em)[body]
+
 #set enum(
   spacing: 1.2em,
 )
@@ -46,7 +46,7 @@
 
 #grid(
   columns: (0.43fr, 0.57fr),
-  gutter: 14mm,
+  gutter: 0mm,
   align: top,
   [
      #let l = [#box[#line(length: 2em)] #h(0.4em) ]
@@ -70,7 +70,7 @@
 
   ],
   [ 
-    *A.* Osoitti, että luontoa voidaan tutkia systemaattisilla kokeilla ja mittauksilla ja kuvata ilmiöitä matematiikan avulla.
+    *A.* Osoitti, että luontoa voidaan tutkia järjestelmällisesti kokeilla ja mittauksilla ja kuvata ilmiöitä matematiikan avulla.
 
     *B.* Osoitti, että aika ja avaruus eivät ole absoluuttisia (suhteellisuusteoria).
 
@@ -106,11 +106,11 @@
     [Hypoteesi], [Yksinkertaistettu kuvaus jollekin ilmiölle],
   )],
   [
-    Kaikki fysiikan laita ovat pohjimmiltaan #box[#line(length: 10em)] #h(0.4em)  
+    Kaikki fysiikan laita ovat pohjimmiltaan #box[#line(length: 10em)] #h(0.0em).
   ], [
-    Mikä on mallin pätevyysalue?
+    Mitä mallin pätevyysalue tarkoittaa?
   ], [
-    Osassa 2.1 on esitetty, miten jousen venymä riippuu siitä roikkuvan punnuksen massasta. Tuloksena saatiin kuvaaja. Pohdi, mikä tämän mallin pätevyysalue on.
+    Osassa 2.1 on tutkittu, miten jousen venymä riippuu jousesta roikkuvan punnuksen massasta. Pohdi, mikä tämän mallin pätevyysalue on.
   ]
 
 )
@@ -121,14 +121,14 @@
   [
     Oppilaan oli tarkoitus tutkia veden suolapitoisuuden ja sähkönjohtavuuden välistä riippuvuutta. Sähkönjohtavuutta tutkittiin laittamalla kaksi elektrodia (metallisauvaa) veteen ja mittaamalla vedessä kulkevan sähkövirran suuruus, kun veden suolapitoisuudet olivat eri suuret.
 
-    Oppilas suoritti kolme mittausta kuvan osoittamalla tavalla. Mikä mittauksessa meni pieleen?
+    Oppilas suoritti kolme mittausta kuvan osoittamalla tavalla. Mitä mittauksessa tehtiin väärin?
 
     #align(center)[#image("current vs salinity.png", width: 70%)]
 
     
   ],
   [
-    Oppilas vertaili kolmen eri aineen (grafiitti, teräs ja kupari) sähkönjohtavuutta mittaamalla erilaisten kappaleiden läpi kulkevan sähkövirran suuruuden. Oppilas suoritti kolme mittausta kuvan osoittamalla tavalla. 
+    Oppilas vertaili kolmen eri aineen (grafiitti, teräs ja kupari) sähkönjohtavuutta mittaamalla eri aineista valmistettujen kappaleiden läpi kulkevan sähkövirran suuruuden. Oppilas suoritti kolme mittausta kuvan osoittamalla tavalla. 
     
     Mikä koejärjestelyssä on pielessä?
     
@@ -149,7 +149,7 @@
     [#image("pendulum.png", width: 80%)]
   )
   ], [
-    Bob tutki ilmiötä, johon liittyvät suureet A, B, C ja D. Suureet A, B ja C vaikuttavat suureeseen D. Alice haluaa tutkia, miten suure B vaikuttaa suureeseen D. Miten tutkimus tulee suorittaa, jotta kyseessä olisi *kontrolloitu koe*?
+    Bob tutki ilmiötä, jossa suureet A, B ja C vaikuttavat suureeseen D. Bob haluaa tutkia, miten suure B vaikuttaa suureeseen D. Miten tutkimus tulee suorittaa, jotta kyseessä olisi *kontrolloitu koe*?
   ]
 )
 #h2[Kuvaajakin on malli]
@@ -159,11 +159,11 @@
 
   a) Piirrä mittauspisteet koordinaatistoon
   
-  b) Sovita pisteisiin origon kautta kulkeva sora.
+  b) Sovita pisteisiin *origon* kautta kulkeva suora.
 
   c) sovitettu suora on #l(10em), jonka avulla suureiden välistä riippuvuutta kuvataan.
 
-  d) Valitse suoralta mikä tahansa piste ja laske sen avulla nopeus yksikössä m/s.
+  d) Tee kuvaajan avulla ennuste sille, kuinka kauan kuluu 5,6 metrin pituiseen matkaan.
     #grid(
       columns: (0.5fr, 1fr),
       gutter: 2mm,
@@ -175,8 +175,8 @@
           inset: 5pt,
           align: center,
           stroke: 0.6pt,
-          table.header([aika  \ 
-          (s)], [matka \ 
+          table.header([*aika*  \ 
+          (s)], [*matka* \ 
           (m)]),
           [0], [0],
           [1,2], [1],
@@ -188,7 +188,7 @@
       ],
   [
 
-    #plot(
+    #cplot(
       xmin: 0, xmax: 5,
       ymin: 0, ymax: 6,
       xtick-step: 1,
@@ -198,16 +198,8 @@
       minor-grid-step: 5,
       axis-x-pos: "bottom",
       axis-y-pos: "left",
-      //(fn: x => 3*x, stroke: blue + 1.5pt),
-      scatter(
-        (),
-        mark: "*",
-        mark-fill: red,
-        mark-stroke: red,
-        mark-size: 0.15,
-      ),
       width: 8.5,
-      height: 8.6
+      height: 8.3
       
     )
     
@@ -315,7 +307,7 @@
     b) Jos ilman tiheys on 1,3 kg/m³, laske luokkahuoneessa olevan ilman massa.
   ],
 
-  [Vedenkeittimellä kului 40 sekuntia (40 s) lämmittää 20 °C:n vesi kiehuvaksi (100 °C). Laske veden lämpenemisnopeus eli kuinka monta celsiusastetta veden lämpötila nousi sekunnissa.],
+  [Vedenkeittimellä kului 40 sekuntia lämmittää 20 °C:n vesi kiehuvaksi (100 °C). Laske veden lämpenemisnopeus eli kuinka monta celsiusastetta veden lämpötila nousi sekunnissa.],
   [Aurinkopaneelin valmistaja ilmoittaa, että heidän valmistamiensa aurinkopaneelien energiantuotto on 150 W/m². Valmistajalta tilataan aurinkopaneeli, jonka mitat ovat 1,5 m × 2,0 m. Laske, kuinka monta wattia (W) kyseisen aurinkopaneelin energiantuotto on.],
   [Vesi maksaa 2,30 €/m³. Suihkussa käynti kuluttaa vettä nopeudella 12 L/min. Henkilö on 5 min suihkussa vuoden jokaisena päivänä. Kuinka paljon suihkussa käynti maksaa vuodessa?
 
@@ -330,10 +322,45 @@
 
     #grid(
       columns: (1fr, 1fr, 1fr),
+      gutter: 0mm,
+      [a) kilo #l(9.2em)
+       
+      b) giga #l(9em)
+    ],
+      [c) mega #l(8em) 
+      
+      d) milli #l(8.5em)],
+      [e) mikro #l(8em)  
+      
+      f) hehto #l(8.2em)],
+    )
+  ],[ Yhdistä etuliite ja tunnus.
+    
+    #grid(
+      columns: (1fr, 1fr, 1fr),
       gutter: 8mm,
-      [a) kilo \    b) giga],
-      [c) mega \ d) milli],
-      [e) mikro  \ f) tera],
+      [ kilo
+       
+        giga 
+
+        milli
+
+        mega
+
+        mikro
+      ],
+      [G 
+    
+      m
+
+      μ
+
+      M
+
+      k
+      
+    ],
+      [],
     )
   ],
   [Pohdi, miksi etuliitteitä tarvitaan.],
@@ -397,40 +424,3 @@
 )
 
 
-
-/*
-#pagebreak()
-
-= 7. Kuvaaja
-
-#q[
-  *10.1.* Alice ja Bob tutkivat radio-ohjattavan auton liikettä. He mittasivat, kuinka pitkä aika radio-ohjattavalla autolla kuluu eri pituisiin matkoihin.
-
-  a) Piirrä mittauspisteet koordinaatistoon.  
-  b) Sovita mittauspisteisiin suora.
-]
-
-#grid(
-  columns: (0.25fr, 0.75fr),
-  gutter: 12mm,
-  align: top,
-  [
-    #table(
-      columns: (1fr, 1fr),
-      inset: 5pt,
-      align: center,
-      stroke: 0.6pt,
-      table.header([aika  
-      (s)], [matka  
-      (m)]),
-      [0], [0],
-      [1,2], [1],
-      [2,0], [2],
-      [3,0], [3],
-      [4,2], [4],
-      [4,8], [5],
-    )
-  ],
-  [#image("assets/koordinaatisto.png", width: 100%)],
-)
-*/

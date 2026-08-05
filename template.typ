@@ -4,6 +4,7 @@
 #let save_taxpayer_money = false
 #let cols = 2
 #let example_bg_color = if save_taxpayer_money { rgb("#fff") } else { rgb("#eef7ff") }
+#let example-counter = counter("example")
 
 #let oikosulku(body) = {
     
@@ -69,6 +70,12 @@
     #v(0.0em)
   ]
 
+  // nollaa example-counterin aina uuden level 1 headingin kohdalla.
+  show heading.where(level: 1): it => {
+    example-counter.update(0)
+    it
+  }
+  
   show footnote.entry: it => {
   par(
     hanging-indent: 0.6em,
@@ -89,6 +96,10 @@
   body
 }
 
+#let example-ref(label) = context {
+  let item = query(label).first()
+  link(label)[#item.value]
+}
 
 #let fig_num(label) = ref(label, supplement: [])
 
@@ -126,10 +137,12 @@
   )
 }
 
-#let example-counter = counter("example")
+
+
+
 
 #let example_border_color = rgb("#4a90e2")
-#let numbered_example(body) = {
+#let numbered-example(title: "", label: none, body) = {
   example-counter.step()
 
   align(center)[
@@ -146,14 +159,32 @@
         radius: 1pt,
         width: 100%, height: auto
       )[
-        #set align(left)
+        #context{
+          set align(left)
+          let dot = if title == "" {} else [.]
+          let chapter = counter(heading).get().first()
+          let number = example-counter.get().first()
+          let full-number = numbering("1.1", chapter, number)
+          
+          [
+            *Esimerkki #full-number#dot #title*
+            
+            #body
 
-        *Esimerkki #context example-counter.display()*
+            #if label != none {
+              [#metadata(full-number) #label]
+            }
+          ]
 
-        #body
+          
+        }
       ]
     ]
   ]
+}
+
+#let pageref(label) = context {
+  counter(page).at(locate(label)).first()
 }
 
 #let underlined(body) = {
@@ -168,3 +199,26 @@
 }
 
 #let desimal_comma(x) = str(x).replace(".", ",")
+
+#let cplot(..args) = plot(
+  style: (
+    grid: (
+      major: (
+        stroke: luma(80) + 0.5pt,
+      ),
+      minor: (
+        stroke: luma(200) + 0.5pt,
+      ),
+    ),
+    axis: (
+      stroke: 1pt,
+    ),
+  ),
+
+  ..args,
+)
+
+#let enum_abc(..items) = enum(
+  numbering: "a)",
+  ..items,
+)

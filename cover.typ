@@ -16,7 +16,7 @@
   9.~lk fysiikka
   #image("kortslutning 3.png", width: 50%)
   #text(size: 10pt,  font: "Roboto")[
-    Teoria
+    //Teoria
   ]
 ]
 

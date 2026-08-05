@@ -10,7 +10,7 @@
 
 #set text(font: "IBM Plex Sans", weight: "regular")
 #outline(title: [
-  Fysiikka luonnontieteenä
+  Oikosulku
   
   \
 ])
@@ -24,11 +24,12 @@
 //#include "lukijalle.typ"
 
 
-#include "chapters/fysiikka luonnontieteenä.typ"
-#include "exercises/fysiikka luonnontieteenä/fysiikka luonnontieteenä.typ"
-//#include "chapters/liike.typ"
+//#include "chapters/fysiikka luonnontieteenä.typ"
+//#include "exercises/fysiikka luonnontieteenä/fysiikka luonnontieteenä.typ"
+#include "chapters/liike.typ"
+#include "exercises/liike/exercises.typ"
 //#include "chapters/vuorovaikutus ja voima.typ"
 //#include "chapters/energia.typ"
-//#include "circuits.typ"
-//#include "power and energy.typ"
-//#include "appendix.typ"
+#include "circuits.typ"
+#include "power and energy.typ"
+#include "appendix.typ"

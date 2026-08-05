@@ -66,7 +66,7 @@ Energian (tunnus: $E$) SI-järjestelmän mukainen yksikkö on joule (J). Teho (t
 
 Sähkölaitteiden tapauksessa käytetään termiä sähköteho. Jos esimerkiksi vedenkeittimen sähköteho on 2000 W, sen yhden minuutin aikana kuluttama energia voidaan laskea seuraavasti:
 
-#numbered_example[
+#numbered-example[
   $t = 1 "min" = 60 "s"$\
   $P = 2000 "W" = 2000 thin frac("J","s")$\
   $
@@ -94,7 +94,7 @@ Joulen lain avulla voidaan laskea sähköteho, mikäli jännite ja sähkövirran
 
 Joulen lain avulla voidaan laskea esimerkiksi sähkölaitteen sähköteho tai virtapiirin yksittäisen komponentin sähköteho. Jälkimmäisessä tapauksessa $U$ on komponentin jännitehäviö.
 
-#numbered_example[
+#numbered-example[
   Samsungin laturin ulostulon jännite on 5 V ja teho on 10 wattia. Lasketaan latausvirta.
 
   $U = 5 "V"$\  
@@ -106,7 +106,7 @@ Joulen lain avulla voidaan laskea esimerkiksi sähkölaitteen sähköteho tai vi
   $
 ]
 
-#numbered_example[
+#numbered-example[
   Vedenkeitin on kytketty 230 voltin verkkojännitteeseen. Jos vedenkeittimen lämmitysvastuksen resistanssi on 45 $Omega$, laske kuinka suuri on vedenkeittimen sähköteho.
 
   Lasketaan aluksi sähkövirta Ohmin lain avulla:
@@ -133,7 +133,7 @@ Vuonna 2024 sähkön hinta (siirtomaksu + energia) oli keskimäärin noin 15–2
 
 Kilowattitunti (kWh) on energian yksikkö, jota käytetään usein SI-järjestelmän yksikön (J = joule) sijasta, sillä kilowattitunti on käytännöllisempi yksikkö. Seuraavista laskuesimerkistä ilmenee syy miksi.
 
-#numbered_example[
+#numbered-example[
   6 watin LED-lamppua pidetään päällä 8 tuntia päivässä. Lasketaan lampun kuluttaman energian määrä vuodessa (*jouleina*): 
   
   Lasketaan aika sekunteina:\  
@@ -148,7 +148,7 @@ Kilowattitunti (kWh) on energian yksikkö, jota käytetään usein SI-järjestel
 ]
 *Yikes!* Aika ikävän näköinen laskutoimitus ja vielä ikävämmän näköinen tulos… Lasketaan seuraavaksi sama energian määrä kilowattitunteina (kWh). Kuluneen energian määrä kilowattitunteina lasketaan periaatteessa täysin samalla tavalla kuin edellä, mutta yksiköiden kanssa puljataan tavalla, jonka tuloksena kulutetun energian yksiköksi saadaan kilowattitunti.
 
-#numbered_example[
+#numbered-example[
   Lasketaan kuluneen energian määrä *kilowattitunteina*. 
   
   Lasketaan aika *tunteina*:\  
@@ -197,7 +197,7 @@ Jos laturissa ei tapahtuisi energiahäviöitä, tällöin puhelimen sähköverko
 
 Käytännössä laturin hyötysuhde ei koskaan ole 100 %. Tarkastellaan esimerkkinä kuvan #fig_num(<efficiency>) kännykän laturia ja lasketaan sille hyötysuhde.
 
-#numbered_example[
+#numbered-example[
   Ottoteho: $P_("in") = 25 "W"$\
   Antoteho: $P_("out") = 22 "W"$
 
@@ -216,7 +216,7 @@ Käytännössä laturin hyötysuhde ei koskaan ole 100 %. Tarkastellaan esimerkk
 
 Tarkastellaan lopuksi kuvan #fig_num(<input_output>) esimerkkiä, jossa on jälleen kerran kännykkälaturi ja jossa lasketaan laturin hyötysuhde. 
 
-#numbered_example[
+#numbered-example[
   Energiankulutusmittarin avulla mitataan, että kännykkälaturi kuluttaa energiaa 19,5 watin teholla (ottoteho). Laturin arvokilvessä lukee *OUTPUT: DC 5.0 V 3.2 A*
 
   Laturin ottoteho: $P_("in") = 19","5 "W" med $ 

@@ -12,7 +12,7 @@
     Näiden matemaattisten mallien avulla voidaan tehdä täsmällisiä ja kvantitatiivisia#footnote[Kvantitatiivinen eli "määrällinen" tarkoittaa sitä, että ennusteet ovat lukuarvoja, ei esimerkiksi että "ennusteeni mukaan tämä tykin ammus lentää tosi pitkälle". Tosi pitkälle on kvalitatiivinen eli "laadullinen" määritelmä.] ennusteita. Kokeellisuus tarkoittaa sitä, että fysiikan tieto perustuu kokeisiin eli järjestelmällisesti suoritettuihin tutkimuksiin. 
        
     #important[
-    Fysiikka käsittelee perustavanlaatuisimpia luonnonilmiöitä, joita ovat esimerkiksi *lämpö, valo, liike, sähkö, magnetismi *ja* säteily*. 
+    Fysiikka käsittelee perustavanlaatuisimpia luonnonilmiöitä, joita ovat esimerkiksi *lämpö, ääni, valo, liike, sähkö, magnetismi *ja* säteily*. 
     ]
     == Tieteellinen menetelmä
     Fysiikan ja muiden luonnontieteiden synty perustuu ajattelutapaan, jonka avulla voidaan hankkia luotettavasti uutta tietoa. Tätä menetelmää ja ajattelutapaa kutsutaan tieteelliseksi menetelmäksi.
@@ -72,9 +72,9 @@
   
   *#underlined[1800-luku – Sähkö ja energia]*
   
-  1800-luvulla havaittiin, että sähkö ja magnetismi ovat saman luonnonvoiman eri ilmenemismuotoja.  *Heinrich Hertz* osoitti sähkömagneettisen aaltoliikkeen olemassaolon rakentamalla ensimmäisen alkeellisen radion. Ilmiön olemassaolon oli jo aiemmin ennustanut *James Clark Maxwell*.
+  1800-luvulla havaittiin, että sähkö ja magnetismi ovat saman luonnonvoiman eri ilmenemismuotoja.  *Heinrich Hertz* osoitti sähkömagneettisen aaltoliikkeen olemassaolon rakentamalla ensimmäisen alkeellisen radion. Ilmiön olemassaolon oli jo aiemmin ennustanut *James Clerk Maxwell*.
   
-  Samaan aikaan muotoutui energian säilymislaki, jonka mukaan energiaa ei synny eikä häviä, vaan se muuttuu muodosta toiseen. Energian säilymislaki lienee tärkein fysiikan periaate. Energiakäsite antoi mahdollisuuden myös ymmärtää paremmin koneiden toimintaa, josta oli tullut *teollisen vallankumouksen* myötä tärkeää.
+  Samaan aikaan muotoutui energian säilymislaki, jonka mukaan energiaa ei synny eikä häviä, se vain muuttuu muodosta toiseen. Energian säilymislaki lienee tärkein fysiikan periaate. Energiakäsite antoi mahdollisuuden myös ymmärtää paremmin koneiden toimintaa, josta oli tullut *teollisen vallankumouksen* myötä tärkeää.
  
   Myös radioaktiivisuus löydettiin 1800-luvun lopulla, ja erityisesti *Marie Curien* tutkimukset lisäsivät merkittävästi ilmiön ymmärtämistä.
   
@@ -136,7 +136,7 @@
 
     #underlined[*Entä sitten?*]
 
-    Nyt kun tiedetään miten jousi _käyttäytyy_, voidaan jousen avulla esimerkiksi "punnita" esineitä. Mikäli jouseen laitetaan roikkumaan esine ja jousen venymä on 9 cm, voidaan kuvaajasta lukea esineen massa (n. 125 g). *Pohdi* voidaanko jousen avulla punnita mikä tahansa kappale.
+    Nyt kun tiedetään miten jousi "käyttäytyy", voidaan jousen avulla esimerkiksi "punnita" esineitä. Mikäli jouseen laitetaan roikkumaan esine ja jousen venymä on 9 cm, voidaan kuvaajasta lukea esineen massa (n. 125 g). Pohdi, voidaanko jousen avulla punnita mikä tahansa kappale.
 
     #let spring_data = (
       (0, 0),
@@ -170,14 +170,14 @@
         ((125,0), (125, 9), (0, 9)), mark-size: 0, stroke: (paint: black, dash: "dashed")
       ),
       width: 5,
-      height: 4.7
+      height: 4.5
       
     ), caption: [Kuvaajan avulla voidaan tehdä ennusteita.] )
   ],[
     #align(center)[*1. Mittauksen suoritus*]
     #figure(
       image("../images/intro to physics/springs.png", width: 80%),
-      caption: [Tutkittava jousi venyy sitä enemmän, mitä raskaampi paino jousesta roikkuu.]
+      caption: [Mitataan jousen venymä eripainoisilla punnuksilla.]
     )
 
     #align(center)[*2. Mittaustulosten kirjaaminen*]
@@ -251,9 +251,9 @@
 
 *Fysiikan laki* kuvaa jonkinlaista luonnossa esiintyvää säännönmukaisuutta. Fysiikan lait esitetään matemaattisesti ja lakien avulla voidaan tehdä ennusteita.
 
-Voimmeko tietää kuvaavatko fysiikan lait absoluuttisen tarkasti havaittuja ilmiöitä?
+Voimmeko tietää, kuvaavatko fysiikan lait absoluuttisen tarkasti havaittuja ilmiöitä?
 
-Vastaus on ei. 
+Vastaus on: ei. 
 Ensinnäkin emme pysty mittaamaan emmekä tutkimaan ilmiöitä äärettömän tarkasti, joten täytyy tyytyä siihen, että fysiikan lait kuvaavat ilmiöitä vain rajallisella tarkkuudella.
 
 Toiseksi  maailma on useimmissa tilanteissa melko monimutkainen, joten usein joudutaan tyytymään siihen, että ilmiöitä kuvatessa joudutaan tekemään yksinkertaistuksia.
@@ -263,14 +263,14 @@ Toiseksi  maailma on useimmissa tilanteissa melko monimutkainen, joten usein jou
   \
 
   #figure(
-    image("../images/intro to physics/Law of reflection.png"), caption: [Valon kulkuun liittyvä heijastuslaki sanoo, että valonsäteen tulokulma ($alpha$) on yhtä suuri kuin heijastuskulma ($beta$). Laki on melko helppo esittää matemaattisesti: $alpha = beta $.]
+    image("../images/intro to physics/Law of reflection.png"), caption: [Valon kulkuun liittyvä _heijastuslaki_ sanoo, että valonsäteen tulokulma ($alpha$) on aina yhtä suuri kuin heijastuskulma ($beta$). Laki on melko helppo esittää matemaattisesti: $alpha = beta $.]
   )
   
 ])
 #important[
-  Fysiikan lait ovat pohjimmiltaan malleja. *Malli* on yksinkertaistettu kuvaus todellisuudesta.
+  Fysiikan lait ovat pohjimmiltaan malleja. *Malli* on yksinkertaistettu kuvaus todellisuudesta. 
 ]
-Mallien avulla pyritään kuvaamaan luonnon toimintaa mahdollisimman tarkasti. Mallin käyttökelpoisuuden määrittää se, kuinka hyvin sen avulla voidaan tehdä havaintoja vastaavia ennusteita. Malleilla on yleensä jonkinlainen pätevyysalue. 
+Mallien avulla pyritään kuitenkin kuvaamaan luonnon toimintaa mahdollisimman tarkasti. Mallin käyttökelpoisuuden määrittää se, kuinka hyvin sen avulla voidaan tehdä havaintoja vastaavia *ennusteita*. Malleilla on yleensä jonkinlainen pätevyysalue. 
 #important[
   Mallin *pätevyysalue* tarkoittaa olosuhteita tai rajoja, joiden sisällä malli tuottaa luotettavia ennusteita.
 ]
@@ -330,7 +330,7 @@ Mallien avulla pyritään kuvaamaan luonnon toimintaa mahdollisimman tarkasti. M
     )
   ])
 #extra[
-  *Laki, teoria vai hypoteesi?*
+  *Laki, malli, teoria vai hypoteesi?*
   
 Teorialla usein tarkoitetaan laajasti hyväksyttyä selitysmallia jollekin ilmiölle tai ilmiöjoukolle. Lain voidaan ajatella tarkoittavan yksittäiseen tilanteeseen tai ilmiöön liittyvää säännönmukaisuutta.  Hypoteesi on taas jonkinlainen oletus tai ehdotettu selitys jollekin ilmiölle.
 
@@ -369,7 +369,7 @@ Noudattamalla edellä kuvattua tapaa mittaus siis suoritetaan kontrolloidusti se
       (5, 7),
       (8, 14),
       (10, 25),
-      (12, 36),
+      (12, 33),
     )
 Oletetaan että edellisessä osiossa kuvailtu mittaus on suoritettu. Kuvassa #fig_num(<graph_flight>) on mittaustulokset ja mittauspisteet piirrettynä koordinaatistoon.
 
@@ -387,7 +387,7 @@ Oletetaan että edellisessä osiossa kuvailtu mittaus on suoritettu. Kuvassa #fi
       [5], [7],
       [8], [14],
       [10], [25],
-      [12], [36])}
+      [12], [33])}
       
     #colbreak()
       
@@ -417,24 +417,25 @@ Oletetaan että edellisessä osiossa kuvailtu mittaus on suoritettu. Kuvassa #fi
       
     )
   
-  ], caption: [Mittaustulokse taulukkona ja taulukon mittaustulokset piirrettynä koordinaatistoon. Mittauspisteisiin on *sovitettu* käyrä, sillä suureiden välinen riippuvuus on *epälineaarinen*]
+  ], caption: [Mittaustulokset taulukkona ja taulukon mittaustulokset piirrettynä koordinaatistoon. Mittauspisteisiin on *sovitettu* käyrä, sillä suureiden välinen riippuvuus on *epälineaarinen*]
 )<graph_flight>
 
 #grid(
   columns: (1.5fr, 1fr),
   gutter: 1em,
   [
-  Miksi pisteisiin *sovitetaan* käyrä (tai suora#footnote[Käyrä on yleisnimitys, joten suorakin on käyrä.]), joka ei välttämättä kulje yhdenkään mittauspisteen kautta?
-  
-  - Mittaustulokset ovat epätarkkoja. Tämä voi johtua käytettävien mittausvälineiden epätarkkuudesta tai koejärjestelystä. Ehkä suureet riippuvatkin toisistaan käyrän kuvaamalla ”siistillä” tavalla mutta emme vain onnistuneet tutkimaan ilmiötä riittävän tarkasti?
-  
-  - Entäpä jos ilmiö onkin melko monimutkainen ja suureiden välinen riippuvuus ei ole kovin yksinkertainen? Sovitettu käyrä kuvaaa suureiden välistä riippuvuutta yksinkertaistetusti.
-  
-  #important[Sovitettu käyrä on *malli*#footnote[Muistathan että malli on yksinkertaistettu todellisuuden kuvaus.], jolla suureiden välistä riippuvuutta kuvataan.]
+  Miksi pisteisiin *sovitetaan* käyrä (tai suora#footnote[Matemaattisessa mielessä suorakin on käyrä.]), joka ei välttämättä kulje yhdenkään mittauspisteen kautta?
 
-  Kuvassa #fig_num(<overfit_and_underfit>) on vielä esitetty *ylisovitettu* ja *alisovitettu* malli. Kummatkin kuvaavat huonosti suureiden välistä riippuvuutta, sillä mallien *ennusteet* eivät yleisesti vastaa havaintoja.
+  - Mittausvirheiden vuoksi yksittäisen mittauspisteen tarkka sijainti koordinaatistossa jää epävarmaksi.
+ 
+  
+  - Fysiikassa oletetaan, että luonnonilmiöissä on taustalla säännönmukaisuuksia, joita mittaustulokset kuvaavat epätarkasti. Sovitettu käyrä on yritys löytää tämä säännönmukaisuus mittaustulosten taustalta.
+  
+  #important[Sovitettu käyrä on *malli*, jonka avulla suureiden välistä riippuvuutta tutkitussa ilmiössä kuvataan.]
 
-  Kuvassa #fig_num(<prediction>) on vielä kuvaajan avulla tehty ennuste, että ritsan venymän ollessa 9 cm, lentomatka on n. 19 metriä. Huomaa, että ennuste pätee tietysti vain samalle ampumakulmalle ja linnulle, jolla mittaus on suoritettu eli mallin *pätevyysalue* on hyvin rajallinen.
+  Kuvassa #fig_num(<overfit_and_underfit>) on vielä esitetty *ylisovitettu* ja *alisovitettu* malli. Kummatkin kuvaavat huonosti suureiden välistä riippuvuutta tutkitussa ilmiössä.
+
+  Kuvassa #fig_num(<prediction>) on lopuksi mallin avulla tehty *ennuste*, että ritsan venymän ollessa 9 cm, lentomatka on n. 19 metriä. Huomaa, että ennuste pätee vain samalle ampumakulmalle ja linnulle, jolla mittaus on suoritettu eli tämän mallin *pätevyysalue* on hyvin rajallinen.
 
   Malli ei siis mitenkään yleispätevästi kuvaa ilmiötä, vaan on vasta ensimmäinen askel ilmiön tutkimisessa ja ymmärtämisessä. 
 ],[
@@ -479,7 +480,7 @@ Oletetaan että edellisessä osiossa kuvailtu mittaus on suoritettu. Kuvassa #fi
       minor-grid-step: 1,
       axis-x-pos: "bottom",
       axis-y-pos: "left",
-      (fn: x => 3*x, stroke: blue + 1.5pt),
+      (fn: x => 2.2*x, stroke: blue + 1.5pt),
       scatter(
         d,
         mark: "*",
@@ -491,7 +492,7 @@ Oletetaan että edellisessä osiossa kuvailtu mittaus on suoritettu. Kuvassa #fi
       height: 4.5
       
     
-  )),caption: [ Ylisovitettu ja alisovitetut mallit kuvaavat huonosti suureiden välistä riippuvuutta. Alemmasta kuvasta selväti näkee että *lineaarinen* malli on liian yksinkertainen kuvaamaan suureiden välistä riippuvuutta.]
+  )),caption: [Ylisovitettu malli ei huomioi sitä, että mittausvirheiden vuoksi yksittäisen mittauspisteen tarkka sijainti koordinaatistossa on epävarma. Alisovitettu malli taas on liian yksinkertainen kuvaamaan ilmiötä.]
   )<overfit_and_underfit>
 ])
 
@@ -521,8 +522,8 @@ Oletetaan että edellisessä osiossa kuvailtu mittaus on suoritettu. Kuvassa #fi
       line-plot(
         ((9,0), (9, 19.3), (0, 19.3)), mark-size: 0, stroke: (paint: black, dash: "dashed")
       ),
-      width: 6,
-      height: 6), caption: [Sovitettu käyrä on *malli*, jonka avulla voidaan tehdä ennusteita.])<prediction>
+      width: 7,
+      height: 7), caption: [Sovitettu käyrä on *malli*, jonka avulla voidaan tehdä ennusteita.])<prediction>
       
 
 #pagebreak()
@@ -559,7 +560,7 @@ Jotta suureen arvo voidaan määrittää, täytyy määritellä mittayksikkö. *
 
 
 
-#important[Jokainen SI-järjestelmän perussuureen yksikkö on tavalla tai toisella määritelty jonkin luonnossa esiintyvän muuttumattoman asian avulla.] 
+#important[Jokainen SI-järjestelmän perussuureen yksikkö on määritelty täsmällisesti jonkin luonnossa esiintyvän muuttumattoman asian avulla.] 
 
 SI-järjestelmän yksiköistä muodostetaan uusia yksiköitä, eli *johdannaisyksiköitä*. Fysiikassa esimerkiksi käytetään nopeudelle useimmiten yksikköä $"m"/"s"$ eli ”metriä sekunnissa”. Yksikkö on muodostettu kahdesta SI-järjestelmässä määritellystä yksiköstä.
 
@@ -607,7 +608,7 @@ SI-järjestelmän yksiköistä muodostetaan uusia yksiköitä, eli *johdannaisyk
 
 SI-järjestelmän suureiden lisäksi on johdannaissuureita, jotka muodostetaan laskutoimitusten avulla SI-järjestelmän suureista. Samalla saadaan aikaan uusi yksikkö, johdannaisyksikkö. Alla on laskuesimerkkejä, jotka havainnollistavat, miten kahdesta eri suureesta muodostuu uusi suure ja yksikkö.
 
-#numbered_example[
+#numbered-example[
   Auto ajaa Helsingistä Seinäjoelle (300 km). Tähän kuluu aikaa kolme tuntia (3 h). Lasketaan auton nopeus.
 
   $
@@ -615,7 +616,7 @@ SI-järjestelmän suureiden lisäksi on johdannaissuureita, jotka muodostetaan l
   $
 ]
 
-#numbered_example[
+#numbered-example[
   Coca-cola-tölkissä lukee että 100 grammaa Coca-colaa sisältää 4000 cal energiaa. Lasketaan kuinka paljon Coca-colassa on energiaa grammaa kohti.
 
   $
@@ -625,7 +626,7 @@ SI-järjestelmän suureiden lisäksi on johdannaissuureita, jotka muodostetaan l
   Tulos siis kertoo, että Coca-Colassa on 40 kaloria energiaa (yhtä) grammaa kohti. Yksikkö luetaan ”kaloria grammaa kohti” tai arkikielisemmin ”kaloria per gramma”.
 ]
 
-#numbered_example[
+#numbered-example[
   Käytetään esimerkin 2 tulosta hyväksi ja lasketaan kuinka paljon energiaa on 250 grammassa Coca-Colaa:
 
   $ 
@@ -647,7 +648,7 @@ Kerrannaisyksikkö (esimerkiksi kilometri, km) muodostetaan etuliitteestä (k = 
   image("../images/intro to physics/units and ruler.png", width: 80%),
 )
 
-#important[#align(center)[Samoja etuliitteitä käytetään kaikkien yksiköiden tapauksessa.]]
+#important[#align(center)[Samoja etuliitteitä käytetään kaikkien fysiikan yksiköiden tapauksessa.]]
 
 Alla on taulukko, jossa lueteltu etuliitteitä. Huomaa että *lihavoitujen* välillä on tuhatkertainen ero. 
 
@@ -679,17 +680,17 @@ table(
   [*milli*],         [m],  [0,001],             [tuhannesosa],
   [sentti],          [c],  [0,01],              [sadasosa],
   [desi],            [d],  [0,1],               [kymmenesosa],
-  [perusyksikkö],    [–],  [1],                 [yksi],
+  [*perusyksikkö*],    [–],  [1],                 [yksi],
   [deka],            [da], [10],                [kymmenen],
   [hehto],           [h],  [100],               [sata],
   [*kilo*],          [k],  [1 000],             [tuhat],
   [*mega*],          [M],  [1 000 000],         [miljoona],
   [*giga*],          [G],  [1 000 000 000],     [miljardi],
   [*tera*],          [T],  [1 000 000 000 000], [biljoona],
-), caption: [Etuliitteet. Lihavoitujen välillä on tuhatkertainen ero. ]
+), caption: [Etuliittetä. *Lihavoitujen* välillä on tuhatkertainen ero. ]
 )
 }
-#numbered_example[
+#numbered-example[
   Alla on muutamia yksikkömuunnoksia, joissa esiintyy taulukon etuliitteitä.
 
   $ 3 "km" = "3 000 m"$

@@ -97,7 +97,7 @@ Esimerkiksi jokaiselle sähkölaitteelle on ilmoitettu teho eli ”energiankulut
 
 Esimerkkinä vedenkeittimen teho on tyypillisesti n. 2000 W. Vedenkeitin siis kuluttaa energiaa 2000 joulea sekunnissa. 
 Kuluttaa on kuitenkin hieman harhaanjohtava sana koska energia ei ”kulu” eli häviä mihinkään. Vedenkeittimen kuluttama energia muuttuu lämpöenergiaksi. Osa lämpöenergiasta siirtyy veteen, osa itse vedenkeittimeen ja osa ympäröivään ilmaan.
-#numbered_example[
+#numbered-example[
   Vedenkeittimen teho on 2000 W. Lasketaan kuinka paljon energiaa laite kuluttaa yhden minuutin aikana.
 
   $P = 2000 "W" = 2000 med "J"/"s"$
@@ -152,7 +152,7 @@ Alla on vielä esitettynä yksinkertaistettu energiakaavio polttomoottorille.
   
   
     #figure(
-      image("../images/energy/potential energy 4.png", width: 95%), caption: [Putoamisliikkeessä kappaleen potentiaalienergia muuttuu liike-energiaksi. Jos potentiaalienergian *nollatasoksi* on valittu maanpinta, kaikki potentiaalienergia on lopussa muuttunut liike-energiaksi.]
+      image("../images/energy/potential energy 4.png", width: 95%), caption: [Putoamisliikkeessä kappaleen potentiaalienergia muuttuu liike-energiaksi. Jos potentiaalienergian *nollatasoksi* on valittu maanpinta, kaikki potentiaalienergia on  muuttunut liike-energiaksi kun omena osuu maahan.]
     )
   
   ]
@@ -213,7 +213,7 @@ Palokaasujen luotiin kohdistama voima vaikuttaa luotiin aseen piipun pituisen ma
 == Yksinkertaiset koneet
 
 Yksinkertaiset koneet ovat mekaanisia laitteita, jotka muuttavat tarvittavan voiman suuntaa tai suuruutta, kun on tarkoituksena tehdä tietyn suuruinen työ. Alla olevassa esimerkissä on *väkipyörä*. Väkipyörän avulla voidaan muuttaa tarvittavan voiman suuntaa mutta nostamiseen tarvittava voima ei muutu.
-#numbered_example[
+#numbered-example[
 #grid(columns: (1.5fr, 1fr), gutter: 0em,[
   
 
@@ -243,7 +243,7 @@ Yksinkertaiset koneet ovat mekaanisia laitteita, jotka muuttavat tarvittavan voi
 #pagebreak()
 *Talja* on väkipyöristä koostuva systeemi, jonka avulla voidaan pienentää kappaleen nostamiseen tarvittavaa voimaa. Voiman pienentyminen ei tule kuitenkaan ilmaiseksi, työn tekemiseen tarvittava matka pienenee.
 
-#numbered_example[
+#numbered-example[
   #grid(columns: (2.2fr, 1fr), gutter: 1em,[
   
 
@@ -344,6 +344,6 @@ Kelvinit eroavat celsiusasteista siten että kelvinasteikon nollapiste on pienin
 
 == Aineen olomuodot
 
-Aine esiintyy tavallisimmin kolmessa olomuodossa, jotka ovat *kiinteä, neste* ja *kaasu*. Aineella on myös muitakin olomuotoja kuten plasma tai supraneste, jolla ei ole lainkaan "sisäistä kitkaa" eli viskositeetti. Suprajohde pysyy jatkuvasti liikkeessä eikä edes suostu pysymään astiassa vaan karkaa!
+Aine esiintyy tavallisimmin kolmessa olomuodossa, jotka ovat *kiinteä, neste* ja *kaasu*. Aineella on myös muitakin olomuotoja kuten plasma tai supraneste, jolla ei ole lainkaan "sisäistä kitkaa" eli viskositeettia. Suprajohde pysyy jatkuvasti liikkeessä eikä edes suostu pysymään astiassa vaan karkaa!
 
 #pagebreak()

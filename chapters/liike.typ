@@ -17,10 +17,10 @@ $
   "nopeus" = frac("matka", "aika")
 $
 
-#numbered_example[
+#numbered-example[
   100 metrin juoksun maailmanennätys on Usain Boltin nimissä. Hänen ennätysaikansa on 9,58 sekuntia. Usain Boltin nopeus 100 metrin matkalla voidaan laskea seuraavasti:
   $
-    frac("100 m", "9.58 s") = 10,438..."m"/"s" approx 10.4 med "m"/"s"
+    frac("100 m", "9.58 s") = 10.438..."m"/"s" approx 10.4 med "m"/"s"
   $
 ]
 
@@ -31,7 +31,7 @@ Edellä esitetty määritelmä kappaleen nopeudelle voidaan esittää käyttäm�
 #important[
   *Nopeuden määritelmä*:
   $
-    "nopeus" = frac("matka", "aika") quad => quad s = v/t
+    "nopeus" = frac("matka", "aika") quad => quad v = s/t
   $
   Yllä olevassa yhtälössä $v$ = nopeus, $t$ = aika ja $s$ = matka.
 ]
@@ -47,7 +47,7 @@ Edellä esitetty määritelmä kappaleen nopeudelle voidaan esittää käyttäm�
   Joskus yläkoulun fysiikan kirjoissa hifistellään käyttämällä erikseen termejä vauhti ja nopeus. Lyhyesti: Vauhti on *skalaarisuure*, jolla on ominaisuutena ainoastaan suuruus. Nopeus taas on *vektorisuure*, jolla on ominaisuuksina suuruus ja suunta. Yläkoulun materiaalissa näiden käsitteiden kanssa kikkailu on turhaa, sillä emme käsittele aihetta matemaattisesti kovin rigoröösisti. Tästä syystä nämä käsitteet eivät tuo lisäarvoa ymmärrykseen.
 ]
 
-#numbered_example[
+#numbered-example[
   Alicen kävelynopeus on n. 1,3 m/s. Lasketaan kuinka pitkän matkan Alice kävelee puolen tunnin aikana.
 
   $v = 1.3 med "m/s"$
@@ -59,7 +59,7 @@ Edellä esitetty määritelmä kappaleen nopeudelle voidaan esittää käyttäm�
   $
 ]
 
-#numbered_example[
+#numbered-example[
   Alicen kävelynopeus on n. 1,3 m/s. Lasketaan kuinka kauan Alicelta kuluu kävellä Alepaan, joka on 950 metrin päässä.
 
   $v = 1.3 med "m/s"$
@@ -73,7 +73,7 @@ Edellä esitetty määritelmä kappaleen nopeudelle voidaan esittää käyttäm�
 
 == Liikkeen lajit
 
-Liike voidaan luokitella eri lajeihin. Esimerkiksi kärpäsen pörrääminen sinne sun tänne on kolmiulotteista liikettä. Pöydällä kipittävän mutkittelevan leppäkertun liike taas on kaksiulotteista liikettä. Yläkoulun fysiikassa käsittelemme käytännössä vain yksiulotteista liikettä eli kappale liikkuu suoraviivaisesti.
+Liike voidaan luokitella eri lajeihin. Esimerkiksi kärpäsen pörrääminen sinne sun tänne on kolmiulotteista liikettä. Pöydällä kipittävän mutkittelevan leppäkertun liike taas on kaksiulotteista liikettä. Yläkoulun fysiikassa käsittelemme usein vain yksiulotteista liikettä eli tapausta, jossa kappale liikkuu suoraviivaisesti.
 
 Yleisemmin kappaleen liike voidaan luokitella kahteen ryhmään. Joko kappaleen liikkeessä ei tapahdu muutoksia (_tasainen liike_) tai sitten kappaleen liike muuttuu (_kiihtyvä liike_). Kiihtyväksi liikkeeksi luokitellaan myös liike, jossa liikesuunta muuttuu.
 
@@ -127,7 +127,7 @@ Kuvassa #fig_num(<uniform_motion>) on kipittävän leppäkertun sijainnit#footno
       (5, 15.0),
       (6, 17.8),
     )
-    #plot(
+    #cplot(
       xmin: 0, xmax: 6,
       ymin: 0, ymax: 18,
       xtick-step: 1,
@@ -159,13 +159,13 @@ Leppäkerttuesimerkin perusteella voidaankin päätyä seuraavanlaiseen havainto
 == Nopeuden määritys kuvaajasta
 
 Kun kappaleen liike on tasaista, _aika-matka_–koordinaatistosta voidaan määrittää kappaleen nopeus valitsemalla mikä tahansa piste suoralta, kunhan suora kulkee *origon* kautta. 
-#numbered_example[
+#numbered-example(label: <determine_velocity_from_graph>)[
 #figure(
   grid(
     columns: (1fr, 1fr),
     gutter: 0em,
     [
-      #plot(
+      #cplot(
       xmin: 0, xmax: 6,
       ymin: 0, ymax: 16,
       xtick-step: 1,
@@ -179,9 +179,16 @@ Kun kappaleen liike on tasaista, _aika-matka_–koordinaatistosta voidaan määr
       line-plot(
         ((4,0), (4, 10), (0, 10)), mark-size: 0, stroke: (paint: black, dash: "dashed")
       ),
+      scatter(
+        ((4, 10),),
+        mark: "*",
+        mark-fill: black,
+        mark-stroke: black,
+        mark-size: 0.1,
+      ),
       width: 5,
       height: 4.8
-    )
+      )
     ],[
       \
       
@@ -196,7 +203,7 @@ Kun kappaleen liike on tasaista, _aika-matka_–koordinaatistosta voidaan määr
       \
       #align(left)[
       *Vinkki!*      
-      Kannattaa aina valita *kiva piste#super[TM]*, eli piste, jonka koordinaatti on helppo lukea.
+      Kannattaa aina valita *kiva piste#super[TM]*, eli suoralta piste, jonka koordinaatti on helppo lukea.
     ]
     ], 
   )
@@ -209,30 +216,30 @@ Mikäli kappaleen liikettä halutaan kuvata täsmällisesti, ollaan kiinnostunei
 
 #important[Kappaleen *sijainnin* määrittämiseksi täytyy määritellä nollapiste eli *origo*, jonka suhteen kappaleen sijainti ilmoitetaan. ]
 
-Kappaleen sijainti on siis koordinaatti jonkinlaisessa valitussa koordinaatistossa. Matematiikan tunneilla koordinaatisto leijuu jonkinlaisessa abstraktiomaailmassa, fysiikan sovelluksissa koordinaatisto "lätkäistään" fysikaalisen systeemin päälle tarkoituksenmukaisesti. 
+Kappaleen sijainti on siis koordinaatti jonkinlaisessa _valitussa_ koordinaatistossa. Matematiikan tunneilla koordinaatisto leijuu jonkinlaisessa abstraktiomaailmassa, fysiikan sovelluksissa koordinaatisto "lätkäistään" fysikaalisen systeemin päälle tarkoituksenmukaisesti. 
 
 
 
 ],[
   #figure(
-    image("../images/motion/coordinate system.png"), caption: [Kaksiulotteisen liikkeen tapauksessa kappaleen sijainnin ilmoittamiseksi tarvitaan kaksi koordinaattiarvoa. Älä sekoita tätä kuvaajaa _aika-matka_–koordinaatiston kuvaajiin.]
+    image("../images/motion/coordinate system.png"), caption: [Kaksiulotteisen liikkeen tapauksessa kappaleen sijainnin ilmoittamiseksi tarvitaan kaksi koordinaattiarvoa. Älä sekoita tätä kuvaa _aika-matka_–koordinaatiston kuvaajaan.]
   )
 ])
 
-Jos liike on 2-ulotteista, kappaleen sijainnin määrittämiseksi tarvitaan kaksi koordinaattiarvoa. Kolmiulotteisen liikkeen tapauksessa tarvittaan kolme koordinaattiarvoa.
+Jos liike on 2-ulotteista, kappaleen sijainnin määrittämiseksi tarvitaan kaksi koordinaattiarvoa. Kolmiulotteisen liikkeen tapauksessa tarvitaan kolme koordinaattiarvoa.
 Tyydymme kuitenkin tarkastelemaan 1-ulotteista liikettä, eli suoraviivaista liikettä. Tällöin kappaleen koordinaatti ilmaisee kappaleen sijainnin ”lukusuoralla”.
 
 Alla on esimerkkinä 1-ulotteisesta liikkeestä kahden leppäkertun juoksukilpailu. Kuvattaessa ilmiötä on luontevaa päättää, että *origo* on punaisen leppäkertun lähtöpiste.
 
 #figure(pad(right: 3em,
-  image("../images/motion/uniform motion two lady bugs.png",width: 100%),), caption: [Kaksi leppäkerttua ottaa juoksukilpailun. Kuvassa on leppäkerttujen sijainnit *sekunnin välein* ensimmäisen 5 sekunnin aikana. Punaisen leppäkertun lähtöpiste on valittu *origoksi*.]
+  image("../images/motion/uniform motion two lady bugs.png",width: 90%),), caption: [Kaksi leppäkerttua ottaa juoksukilpailun. Mustalla leppäkertulla on 5 cm:n etumatka. Kuvassa on leppäkerttujen sijainnit *sekunnin välein* ensimmäisen 4 sekunnin aikana. Punaisen leppäkertun lähtöpiste on valittu *origoksi*. Pohdi, voiko leppäkertun sijainti olla negatiivinen?]
 
 )
 #figure(kind: image,
   grid(
-  columns: (1fr, 1fr),[
+  columns: (1fr, 1fr))[
     #set text(size: 9pt)
-    #v(1em)
+    #v(2em)
 
     #table(columns: (6em, 6em, 6em),
           stroke: 0.5pt,
@@ -243,16 +250,16 @@ Alla on esimerkkinä 1-ulotteisesta liikkeestä kahden leppäkertun juoksukilpai
           [2], [8], [11],
           [3], [12], [14],
           [4], [16], [17],
-          [5], [20], [20],
+
 
           )
 
 
     
-  ],[
-    #plot(
-      xmin: 0, xmax: 7,
-      ymin: 0, ymax: 30,
+  ][
+    #cplot(
+      xmin: 0, xmax: 6,
+      ymin: 0, ymax: 25,
       xtick-step: 1,
       ytick-step: 5,
       xlabel: "aika (s)",
@@ -271,7 +278,7 @@ Alla on esimerkkinä 1-ulotteisesta liikkeestä kahden leppäkertun juoksukilpai
         mark-size: 0.12,
       ),
       scatter(
-        ((0,5), (1,8), (2,11), (3,14), (4,17), (5, 20)),
+        ((0,5), (1,8), (2,11), (3,14), (4,17)),
         mark: "*",
         mark-fill: black,
         mark-stroke: black,
@@ -281,8 +288,7 @@ Alla on esimerkkinä 1-ulotteisesta liikkeestä kahden leppäkertun juoksukilpai
       height: 5.3
     )
     
-  ]
-), caption: [Punaisen ja mustan leppäkertun sijainnit taulukoituna ja kuvaaja. Huomaa että mustan leppäkertun liikettä kuvaava suora ei lähde origosta, sillä  sen sijainti ajanhetkellä 0 on 5 cm.  ]
+  ], caption: [Punaisen ja mustan leppäkertun sijainnit taulukoituna ja kuvaajana. Huomaa että mustan leppäkertun liikettä kuvaava suora ei lähde origosta, sillä  sen sijainti ajanhetkellä 0 on 5 cm.  ]
 )
 == Nopeus tietyllä aikavälillä
 
@@ -309,7 +315,7 @@ Esimerksiksi, jos tunnus $s$ tarkoittaa kappaleen _sijaintia_, tunnus $Delta s$ 
 )<uniform_motion_2>
 
 Tarkastellaan laskuesimerkkinä kuvan #fig_num(<uniform_motion_2>) leppäkerttua.
-#numbered_example[
+#numbered-example[
 Leppäkertun nopeus aikavälillä 4...8 s:
 
 sijainnin muutos: $Delta s = 14 "cm" - 8 "cm" = 6 "cm"$
@@ -320,7 +326,7 @@ nopeus:
 $
   v = frac(Delta s, Delta t) = frac(6 "cm", 4 "cm") =1.5 med "m"/"s"  
 $
-Nokkela lukija huomaaa, että leppäkertun liike on tasaista, joten tässä tilanteessa ei ole merkitystä millä aikavälillä nopeus määritetään.
+Nokkela lukija huomaa, että leppäkertun liike on tasaista, joten tässä tilanteessa ei ole merkitystä millä aikavälillä nopeus määritetään.
 ]
 
 #extra[
@@ -336,13 +342,13 @@ Nokkela lukija huomaaa, että leppäkertun liike on tasaista, joten tässä tila
 ]
 
 == Nopeuden määritys kuvaajasta - yleinen tapaus
-Tarkastellaan vielä miten nopeus tietyllä aikavälillä määritetään kuvaajasta. Huomaa, että tällä menetelmällä voidaan määrittää nopeus myös tapauksissa, joissa kappaleen sijainti ajanhetkellä 0 ei ole origossa.
-#numbered_example[
+Tarkastellaan vielä miten nopeus tietyllä aikavälillä määritetään kuvaajasta. Huomaa, että tällä menetelmällä voidaan määrittää nopeus myös tapauksissa, joissa kappaleen sijainti ajanhetkellä 0 on origossa (ks. esimerkki #example-ref(<determine_velocity_from_graph>)).
+#numbered-example[
 
 #grid(
   columns: (1fr, 1fr), gutter: 3em, [
 
-  #plot(
+  #cplot(
       xmin: 0, xmax: 6,
       ymin: 0, ymax: 16,
       xtick-step: 1,
@@ -350,7 +356,7 @@ Tarkastellaan vielä miten nopeus tietyllä aikavälillä määritetään kuvaaj
       xlabel: "aika (s)",
       ylabel: "sijainti (m)",
       show-grid: "both",
-      minor-grid-step: 5,
+      minor-grid-step: 1,
       axis-x-pos: "bottom",
       axis-y-pos: "left",
       (fn: x => 2*x + 4, stroke: blue + 1.5pt),
@@ -360,7 +366,7 @@ Tarkastellaan vielä miten nopeus tietyllä aikavälillä määritetään kuvaaj
       ),
 
       line-plot(((2, 4.5),),mark-size: 0, label: $Delta t = 3 "s"$),
-      line-plot(((4.2, 8.5),),mark-size: 0, label: $Delta s = 6 "m"$),
+      line-plot(((4.1, 8.5),),mark-size: 0, label: $Delta s = 6 "m"$),
       width: 6,
       height: 6
     )],[
@@ -383,22 +389,23 @@ Tarkastellaan vielä miten nopeus tietyllä aikavälillä määritetään kuvaaj
 ]
 Tätä menetelmää matematiikassa kutsutaan *kulmakertoimen* määrittämiseksi. Kulmakerroin voidaan siis määrittää kuvaajasta riippumatta siitä mitä kuvaaja esittää (kunhan kyseessä on suora).
 
-#numbered_example[
+#numbered-example[
 
 Oheinen kuvaaja esittää miten Tier-sähköpotkulaudalla tehdyn matkan hinta riippuu matkaan käytetystä ajasta. Määritetään kuvaajasta *kulmakerroin* ($k$).
 
 #grid(
     columns: (1fr, 1fr), gutter: 1.5em, [
   
-    #plot(
+    #cplot(
         xmin: 0, xmax: 10,
         ymin: 0, ymax: 4,
-        xtick-step: 1,
+        xtick-step: 2,
         ytick-step: 1,
+        ytick-label-step: 1,
         xlabel: "aika (min)",
         ylabel: "hinta (€)",
         show-grid: "both",
-        minor-grid-step: 4,
+        minor-grid-step: 2,
         axis-x-pos: "bottom",
         axis-y-pos: "left",
         (fn: x => 0.25*x + 1, stroke: blue + 1.5pt),
@@ -408,7 +415,7 @@ Oheinen kuvaaja esittää miten Tier-sähköpotkulaudalla tehdyn matkan hinta ri
         ),
   
         line-plot(((4.3, 1.6),),mark-size: 0, label: $Delta x = 4 "min"$),
-        line-plot(((8.1, 2.4),),mark-size: 0, label: $Delta y = 1 "€"$),
+        line-plot(((8.1, 2.3),),mark-size: 0, label: $Delta y = 1 "€"$),
         width: 6,
         height: 6
       )],[
@@ -418,7 +425,7 @@ Oheinen kuvaaja esittää miten Tier-sähköpotkulaudalla tehdyn matkan hinta ri
             k =frac(Delta y, Delta x)=frac(1 "€", 4 "min")= 0.25 med "€"/"min"
           $
         \
-        Saadun tuloksen yksikköä tutkailemalla huomaa että kulmakerroin on tässä tilanteessa sähköpotkulaudalla matkustamisen *minuuttihinta*.
+        Saadun tuloksen yksikköä tutkailemalla huomaa, että kulmakerroin on tässä tilanteessa sähköpotkulaudalla matkustamisen *minuuttihinta*.
 
         Huomaa että tällä kerralla tyydyttiin käyttämään geneerisiä#footnote[geneerinen = yleinen, yleisluonteinen] suureen tunnuksia $x$ ja $y$.
         
@@ -442,7 +449,7 @@ Aiemmat osiot käsittelivät ainoastaan tasaista liikettä. Nyt siirrämme miele
 #extra[#set text(size: 10pt)
   *Miksi liikesuunnan muutos on kiihtyvää liikettä?*
   
-  Jos tarkkoja ollaan, kappaleen nopeus on *vektorisuure*: nopeudella on *suuruus* ja *suunta*. Jos liikkeen suunta muuttuu, nopeusvektorin suunta muuttuu ts. nopeus muuttuu. Näin ollen myös se, että kappaleen liikesuunta muuttuu, luokitellaan kiihtyvyydeksi. Tässä materiaalissa kuitenkin nopeutta on käsitelty ainoastaan *skalaarisuureena*, eli suureena, jolla on vain yksi ominaisuus, suuruus. Myöhemmin käsiteltävät *Newtonin liikelait* antavat täsmällisenmmän merkityksen tälle jaottelulle.
+  Jos tarkkoja ollaan, kappaleen nopeus on *vektorisuure*: nopeudella on *suuruus* ja *suunta*. Jos liikkeen suunta muuttuu, nopeusvektorin suunta muuttuu, ts. nopeus muuttuu. Näin ollen myös se, että kappaleen liikesuunta muuttuu, luokitellaan kiihtyvyydeksi. Tässä materiaalissa kuitenkin nopeutta on käsitelty ainoastaan *skalaarisuureena*, eli suureena, jolla on vain yksi ominaisuus, suuruus. Myöhemmin käsiteltävät *Newtonin liikelait* antavat täsmällisenmmän merkityksen sille, miksi liikesuunnan muutoskin luokitellaan kiihtyvyydeksi.
 ]
 
 == Kiihtyvä liike koordinaatistossa
@@ -456,11 +463,11 @@ Aiemmat osiot käsittelivät ainoastaan tasaista liikettä. Nyt siirrämme miele
 columns(2)[
   #align(center)[*tasainen liike*]
   
-  #plot(
+  #cplot(
         xmin: 0, xmax: 10,
         ymin: 0, ymax: 10,
-        xtick-step: 1,
-        ytick-step: 1,
+        xtick-step: 2,
+        ytick-step: 2,
         xtick-labels: (),
         ytick-labels: (),
         show-origin: false,
@@ -479,14 +486,14 @@ columns(2)[
   #colbreak()
   #align(center)[*kiihtyvä liike (nopeus kasvaa)*]
   
-  #plot(
+  #cplot(
         xmin: 0, xmax: 10,
         ymin: 0, ymax: 10,
         xtick-labels: (),
         ytick-labels: (),
         show-origin: false,
-        xtick-step: 1,
-        ytick-step: 1,
+        xtick-step: 2,
+        ytick-step: 2,
         xlabel: "aika",
         ylabel: "matka / sijainti",
         show-grid: "both",
@@ -503,11 +510,11 @@ columns(2)[
 
 Alla olevassa kuvassa on havainnollisettu sitä, miten kuvaajasta voidaan päätellä, että kappaleen nopeus kasvaa, eli että kysessä on kiihtyvä liike.
 #figure(
-  plot(
+  cplot(
         xmin: 0, xmax: 10,
         ymin: 0, ymax: 10,
-        xtick-step: 1,
-        ytick-step: 1,
+        xtick-step: 2,
+        ytick-step: 2,
         xtick-labels: (),
         ytick-labels: (),
         show-origin: false,
@@ -529,12 +536,12 @@ Alla olevassa kuvassa on havainnollisettu sitä, miten kuvaajasta voidaan päät
 
         width: 4.5,
         height: 4.5
-      ), caption: [Mikäli tarkastellaan saman pituisia aikavälejä (2 ruutua) huomataan, että kappale kulkee aina sitä pitemmän matkan mitä enemmän aikaa on kulunut. Voidaan siis päätellä, että kappaleen nopeus kasvaa eli kyseessä on kiihtyvä liike.]
+      ), caption: [Mikäli tarkastellaan saman pituisia aikavälejä huomataan, että kappale kulkee aina sitä pitemmän matkan mitä enemmän aikaa on kulunut. Voidaan siis päätellä, että kappaleen nopeus kasvaa eli kyseessä on kiihtyvä liike.]
 )
 
 
 #figure(
-  plot(
+  cplot(
         xmin: 0, xmax: 6,
         ymin: 0, ymax: 15,
         xtick-step: 1,
@@ -610,10 +617,10 @@ Kiihtyvyys on suure, joka ilmoittaa *kuinka paljon kappaleen nopeus muuttuu yht�
 
 Suure kiihtyvyys ja erityisesti sen SI-järjestelmän mukainen yksikkö on alkuun hieman haastava ymmärtää. Tarkastelemme ensin suuretta käyttäen hyväksi arkipäiväisempiä yksiköitä.
 
-#numbered_example[
+#numbered-example[
   Auto lähtee paikoiltaan liikkeelle ja saavuttaa nopeuden 100 km/h viiden sekunnin aikana. Lasketaan auton kiihtyvyys.
 
-  Nopeuden muutos: $Delta s = 100 med"km"/"h" - 0 med "km"/"h" = 100 "km"/"h"$
+  Nopeuden muutos: $Delta s = 100 med"km"/"h" - 0 med "km"/"h" = 100 thin "km"/"h"$
   
   Aikaväli: $Delta t = 5 "s"$
 
@@ -647,7 +654,7 @@ $
 
 
 
-#numbered_example[
+#numbered-example[
   Auto liikkuu nopeudella 10 m/s. Autoilija aikoo ohittaa edellä kulkevan auton ja autoilija painaa kaasun pohjaan. 3,5 sekunnin kuluttua auton nopeus on 15 m/s. Lasketaan auton kiihtyvyys.
 
   $Delta v = 15 "m/s"-10 "m/s" = 5 "m/s"$ 
@@ -672,9 +679,9 @@ $
 #extra[
   *Fun fact!*
   #grid(columns: (3fr, 1fr), gutter: 1em, [
-  Miksi $Delta$, eli kreikan kielen iso d, on valittu aikoinaan kuvaamaan suureen muutosta#footnote[...älä sekoita tätä suomalaiseen laulajalegendaan (Danny)]? Oletettavasti, koska jonkin suureen muutos on yhtä suuri kuin kahden suuren arvon erotus, joka on englanniksi _difference_ ja latinaksi _differentia_. 
+  Miksi $Delta$, eli kreikan kielen iso d, on valittu aikoinaan kuvaamaan suureen muutosta#footnote[...älä sekoita tätä suomalaiseen laulajalegendaan (Iso D eli Danny)]? Oletettavasti, koska jonkin suureen muutos on yhtä suuri kuin kahden suuren arvon ero(tus), joka on englanniksi _difference_ ja latinaksi _differentia_. 
   
-  Delta taas tarkoittaa monessa kielessä _suistoa_, eli jokimuodostelmaa jonka isot joet tekevät laskeutuessaan mereen. Suisto on nimettu kreikan kielen kirjaimen mukaan. Kuvasta ehkä huomaat samankaltaisuuden kirjaimen ja luonnonmuodostelman välillä.], [
+  Delta taas tarkoittaa monessa kielessä _suistoa_, eli jokimuodostelmaa jonka jotkin isot joet tekevät laskeutuessaan mereen. Suisto on nimettu kreikan kielen kirjaimen mukaan. Kuvasta ehkä huomaat samankaltaisuuden kirjaimen ja luonnonmuodostelman välillä.], [
 
 
   #image("../images/motion/delta river.png", width: 100%)])
@@ -689,18 +696,18 @@ $
 ]
 Tasaisesti kiihtyvä liike on kiihtyvän liikkeen erityistapaus. Esimerkiksi putoavan kappaleen liike, mikäli kappaleeseen vaikuttava ilmanvastus ei ole merkittävän iso#footnote[toisin sanoen, kappaleella on melko pieni pinta-ala suhteessa sen massaan ja kappaleen nopeus ei ole vielä kovin suuri.], on tasaisesti kiihtyvää liikettä.
 
-_Aika-matka_-koordinaatiston kuvaajasta ei voida mitenkään nähdä (ainakaan silmämääräisesti) onko kyseessä tasaisesti kiihtyvä liike. Sen sijaan mikäli kyseessä on aika-nopeus-koordinaatisto, kyseessä on suora.
+_Aika-matka_-koordinaatiston kuvaajasta ei voida mitenkään nähdä (ainakaan silmämääräisesti) onko kyseessä tasaisesti kiihtyvä liike. Sen sijaan, mikäli kyseessä on aika-nopeus-koordinaatisto, kyseessä on suora.
 
 #important[
   Tasaisesti kiihtyvän liikkeen kuvaaja _aika-nopeus_–koordinaatistossa on *suora*.
 ]
 
-#numbered_example[
+#numbered-example[
   Määritetään *_aika-nopeus_-koordinaatiston* kuvaajasta kappaleen kiihtyvyys.
   #grid(
     columns: (1fr, 1fr), gutter: 1.5em, [
   
-    #plot(
+    #cplot(
         xmin: 0, xmax: 8,
         ymin: 0, ymax: 20,
         xtick-step: 1,
@@ -708,7 +715,7 @@ _Aika-matka_-koordinaatiston kuvaajasta ei voida mitenkään nähdä (ainakaan s
         ylabel: "nopeus (m/s)",
         xlabel: "aika (s)",
         show-grid: "both",
-        minor-grid-step: 4,
+        minor-grid-step: 1,
         axis-x-pos: "bottom",
         axis-y-pos: "left",
         (fn: x => 2*x + 2, stroke: blue + 1.5pt),
@@ -736,6 +743,55 @@ _Aika-matka_-koordinaatiston kuvaajasta ei voida mitenkään nähdä (ainakaan s
         Muistathan että tätä metodia kutsuttiin yleisesti *kulmakertoimen* määrittämiseksi.
   ])
   
-]
+]<using_symbols_page>
+#numbered-example(title: "Suureiden tunnusten kanssa pelaaminen", label: <using_symbols>)[
+  Tutkittiin vedenkeittimessä olevan veden lämpötilan muuttumista. Ajanhetkellä 10 s vedenkeitin kytkettiin päälle. Ajanhetkellä 60 s vedenkeitin saavutti 100 celsius-asteen lämpötilan. Lasketaan keskimääräinen lämpötilan kasvunopeus (yksikössä $degree"C/s"$).
 
+  Merkitään lämpötilan kasvunopeutta tunnuksella $r$ (engl. _*rate* of temperature increase_), lämpötilaa tunnuksella $T$ ja aikaa tunnuksella $t$.
+
+  #grid(columns: (1fr,1fr))[
+  Lämpötilan muutos:
+  
+  $Delta T = "100" thin degree"C" - "20" degree"C" = 80 thin degree"C" $
+
+  #v(0.8em)
+  
+  Aikaväli: 
+  
+  $Delta t = 60 "s" - 50 "s" = 10 "s"$
+  
+  #v(0.8em)
+  
+  Lämpötilan kasvunopeus:
+  $
+    r = frac(Delta T, Delta t) = frac(80 thin degree"C", "50 s") = 1.6 frac(degree"C ", "s")
+  $
+  ][
+  #cplot(
+      xmin: 0, xmax: 70,
+      ymin: 0, ymax: 110,
+      xtick-step: 10,
+      ytick-step: 10,
+      xlabel: [aika (s)],
+      ylabel: [lämpötila ($degree$C)],
+      show-grid: "both",
+      minor-grid-step: 1,
+      axis-x-pos: "bottom",
+      axis-y-pos: "left",
+      width: 6,
+      height: 5,
+      (fn: t => {
+        if t <= 10 {
+          20
+        } else if t >= 60 {
+          100
+        } else {
+          let u = (t - 10) / 50
+          20 + 80 * u * u * (3 - 2 * u)
+        }
+      }, domain: (0.5, 70))
+      )
+    ]
+    
+]
 #pagebreak()

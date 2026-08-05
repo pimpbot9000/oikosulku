@@ -177,7 +177,7 @@ Johtimillakin on resistanssi, mutta se on yleensä hyvin pieni verrattuna muiden
 #important[Mitä suurempi virtapiirin kokonaisresistanssi on, sitä pienemmän sähkövirran virtalähde saa aikaan.]
 
 #figure(
-    image("total resistance.png", width: 60%),
+    image("total resistance.png", width: 90%),
     caption: [
       Jos kaksi hehkulamppua kytketään sarjaan, niiden muodostama kokonaisresistanssi on suurempi kuin yksittäisen lampun resistanssi, joten piirissä kulkee pienempi sähkövirta.  
     ],) <total_resistance>
@@ -191,7 +191,7 @@ Johtimillakin on resistanssi, mutta se on yleensä hyvin pieni verrattuna muiden
   [
     
     
-    Tietyistä materiaaleista valmistetuilla johtimilla on resistanssi, joka on vakio ts. resistanssi ei riipu johtimen läpi kulkevan sähkövirran suuruudesta eikä lämpötilasta.
+    Tietyistä materiaaleista valmistetuilla johtimilla on resistanssi, joka on vakio, ts. resistanssi ei riipu johtimen läpi kulkevan sähkövirran suuruudesta eikä lämpötilasta.
 
     Tällaisista johdinmateriaaleista valmistetaan vastuksia, jotka ovat elektroniikan komponentteja, joilla on vain yksi elämäntehtävä: niillä on tietyn suuruinen resistanssi. Vastuksia käytetään virtapiireissä useimmiten virtapiirin toiminnan säätämiseen. 
     
@@ -199,7 +199,7 @@ Johtimillakin on resistanssi, mutta se on yleensä hyvin pieni verrattuna muiden
 
     == Sähkövirran ilmeneminen
 
-  Miten sähkövirta ilmenee? Jotta sähkövirta voitaisiin ylipäätään mitata, sähkövirta täytyy jollain tavalla epäsuorasti havaita.
+  Miten sähkövirta ilmenee? Jotta sähkövirta voidaan ylipäätään mitata, sähkövirta täytyy jollain tavalla epäsuorasti havaita.
   
   #set text(size: 9.5pt)
     - Sähkövirta *kuumentaa* johtimia ja komponentteja. Useimmiten tästä on haittaa sillä se aiheuttaa energiahäviöitä sähkönsiirrossa ja sähkölaitteissa.
@@ -227,8 +227,8 @@ Johtimillakin on resistanssi, mutta se on yleensä hyvin pieni verrattuna muiden
     #figure(
     pad(top: 10pt, image("resistor symbol.png", width: 90%)),
     caption: [
-      ylhäällä: vastuksen piirikaaviosymboli (IEC-standardi.)\
-      alhaalla: erityisesti Amerikassa käytettävä symboli vastukselle. Make Schematic Symbols Great Again!
+      _Ylhäällä_: vastuksen piirikaaviosymboli (IEC-standardi.) 
+      _Alhaalla_: rityisesti Amerikassa käytettävä symboli vastukselle. Make Schematic Symbols Great Again!
     ],) <resisstors2>
   ]
 )
@@ -267,7 +267,7 @@ Tässä osiossa esitellään matemaattinen määritelmä resistanssille. Jotta m
   Tarkastellaan esimerkkinä luomubanaaneita ja niiden hintaa. Banaanien määrä (kg) ja hinta (€) ovat mitä ilmeisimmin suoraan verrannolliset, sillä jos banaanien määrä kaksinkertaistuu, myös hinta kaksinkertaistuu.
 
   #figure(
-    plot(
+    cplot(
       xmin: 0, xmax: 5,
       ymin: 0, ymax: 10,
       xlabel: "määrä (kg)",
@@ -280,7 +280,8 @@ Tässä osiossa esitellään matemaattinen määritelmä resistanssille. Jotta m
       scatter(
         ((2, 4),),
         mark: "*",
-        mark-fill: blue,
+        mark-fill: black,
+        mark-stroke: black,
         mark-size: 0.1,
       ),
 
@@ -336,7 +337,7 @@ Vastuksen jännitehäviön ja sen läpi kulkevan sähkövirran välistä riippuv
     ],) <ohms_law_measurement>
     
 #figure(
-    plot(
+    cplot(
       xmin: 0, xmax: 0.35,
       xtick-step: 0.05,
       xtick-label-step: 2,      
@@ -358,16 +359,22 @@ Vastuksen jännitehäviön ja sen läpi kulkevan sähkövirran välistä riippuv
       
       scatter(
         ((0.2, 3),),
-        mark: "square*",
-        mark-fill: blue,
-        mark-size: 0.15,
+        mark: "*",
+        mark-fill: black,
+        mark-stroke: black,
+        mark-size: 0.1,
+      ),
+      line-plot(
+        ((0.2,0), (0.2, 3), (0, 3)), mark-size: 0, stroke: (paint: black, dash: "dashed")
       ),
       width: 6, height: 5.5
-    ), caption: [Tutkitun vastuksen läpi kulkevan sähkövirran ja jännitehäviön välinen riippuvuus. Mittauspisteisiin (punaiset pyöreät pisteet) on sovitettu origon kautta kulkeva suora. Suureet ovat siis *suoraan verrannolliset*. Suoralta valitun pisteen (sininen neliö) avulla on määritetty errannollisuuskertoimen arvo] 
+    ), caption: [Tutkitun vastuksen läpi kulkevan sähkövirran ja jännitehäviön välinen riippuvuus. Mittauspisteisiin on sovitettu origon kautta kulkeva suora. Suureet ovat siis *suoraan verrannolliset*. Suoralta valitun pisteen avulla on määritetty verrannollisuuskertoimen arvo] 
   )<current_vs_voltage>
   
-  #colbreak()
   Kun tutkitaan vastusta edellä kuvatulla tavalla, päädytään seuraavaan havaintoon:
+
+  
+  #colbreak()
   
   #important[Vastuksen läpi kulkeva sähkövirta ja vastuksen jännitehäviö ovat siis *suoraan verrannolliset*.
   Tiedetään siis, että jännitteen ja sähkövirran välinen riippuvuus voidaan esittää muodossa:
@@ -386,7 +393,7 @@ Vastuksen jännitehäviön ja sen läpi kulkevan sähkövirran välistä riippuv
 
   Määritetään kuvan #fig_num(<current_vs_voltage>) perusteella verrannollisuuskerroin: 
   
-  Valitaan piste (0,2 A, 3 V) *suoralta*#footnote[Ei siis valita yksittäistä mittauspistettä. Mitä pointtia koko suoran piirtämisessä muuten olisi?] (sininen neliö kuvassa).  Verrannollisuuskertoimen arvoksi saadaan
+  Valitaan piste (0,2 A, 3 V) *suoralta*#footnote[Ei siis valita yksittäistä mittauspistettä. Mitä pointtia koko suoran piirtämisessä muuten olisi?] Verrannollisuuskertoimen arvoksi saadaan
 
   $
   k = y/x = "jännite"/"sähkövirta" = frac("3 V", "0,2 A") = 15 "V"/"A". 
@@ -404,6 +411,8 @@ Vastuksen jännitehäviön ja sen läpi kulkevan sähkövirran välistä riippuv
       Verrannollisuuskertoimen yksikkö on _volttia (yhtä) ampeeria kohti_.
       
       Mitä suurempi jännitteen (V) tulee olla, että saadaan aikaan yhden ampeerin (A) suuruinen sähkövirta, sitä suurempi on vastuksen kyky vastustaa sähkövirtaa, get it?
+
+      Jos olisi kaksi vastusta, joille saataisiin  verrannollisuuskertoimien arvoiksi 10 V/A ja 20 V/A, jälkimmäisen vastuksen napojen välillä pitäisi olla kaksinkertainen jännite että vastuksen läpi kulkisi yhden ampeerin suuruinen sähkövirta. Jälkimmäinen vastus siis vastustaa enemmän sähkövirtaa.
   ]
   }
 ]
@@ -453,7 +462,7 @@ Ohmin lakia voidaan siis soveltaa yksittäiseen komponenttiin, mutta myös koko 
     ],) <applying_ohms_law>
 #pagebreak()
 Alla on muutamia laskuesimerkkejä, joissa sovelletaan Ohmin lakia.
-#numbered_example[
+#numbered-example[
   Virtapiirin lähdejännite on 9,0 V ja piirin kokonaisresistanssi on 330 $Omega$. Lasketaan piirissä kulkeva sähkövirta.
 
   $U = 9.0 "V"$\
@@ -465,7 +474,7 @@ Alla on muutamia laskuesimerkkejä, joissa sovelletaan Ohmin lakia.
   _Huomaa, että vastaus on ilmoitettu usein käytettävänä ampeerin kerrannaisyksikkönä milliampeereina_.
 ]
 
-#numbered_example[
+#numbered-example[
   Vastuksen jännitehäviö on 2,0 volttia ja vastuksen läpi kulkee 15 mA suuruinen sähkövirta. Lasketaan vastuksen resistanssi.
 
   $U = 2","0 "V"$\
@@ -478,7 +487,7 @@ Alla on muutamia laskuesimerkkejä, joissa sovelletaan Ohmin lakia.
   _Huomaa, että yksiköt muutetaan laskuissa perusyksikköön ennen varsinaista laskua, eli tässä tilanteessa milliampeerit ampeereiksi_.
 ]
 
-#numbered_example[
+#numbered-example[
   #grid(
   columns: (1fr, 4.5cm),
   gutter: 8mm,
@@ -522,7 +531,7 @@ Alla on muutamia laskuesimerkkejä, joissa sovelletaan Ohmin lakia.
   
 ]
 
-  #numbered_example[
+  #numbered-example[
   *Sarjaan kytkettyjen* vastusten kokonaisresistanssi:
     #figure(
     image("total resistance series.png", width: 70%),
@@ -546,7 +555,7 @@ Vastusten rinnankytkennästä käsittelemme vain tapauksen, jossa rinnankytketyi
 
 
 
-#numbered_example[
+#numbered-example[
   
   Rinnankytkettyjen vastusten kokonaisresistanssi:
 
@@ -581,7 +590,7 @@ Vastusten rinnankytkennästä käsittelemme vain tapauksen, jossa rinnankytketyi
     )
 Tarkastellaan vielä kytkentää, joka koostuu sekä sarjaan että rinnankytkennästä.
 
-#numbered_example[
+#numbered-example[
   Lasketaan kytkennän kokonaisresistanssi.
 
   #figure(
@@ -616,7 +625,7 @@ Tarkastellaan vielä kytkentää, joka koostuu sekä sarjaan että rinnankytkenn
 
 
 
-#numbered_example[
+#numbered-example[
   Esimerkkejä paristosysteemeistä ja niiden lähdejännitteistä.
   
   #figure(
@@ -628,7 +637,7 @@ Tarkastellaan vielä kytkentää, joka koostuu sekä sarjaan että rinnankytkenn
 
 
 
-#numbered_example[
+#numbered-example[
   Lasketaan kuvan virtapiirissä kulkeva sähkövirta, jos yksittäisen pariston lähdejännite on 1,5 volttia ja yksittäisen vastuksen resistanssi on 330 ohmia.
 
   #grid(
@@ -678,7 +687,7 @@ Tarkastellaan vielä kytkentää, joka koostuu sekä sarjaan että rinnankytkenn
   #figure(
     image("whats wrong with this 1.png", width: 70%),
     caption: [
-      _Vasemmalla_: Kytkentä on oikosulku, koska sähkövirta pääsee ohittamaan molemmat lamput. _Oikealla_: Vasen lamppu on _ohitettu_ johtimella. Kaikki sähkövirta kiertää johtimen kautta lampun sijasta eli vasen lamppu ei pala lainkaan. Tämänkin voidaan ajatella olevan oikosulku vaikka koko piiri ei olekaan oikosulussa. 
+      _Vasemmalla_: Kytkentä on oikosulku, koska sähkövirta pääsee ohittamaan molemmat lamput. _Oikealla_: Vasen lamppu on _ohitettu_ johtimella. Kaikki sähkövirta kiertää johtimen kautta lampun sijasta eli vasen lamppu ei pala lainkaan. 
       
     ]
   )<whats_wrong_1>
