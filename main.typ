@@ -10,7 +10,7 @@
 
 #set text(font: "IBM Plex Sans", weight: "regular")
 #outline(title: [
-  Oikosulku
+  Liike
   
   \
 ])
@@ -23,13 +23,20 @@
 
 //#include "lukijalle.typ"
 
-
+//#include "chapters/työ.typ"
 //#include "chapters/fysiikka luonnontieteenä.typ"
 //#include "exercises/fysiikka luonnontieteenä/fysiikka luonnontieteenä.typ"
-#include "chapters/liike.typ"
-#include "exercises/liike/exercises.typ"
-//#include "chapters/vuorovaikutus ja voima.typ"
+//#include "exercises/fysiikka luonnontieteenä/extra-exercises.typ"
+//#include "chapters/fysiikan peruskäsitteet.typ"
+//#include "chapters/liike-esipuhe.typ"
+//#include "chapters/liike.typ"
+//#include "chapters/motion.typ"
+//#include "exercises/liike/exercises.typ"
+//#include "exercises/liike/excercises en.typ"
+//#pagebreak()
+//#include "chapters/liike-sanasto.typ"
+#include "chapters/vuorovaikutus ja voima.typ"
 //#include "chapters/energia.typ"
-#include "circuits.typ"
-#include "power and energy.typ"
-#include "appendix.typ"
+//#include "circuits.typ"
+//#include "power and energy.typ"
+//#include "appendix.typ"

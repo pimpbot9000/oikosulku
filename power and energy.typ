@@ -30,9 +30,9 @@ Sähkövirran avulla voidaan siirtää energiaa. Virtapiirissä energia siirtyy 
 ]
 
 #figure(
-  image("images/electric grid and transformer.svg", width: 80%),
+  image("images/electic grid and transformer.png", width: 90%),
   caption: [
-    _Vasemmalla_: Voimaloissa sähkövirtaa tuotetaan generaattorien avulla, joka muuttaa liikkeen sähkövirraksi. Kantaverkossa jännite nostetaan hyvin suureksi, jotta sähköverkon energiahäviöt saadaan minimoitua. Kodin sähkölaitteissa alkuperäisen energialähteen energia muuttuu eri energialajeiksi. _Oikealla_: Muuntaja kaikessa yksinkertaisuudessaan koostuu kahdesta käämistä ja rautasydämestä.
+    _Vasemmalla_: Voimaloissa sähkövirtaa tuotetaan generaattorien avulla, joka muuttaa liikkeen sähkövirraksi. Kodin sähkölaitteissa alkuperäisen energialähteen energia muuttuu eri energialajeiksi. _Oikealla_: Muuntaja kaikessa yksinkertaisuudessaan koostuu kahdesta käämistä ja rautasydämestä.
   ],
 ) <electric_grid_transformer>
 
@@ -65,7 +65,7 @@ Energian (tunnus: $E$) SI-järjestelmän mukainen yksikkö on joule (J). Teho (t
 ]
 
 Sähkölaitteiden tapauksessa käytetään termiä sähköteho. Jos esimerkiksi vedenkeittimen sähköteho on 2000 W, sen yhden minuutin aikana kuluttama energia voidaan laskea seuraavasti:
-
+#v(1em)
 #numbered-example[
   $t = 1 "min" = 60 "s"$\
   $P = 2000 "W" = 2000 thin frac("J","s")$\
@@ -73,11 +73,11 @@ Sähkölaitteiden tapauksessa käytetään termiä sähköteho. Jos esimerkiksi 
   E = P dot t = 2000 thin frac("J","s") dot 60 "s" = 120 thin 000 "J" = 120 "kJ"
   $
 ]
-
+#v(1em)
 Mitä suurempi sähkölaitteen sähköteho on, sitä voimakkaammin sähkölaite esimerkiksi lämmittää tai valaisee. Kaikkien sähkölaitteiden (tai yleisemmin koneiden) tapauksessa vain osa laitteen käyttämästä energiasta muuttuu siksi energianlajiksi, josta on laitteen käyttötarkoituksen kannalta hyötyä. 
 Koneiden ja laitteiden energiatehokkuutta kuvataan suureen *hyötysuhde* avulla, joka ilmoitetaan prosentteina. 
 
-Esimerkiksi LED-lampun hyötysuhde on n. 20–40 %. Loput LED-lampun kuluttamasta energiasta muuttuu lämmöksi. Polttomoottorinkin hyötysuhde on vaivaiset 25 % eli vain näin suuri osa polttoaineen palaessa (tai räjähtäessä) vapautuvasta lämpöenergiasta muuttuu liike-energiaksi.
+Esimerkiksi LED-lampun hyötysuhde on n. 20–40 %. Loput LED-lampun kuluttamasta energiasta muuttuu lämmöksi. 
 
 == Joulen laki
 
@@ -93,7 +93,7 @@ Joulen lain avulla voidaan laskea sähköteho, mikäli jännite ja sähkövirran
 ]
 
 Joulen lain avulla voidaan laskea esimerkiksi sähkölaitteen sähköteho tai virtapiirin yksittäisen komponentin sähköteho. Jälkimmäisessä tapauksessa $U$ on komponentin jännitehäviö.
-
+#v(1em)
 #numbered-example[
   Samsungin laturin ulostulon jännite on 5 V ja teho on 10 wattia. Lasketaan latausvirta.
 
@@ -106,6 +106,7 @@ Joulen lain avulla voidaan laskea esimerkiksi sähkölaitteen sähköteho tai vi
   $
 ]
 
+#v(1em)
 #numbered-example[
   Vedenkeitin on kytketty 230 voltin verkkojännitteeseen. Jos vedenkeittimen lämmitysvastuksen resistanssi on 45 $Omega$, laske kuinka suuri on vedenkeittimen sähköteho.
 
@@ -124,11 +125,13 @@ Joulen lain avulla voidaan laskea esimerkiksi sähkölaitteen sähköteho tai vi
   $
   
 ]
+#v(1em)
 #columns(1)[
-”Sähkön” eli kulutetun energian hinta muodostuu kuluttajalle kahdesta eri asiasta: siirtomaksusta ja kulutetun energian määrästä. Siirtomaksua ei kuluttaja voi kilpailuttaa vaan siirtomaksun määrittelee aina paikallinen sähköyhtiö, joka ylläpitää paikallista sähköverkkoa. Hinnoittelussa käytetään energialle yksikköä kWh (kilowattitunti). Varsinaisen energian voi ostaa erilaisilta sähköä myyviltä yrityksiltä, joiden kanssa tulee olla varovainen, koska osa harrastaa aggressiivista tai muuten vain kyseenalaista telemarkkinointia! 
+”Sähkön” eli energian hinta muodostuu kuluttajalle kahdesta eri asiasta: siirtomaksusta ja kulutetun energian määrästä. Siirtomaksua ei kuluttaja voi kilpailuttaa vaan siirtomaksun määrittelee aina paikallinen sähköyhtiö, joka ylläpitää paikallista sähköverkkoa. Hinnoittelussa käytetään energialle yksikköä kWh (kilowattitunti). Varsinaisen energian voi ostaa erilaisilta sähköä myyviltä yrityksiltä, joiden kanssa tulee olla varovainen, koska osa harrastaa aggressiivista tai muuten vain kyseenalaista telemarkkinointia! 
 
 Vuonna 2024 sähkön hinta (siirtomaksu + energia) oli keskimäärin noin 15–20 snt/kWh. 
 ]
+#pagebreak()
 == Kilowattitunti on energian yksikkö
 
 Kilowattitunti (kWh) on energian yksikkö, jota käytetään usein SI-järjestelmän yksikön (J = joule) sijasta, sillä kilowattitunti on käytännöllisempi yksikkö. Seuraavista laskuesimerkistä ilmenee syy miksi.
@@ -186,7 +189,7 @@ Alla vielä esimerkki sille miten yksiköiden kanssa voidaan pelata hieman eri t
   
 
 Tilanteissa, joissa kilowattituntikin on turhan pieni energian yksikkö, käytetään suureen wattitunti (Wh) eri kerrannaisyksiköitä megawattitunti (MWh), gigawattitunti (GWh) tai terawattitunti (TWh). Esimerkiksi vuonna 2024 suomessa sähköä tuotettiin noin 80 terawattituntia (tera = $10^12$). 
-
+#pagebreak()
 == Ottoteho, antoteho ja hyötysuhde
 #columns(2)[
 Käsitellään vielä laitetta, joka on kaikille arkielämästä tuttu ja jolla on 2 tehtävää. Kännykän laturi muuntaa verkkojännitteen (Suomessa 230 V) 5–9 volttiin, riippuen laturista ja toisaalta laturi muuttaa vaihtovirran tasavirraksi eli toimii AC/DC-muuntimena. 

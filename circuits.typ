@@ -235,30 +235,57 @@ Johtimillakin on resistanssi, mutta se on yleensä hyvin pieni verrattuna muiden
 #pagebreak()
 = Resistanssi ja Ohmin laki
 
-Tässä osiossa esitellään matemaattinen määritelmä resistanssille. Jotta määritelmä voidaan kunnolla ymmärtää, käydään aluksi läpi matemaattinen riippuvuustyyppi nimeltä suoraan verrannollisuus osioissa 3.1 ja 3.2. Osiossa 3.3 esitellään miten Ohmin lakiin voidaan päätyä kokeellisen tutkimuksen perusteella.
+Tässä osiossa esitellään matemaattinen määritelmä resistanssille. Jotta määritelmä voidaan kunnolla ymmärtää, käydään aluksi läpi matemaattinen riippuvuustyyppi nimeltä suoraan verrannollisuus osioissa 3.1 ja 3.2. Ohmin laki käydään läpi osiossa 3.3.
 == Suoraan verrannollisuus
 
 
 
 #important[ #set text(size: 10pt)
+
+#grid(columns: (1.7fr, 1fr), gutter: 1.5em)[
 *Jos suureet $x$ ja $y$ ovat suoraan verrannolliset:*\
 
 - Suureiden välistä riippuvuutta esittävä kuvaaja on *origon kautta kulkeva suora*.
 
 - Suureen $x$ $n$-kertaistuessa myös suure $y$ $n$-kertaistuu. 
 
-- Suureiden suhde on vakio:
+- *Suureiden suhde on vakio:*
 
   $
     y/x="vakio"
   $
-  Tätä vakiota kutsutaan nimellä *verrannollisuuskerroin*. Merkitään tätä tunnuksella $k$.
+  Vakiota kutsutaan nimellä *verrannollisuuskerroin*. Merkitään tätä vakiota tunnuksella $k$.
 
 - Kun yllä olevaa vakiota eli verrannollisuuskerrointa merkitään muuttujakirjaimella $k$, voidaan suureiden $x$ ja $y$ välinen riippuvuus esittää muodossa
 
   $
     y = k dot x.
   $
+][
+  #v(1.4em)
+  $
+    y = k dot x
+  $
+  #cplot(
+      xmin: 0, xmax: 5,
+      ymin: 0, ymax: 10,
+      xlabel: "x",
+      ylabel: "y",
+      show-grid: "both",
+      minor-grid-step: 1,
+      axis-x-pos: "bottom",
+      axis-y-pos: "left",
+      (fn: x => 2.0*x, stroke: blue + 1.5pt),
+      width: 4.6,
+      height: 4.5,
+      xtick-step: 1,
+      ytick-step: 2,
+      xtick-label-step: 20,
+      ytick-label-step: 20,
+      show-origin: false,
+    )
+      
+]
 ]
 
 == Esimerkki suoraan verrannollisuudesta
@@ -288,8 +315,8 @@ Tässä osiossa esitellään matemaattinen määritelmä resistanssille. Jotta m
       line-plot(
           ((2,0), (2, 4), (0, 4)), mark-size: 0, stroke: (paint: black, dash: "dashed")
         ),
-      width: 6,
-      height: 6
+      width: 5.5,
+      height: 5
       
     ), caption: [Luomubanaanien määrän ja hinnan välinen riippuvuus. Kuvaan merkityn pisteen avulla on laskettu verrannollisuuskertoimen arvo.] 
   )<bananas>
@@ -406,13 +433,14 @@ Vastuksen jännitehäviön ja sen läpi kulkevan sähkövirran välistä riippuv
   
   #context{
     extra[
-      *Extra:* Miten yksiköstä näkee, että kyseessä on resistanssi?
+      
+      Miten yksiköstä näkee, että kyseessä on resistanssi?
       
       Verrannollisuuskertoimen yksikkö on _volttia (yhtä) ampeeria kohti_.
       
       Mitä suurempi jännitteen (V) tulee olla, että saadaan aikaan yhden ampeerin (A) suuruinen sähkövirta, sitä suurempi on vastuksen kyky vastustaa sähkövirtaa, get it?
 
-      Jos olisi kaksi vastusta, joille saataisiin  verrannollisuuskertoimien arvoiksi 10 V/A ja 20 V/A, jälkimmäisen vastuksen napojen välillä pitäisi olla kaksinkertainen jännite että vastuksen läpi kulkisi yhden ampeerin suuruinen sähkövirta. Jälkimmäinen vastus siis vastustaa enemmän sähkövirtaa.
+      Jos on kaksi vastusta, joille saadaan  verrannollisuuskertoimien arvoiksi 10 V/A ja 20 V/A, jälkimmäisen vastuksen napojen välillä pitäisi olla kaksinkertainen jännite että vastuksen läpi kulkisi yhden ampeerin suuruinen sähkövirta. Jälkimmäinen vastus siis vastustaa enemmän sähkövirtaa.
   ]
   }
 ]
@@ -609,7 +637,8 @@ Tarkastellaan vielä kytkentää, joka koostuu sekä sarjaan että rinnankytkenn
   R_("kok") = frac(1, 1/R_1 + 1/R_2 + 1/R_3 + 1/R_4 + 1/R_5) 
   $
   
-
+  #pagebreak()
+  
   == Paristosysteemit
   #columns(2)[
   Paristoja voidaan kytkeä joko sarjaan tai rinnan.   
@@ -662,7 +691,7 @@ Tarkastellaan vielä kytkentää, joka koostuu sekä sarjaan että rinnankytkenn
 ]
 
 #extra[
-  *Hyvä tietää!*\
+  *Hyvä tietää*\
   Paristoilla, joita kytketään rinnan, tulee olla sama lähdejännite. Tästä syystä kaukosäätimeen tulee vaihtaa kaikki paristot kerralla. Älä sekoita vanhoja ja uusia paristoja! Vanhojen paristojen jännite on pienempi kuin uusien.
 ]
 

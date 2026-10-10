@@ -5,11 +5,11 @@
 
 #grid(
   columns: (2fr, 1fr),
-  gutter: 1em,
+  gutter: 0.5em,
   [
     #important[Fysiikka on eksakti, *kokeellinen luonnontiede*, joka tutkii luonnon peruslakeja eli fysiikan lakeja.] Eksaktius eli täsmällisyys tarkoittaa sitä, että fysiikan lait esitetään *matematiikan* avulla. 
     
-    Näiden matemaattisten mallien avulla voidaan tehdä täsmällisiä ja kvantitatiivisia#footnote[Kvantitatiivinen eli "määrällinen" tarkoittaa sitä, että ennusteet ovat lukuarvoja, ei esimerkiksi että "ennusteeni mukaan tämä tykin ammus lentää tosi pitkälle". Tosi pitkälle on kvalitatiivinen eli "laadullinen" määritelmä.] ennusteita. Kokeellisuus tarkoittaa sitä, että fysiikan tieto perustuu kokeisiin eli järjestelmällisesti suoritettuihin tutkimuksiin. 
+    Näiden matemaattisten mallien avulla voidaan tehdä täsmällisiä ja kvantitatiivisia#footnote[Kvantitatiivinen eli "määrällinen" tarkoittaa sitä, että ennusteet ovat lukuarvoja, ei esimerkiksi että "ennusteeni mukaan tämä tykin ammus lentää tosi pitkälle".] ennusteita. Kokeellisuus tarkoittaa sitä, että fysiikan tieto perustuu kokeisiin eli järjestelmällisesti suoritettuihin tutkimuksiin. 
        
     #important[
     Fysiikka käsittelee perustavanlaatuisimpia luonnonilmiöitä, joita ovat esimerkiksi *lämpö, ääni, valo, liike, sähkö, magnetismi *ja* säteily*. 
@@ -28,14 +28,13 @@
     Tieteellisen menetelmän periaatteita:
     
     
-    1.	*Kokeellisuus ja havainnot*: Tieto perustuu havaintoihin, mittauksiin ja systemaattiseen tutkimukseen.
-    2.	*Kriittisyys*: Mikään tieto ei ole kiveen hakattu totuus!
-    3.	*Objektiivisuus*: Tieteellinen tieto ei ole mielipidekysymys.
-    4.	*Toistettavuus*: Tutkimusprosessin tulee olla kuvattu niin, että muut tutkijat voivat toistaa tutkimuksen ja arvioida sen tuloksia.
+    -	*Kokeellisuus ja havainnot*: Tieto perustuu havaintoihin, mittauksiin ja systemaattiseen tutkimukseen.
+    -	*Objektiivisuus*: Tieteellinen tieto ei ole mielipidekysymys.
+    -	*Toistettavuus*: Tutkimusprosessin tulee olla kuvattu niin, että muut tutkijat voivat toistaa tutkimuksen ja arvioida sen tuloksia.
   ]
     
 ],[
-  #let portrait_width = 70%
+  #let portrait_width = 65%
 
   #figure(
     image("../images/intro to physics/haitham.jpg", width: portrait_width),
@@ -65,7 +64,7 @@
   columns: (2fr, 0.80fr),
   gutter: 1.5em,
   [
-  \
+  #v(0.5em)
   *#underlined[1600-luku – Kokeellinen fysiikka syntyy]*
   
   *Galileo Galilei* osoitti, että luonnon ilmiöitä voidaan tutkia järjestelmällisesti kokeiden ja mittausten avulla ja kuvata niitä matematiikan avulla. *Isaac Newton* puolestaan löysi ensimmäiset yleispätevät lait, jotka kuvaavat kappaleiden liikettä mukaan lukien taivaankappaleiden liikkeet.
@@ -105,7 +104,7 @@
     )
 
     #figure(
-      image("../images/intro to physics/CERN.jpg", width: history_images_width), caption: [Euroopan hiukkastutkimuskeskuksen (CERN) hiukkaskiihdyttimessä törmäytetään alkeishiukkasia lähes valonnopeudella toisiinsa. Näin pyritään tutkimaan alkeishiukkasten välisiä perusvuorovaikutuksia ja niiden koostumusta.]
+      image("../images/intro to physics/CERN.jpg", width: history_images_width), caption: [Euroopan hiukkastutkimuskeskuksen (CERN) hiukkaskiihdyttimessä törmäytetään alkeishiukkasia lähes valonnopeudella toisiinsa. Näin tutkitaan luonnon perusvuorovaikutuksia.]
     )
   ]
 )
@@ -130,13 +129,11 @@
 
     Jotta suureiden välinen riippuvuus voitaisiin paremmin hahmottaa, mittauspisteet piirretään koordinaatistoon.
 
-    #important[Kun mittauspisteet piirretään koordinaatistoon, pisteisiin *sovitetaan* jonkinlainen *käyrä* tai suora. Käyrä kuvaa suureiden välistä riippuvuutta.
+    #important[Kun mittauspisteet piirretään koordinaatistoon, pisteisiin *sovitetaan* jonkinlainen *käyrä* tai suora. Sovitettu käyrä tai suora kuvaa suureiden välistä riippuvuutta.
     ]
     Käyrän sovittamisen ideaa käydään tarkemmin läpi myöhemmin.
 
-    #underlined[*Entä sitten?*]
-
-    Nyt kun tiedetään miten jousi "käyttäytyy", voidaan jousen avulla esimerkiksi "punnita" esineitä. Mikäli jouseen laitetaan roikkumaan esine ja jousen venymä on 9 cm, voidaan kuvaajasta lukea esineen massa (n. 125 g). Pohdi, voidaanko jousen avulla punnita mikä tahansa kappale.
+    Nyt kun tiedetään miten jousi "käyttäytyy", voidaan jousen avulla esimerkiksi "punnita" esineitä. Mikäli jouseen laitetaan roikkumaan esine ja jousen venymä on 9 cm, voidaan kuvaajasta lukea esineen massa (n. 125 g). 
 
     #let spring_data = (
       (0, 0),
@@ -170,13 +167,13 @@
         ((125,0), (125, 9), (0, 9)), mark-size: 0, stroke: (paint: black, dash: "dashed")
       ),
       width: 5,
-      height: 4.5
+      height: 4.8
       
     ), caption: [Kuvaajan avulla voidaan tehdä ennusteita.] )
   ],[
     #align(center)[*1. Mittauksen suoritus*]
     #figure(
-      image("../images/intro to physics/springs.png", width: 80%),
+      image("../images/intro to physics/springs.png", width: 85%),
       caption: [Mitataan jousen venymä eripainoisilla punnuksilla.]
     )
 
@@ -194,7 +191,7 @@
           [100], [7],
           [150], [14],
           [200], [18],
-    ), caption: [Mittaustulokset kirjataan taulukkoon.])
+    ), )
   }
   #align(center)[*3. Kuvaajan piirto*]
 
@@ -208,7 +205,7 @@
     )
     
     #figure(
-    plot(
+    cplot(
       xmin: 0, xmax: 200,
       ymin: 0, ymax: 16,
       xtick-step: 50,
@@ -229,10 +226,10 @@
       width: 5,
       height: 4.4
       
-    ), caption: [Mittauspisteet piirretään koordinaatistoon. Tässä mittauspisteisiin on sovitettu suora.] )
+    ), caption: [Mittauspisteet piirretään koordinaatistoon. Mittauspisteisiin on sovitettu suora.] )
     *4. Riippuvuuden esittäminen matemaattisesti.*
     
-    Viimeisen vaiheen jätämme käsittelemättä. Kuvaaja riittää meille tällä erää. _To be continued!_
+    Viimeisen vaiheen jätämme käsittelemättä. Kuvaaja riittää tällä erää,
   ])
 
   
@@ -288,7 +285,7 @@ Mallien avulla pyritään kuitenkin kuvaamaan luonnon toimintaa mahdollisimman t
     )
     
     #figure(
-    plot(
+    cplot(
       xmin: 0, xmax: 30,
       ymin: 0, ymax: 6,
       xtick-step: 5,
@@ -306,13 +303,13 @@ Mallien avulla pyritään kuitenkin kuvaamaan luonnon toimintaa mahdollisimman t
         mark-stroke: red,
         mark-size: 0.15,
       ),
-      width: 6,
-      height: 5.5
+      width: 5,
+      height: 4.5
       
     ), caption: [Tutkittiin skuutin nopeuden ja jarrutusmatkan välistä riippuvuutta. Punaiset pisteet ovat mittausdataa. Sovitettu käyrä on malli, jonka avulla kuvataan nopeuden ja jarrutusmatkan välistä riippuvuutta yksinkertaistetusti.] 
   )
   ],[
-    #v(1.7em)
+    #v(0.4em)
     #figure(
       pad(
         top: 4.6mm,
@@ -353,9 +350,9 @@ Mittaus suoritetaan siten, että muut tekijät pidetään samana, ja ammutaan li
 #important[*Kontrolloidussa kokeessa* muutetaan (_varioidaan_) vain yhtä suuretta kerrallaan ja pidetään kaikki muut ilmiöön vaikuttavat suureet samoina (_vakioidaan_). Näin voidaan selvittää, miten muutettava suure vaikuttaa mitattavaan suureeseen.]
 #colbreak()
 Noudattamalla edellä kuvattua tapaa mittaus siis suoritetaan kontrolloidusti seuraavasti:
-- *varioidaan* ritsan venymää,
+- *varioidaan* (muutellaan) ritsan venymää,
 
-- *vakioidaan* ritsan ampumakulma, linnun koko, massa ja muoto (toisin sanoen ammutaan joka kerta samanlainen lintu),
+- *vakioidaan* (pidetään samana) ritsan ampumakulma, linnun koko, massa ja muoto (toisin sanoen ammutaan joka kerta samanlainen lintu),
 - mitataan lentomatka eri suuruisilla ritsan venymillä.
 
 
@@ -375,7 +372,7 @@ Oletetaan että edellisessä osiossa kuvailtu mittaus on suoritettu. Kuvassa #fi
 
 #figure(
   columns(2)[
-    #v(1em)
+    #v(0em)
     #context{
       set text(size: 9pt)
       table(columns: (auto, auto),
@@ -412,8 +409,8 @@ Oletetaan että edellisessä osiossa kuvailtu mittaus on suoritettu. Kuvassa #fi
         mark-stroke: red,
         mark-size: 0.15,
       ),
-      width: 6,
-      height: 5.0
+      width: 4.5,
+      height: 4.3
       
     )
   
@@ -541,7 +538,7 @@ Oletetaan että edellisessä osiossa kuvailtu mittaus on suoritettu. Kuvassa #fi
 
 Jotta suureen arvo voidaan määrittää, täytyy määritellä mittayksikkö. *SI-järjestelmä* eli kansainvälinen mittayksikköjärjestelmä (_Système international d'unités_) määrittelee seitsemän eri suureen yksiköt. 
 
-#important[#align(center)[Kaikki fysiikan suureiden  yksiköt pohjautuvat SI-järjestelmän yksiköihin.]]
+#important[#align(center)[Kaikkien fysiikan suureiden  yksiköt pohjautuvat SI-järjestelmän yksiköihin.]]
 
  #figure(
     context{
@@ -565,13 +562,13 @@ Jotta suureen arvo voidaan määrittää, täytyy määritellä mittayksikkö. *
 SI-järjestelmän yksiköistä muodostetaan uusia yksiköitä, eli *johdannaisyksiköitä*. Fysiikassa esimerkiksi käytetään nopeudelle useimmiten yksikköä $"m"/"s"$ eli ”metriä sekunnissa”. Yksikkö on muodostettu kahdesta SI-järjestelmässä määritellystä yksiköstä.
 
 
-#extra[
+#extra[*Kuinka paljon on yksi kilogramma?*
   
   #grid(
   columns: (4fr, 1.2fr),
   gutter: 1em, [
   
-  *Kuinka paljon on yksi kilogramma?*
+  
   
   Ennen nykyistä määritelmää yksikkö kilogramma oli määritelty tietyn kappaleen avulla. Tätä kappaletta kutsutaan kilogramman prototyypiksi. Oli siis sovittu, että kyseisen kappaleen massa on täsmälleen 1 kilogramma. 
   
@@ -580,7 +577,7 @@ SI-järjestelmän yksiköistä muodostetaan uusia yksiköitä, eli *johdannaisyk
   Aiemmin oli käytössä myös metrin prototyyppi (metallitanko), joka toimi metrin määritelmänä mutta metrin prototyypin käytöstä luovuttiin jo vuonna 1960.
   ],[
   #figure(
-    image("../images/intro to physics/kilogram prototype.jpg"), caption: [Kilogramman prototyyppi eli The kilogramma.]
+    image("../images/intro to physics/kilogram prototype.jpg", width: 80%), caption: [Kilogramman prototyyppi eli The kilogramma.]
   )
 ])
 ]
@@ -654,13 +651,15 @@ Alla on taulukko, jossa lueteltu etuliitteitä. Huomaa että *lihavoitujen* väl
 
 #important[Etuliitteitä *milli*, *kilo*, *mega* ja *giga* tullaan käyttämään jatkossa melko usein. Ne tulee osata ulkoa!]
 
+#v(1em)
+
 #context{
 show table.cell.where(x: 2): set align(right)
 show table.cell.where(x: 0): set align(left)
 
 set text(size: 10pt)
+
 figure(
-  
 
 table(
   columns: (1.5fr, 0.8fr, 2fr, 1.6fr),
@@ -690,6 +689,7 @@ table(
 ), caption: [Etuliittetä. *Lihavoitujen* välillä on tuhatkertainen ero. ]
 )
 }
+#v(1em)
 #numbered-example[
   Alla on muutamia yksikkömuunnoksia, joissa esiintyy taulukon etuliitteitä.
 
@@ -702,9 +702,6 @@ table(
   $100 "kV" = "100 000" "V" $
 
   $6 "GW" = "6 000 000 000 W"$
-
-  $4.5 "MW" = "4 500 000 W"$
-
 
   Huomaa, että vaikka yksiköt J (joule), V (voltti) ja W (watti) eivät ole tässä vaiheessa lukijalle tuttuja, yksikkömuunnoksen kannalta tällä ei ole mitään merkitystä!
     

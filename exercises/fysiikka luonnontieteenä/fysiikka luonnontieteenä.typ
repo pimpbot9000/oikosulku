@@ -119,7 +119,7 @@
 
 #enum(
   [
-    Oppilaan oli tarkoitus tutkia veden suolapitoisuuden ja sähkönjohtavuuden välistä riippuvuutta. Sähkönjohtavuutta tutkittiin laittamalla kaksi elektrodia (metallisauvaa) veteen ja mittaamalla vedessä kulkevan sähkövirran suuruus, kun veden suolapitoisuudet olivat eri suuret.
+    Oppilaan oli tarkoitus tutkia veden suolapitoisuuden ja sähkönjohtavuuden välistä riippuvuutta. Sähkönjohtavuutta tutkittiin laittamalla kaksi elektrodia (metallisauvaa) veteen ja mittaamalla suolaliuoksessa kulkevan sähkövirran suuruus, kun veden suolapitoisuudet olivat eri suuret.
 
     Oppilas suoritti kolme mittausta kuvan osoittamalla tavalla. Mitä mittauksessa tehtiin väärin?
 
@@ -296,7 +296,7 @@
 #h2[Johdannaissuureet ja -yksiköt]
 
 #enum(
-  [Jos auto ajaa 180 km pituisen matkan kahdessa tunnissa, laske auton nopeus. Merkitse laskutoimitus yksiköineen!],
+  [Jos auto ajaa 180 kilometrin pituisen matkan kahdessa tunnissa, laske auton nopeus. Merkitse laskutoimitus yksiköineen!],
   [Jos auton polttoaineenkulutus on 0,05 L/km, kuinka paljon polttoainetta auto kuluttaa 50 kilometrin matkalla?],
   [Miten yksikkö g/mL sanotaan?],
   [Jos 38 millilitraa etanolia painaa 30 grammaa, laske etanolin tiheys (yksikkö: g/mL). Ilmoita vastaus kahden desimaalin tarkkuudella.],
@@ -366,52 +366,28 @@
   [Pohdi, miksi etuliitteitä tarvitaan.],
   [
     Muunna ilmoitettuun yksikköön:
-    #let l = [#box[#line(length: 8em)] #h(0.0em) ]
+    #let l = [#answer-line(length: 20pt + 90%)]
+    #set text(size: 12pt)
     #grid(
-      columns: (1fr, 0fr),
-      gutter: 16mm,
-      [
-        #set text(
-          size: 12pt
-          )
-        2 km = #l m 
-        
-        150 cm = #l m 
-        
-        3 kg = #l g  
-        
-        120 000 J = #l kJ
-        
-        2 kV = #l V
-        
-        6 000 000 W = #l MW
-        
-        20 000 000 b = #l Mb
-        
-        3 kg = #l g
+      columns: (auto, 15em, auto),
+      column-gutter: 8pt,
+      row-gutter: 1.5em,
 
-        110 kV = #l V 
-        
-        30 mm = #l cm  
-        
-        2 mL = #l L 
-        
-        6,5 MW = #l W  
-        
-        4,5 k€ = #l €  
-        
-        2 900 000 000 W = #l GW  
-        
-        0,000 012 m =  #l μm  
-        
-        500 000 000 J = #l GJ
-        
-        \
-        
-      ],
-      [
-        
-      ],
+      [2 km =],             [#answer[2000 m]],        [(m)],
+      [150 cm =],           [#answer[1,5 m]],         [(m)],
+      [3 kg =],             [#answer[3000 g]],        [(g)],
+      [120 000 J =],        [#answer[120 kJ]],        [(kJ)],
+      [2 kV =],             [#answer[2000 V]],        [(V)],
+      [6 000 000 W =],      [#answer[6 MW]],          [(MW)],
+      [20 000 000 b =],     [#answer[20 Mb]],         [(Mb)],
+      [110 kV =],           [#answer[110 000 V]],      [(V)],
+      [30 mm =],            [#answer[3 cm]],          [(cm)],
+      [2 mL =],             [#answer[0,002 L]],       [(L)],
+      [6,5 MW =],           [#answer[6 500 000 W]],     [(W)],
+      [4,5 k€ =],           [#answer[4 500 €]],        [(€)],
+      [2 900 000 000 W =],  [#answer[2,9 GW]],        [(GW)],
+      [0,000 012 m =],      [#answer[12 µm]],         [(µm)],
+      [500 000 000 J =],    [#answer[0,5 GJ]],        [(GJ)],
     )
   ],
   [
@@ -422,5 +398,43 @@
     c) Mitä tarkoittaa, jos internetyhteyden nopeus on 100 Mbs?
   ],
 )
+#pagebreak()
 
+*Kuvaajan lukeminen*
 
+Oheinen kuvaaja esittää miten skuutin jarrutusmatka riippuu sen nopeudesta. Vastaa kuvaajan perusteella kysymyksiin.
+#figure(
+    cplot(
+      xmin: 0, xmax: 25,
+      ymin: 0, ymax: 6,
+      xtick-step: 5,
+      xlabel: "nopeus (km/h)",
+      ylabel: "jarrutusmatka (m)",
+      show-grid: "both",
+      minor-grid-step: 5,
+      axis-x-pos: "bottom",
+      axis-y-pos: "left",
+      (fn: x => 0.01*calc.pow(x,2), stroke: blue + 1.5pt),
+      width: 10,
+      height: 8
+      
+    ), 
+  )
+#enum_abc[
+  Kuinka suuri on jarrutusmatka, jos skuutin alkunopeus on 10 km/h?
+  \
+  \
+  \
+][
+  Kuinka suuri on jarrutusmatka, jos skuutin alkunopeus on 18 km/h?
+   \
+  \
+  \
+][
+  Jos skuutin jarrutusmatka on 2 metriä, kuinka suuri oli skuutin nopeus ennen jarrutusta? 
+   \
+  \
+  \
+][
+  Jos skuutin jarrutusmatka on 4,8 metriä, kuinka suuri oli skuutin nopeus ennen jarrutusta?
+]

@@ -3,18 +3,102 @@
 #set enum(
   spacing: 1.2em,
 )
-#let h2(body) = heading(
-  level: 2,
-  numbering: none,
-  outlined: false,
-  body,
+
+#let answer-line(length: 1cm) = box(
+  baseline: 0.1em,
+  line(length: length, stroke: 0.7pt),
 )
 
 = Liike: tehtävät
+#h2[Fysiikan peruskäsitteet]
 
+
+#enum()[
+  Yhdistä termi ja selitys
+  
+  #answer(optional: answer-line())[*H*] SI-järjestelmä
+  
+  #answer(optional: answer-line())[*A*] suure
+  
+  #answer(optional: answer-line())[*B*] yksikkö
+  
+  #answer(optional: answer-line())[*F*] malli
+  
+  #answer(optional: answer-line())[*G*] sekunti
+  
+  #answer(optional: answer-line())[*C*] pätevyysalue
+
+  #answer(optional: answer-line())[*D*] johdannaisyksikkö
+
+  #answer(optional: answer-line())[*E*] metriä sekunnissa (m/s)
+
+  #answer(optional: answer-line())[*K*] teoria
+
+  #answer(optional: answer-line())[*I*] hypoteesi
+
+  #answer(optional: answer-line())[*J*] laki
+
+  
+  #box(stroke: 0.5pt, inset: 1em)[
+
+  A. Jonkin asian mitattava ominaisuus
+  
+  B. Tarvitaan, jotta suureen arvo voidaan esittää
+
+  C. Olosuhteet tai rajat, joiden sisällä malli antaa luotettavia ennusteita
+
+  D. Muodostetaan SI-järjestelmän perusyksiköistä
+
+  E. Eräs johdannaisyksikkö
+
+  F. Ilmiön yksinkertaistettu kuvaus
+
+  G. Eräs SI-järjestelmän perusyksikkö
+
+  H. Kansainvälinen mittayksikköjärjestelmä
+
+  I. Ennakko-oletus tai ehdotettu selitys jollekin ilmiölle
+
+  J. Yleensä kuvaa johonkin yksittäiseen ilmiöön liittyvää säännönmukaisuutta
+
+  K. Yleisesti hyväksytty selitys jollekin ilmiölle tai ilmiöjoukolle.
+
+  ]
+][
+  Hieman yksikkömuunnoksia. Muunna yksiköt *perusyksikköön*.
+
+  #enum_abc[
+    1,5 km = 
+  ][
+    12 cm =
+  ][
+    4 kV =
+  ][
+    8 GW =
+  ][
+    8 mA =
+  ][
+    2,4 MW =
+  ][
+    24 mV =
+  ]
+]
 #h2[Nopeus]
 #enum(
-  [Auton nopeus on 85 km/h. Kuinka pitkän matkan auto kulkee kolmessa tunnissa?],
+  [Auton nopeus on 85 km/h. Kuinka pitkän matkan auto kulkee kolmessa tunnissa?
+
+  #answer[
+    $v = 85 "km/h"$
+
+    $t = 3 "h"$
+
+    $
+      s = v dot t = 85 thin "km"/"h" dot 3 "h" = 255 "km" approx 260 "km"
+    $
+  ]
+  
+
+  ],
 
   [Muurahainen kipittää 50 senttimetrin pituisen matkan yhdeksässä sekunnissa. Laske muurahaisen nopeus.],
 
@@ -28,14 +112,17 @@
 
   [Auto ajaa ensimmäiset 2 tuntia nopeudella 80 km/h ja seuraavat 3 tuntia nopeudella 100 km/h. Laske auton keskinopeus koko matkalla.
 
-  _Vinkki:_ Laske auton kulkema kokonaismatka ja jaa se kokonaisajalla. Voit olla käyttämättä suureiden tunnuksia, pelkät laskulausekkeet riittää.],
+  *Vinkki!* Laske auton kulkema kokonaismatka ja jaa se kokonaisajalla. Voit olla käyttämättä suureiden tunnuksia, pelkät laskulausekkeet riittää.],
 
   [
-    Muunna 120 km/h yksikköön metriä sekunnissa.
+    a) Muunna 120 km/h yksikköön metriä sekunnissa.
 
-    Vinkki:
+    Alla hieman vinkkiä:
 
     $120 med "km"/"h" = frac(120 "km", 1 "h") = frac("120 000 m", ? ) =$
+    
+    b) Muunna 100 km/h yksikköön metriä sekunnissa.
+
   ],
   [
     Kaksi leppäkerttua ottaa juoksukisan. Musta leppis juoksee nopeudella 4 cm/s ja punainen leppäkerttu nopeudella 2 cm/s. Alla on kuva leppäkerttujen sijainneista juoksukilpailun lähtölaukauksessa.
@@ -46,7 +133,7 @@
 
       #enum_abc[
       Ratkaise tehtävä piirtämällä leppäkerttujen liikettä esittävät kuvaajat viereiseen koordinaatistoon.
-      ][Kokeile ratkaista tehtävä yhtälön avulla.]
+      ][Kokeile ratkaista tehtävä yhtälön avulla!]
     
     ][
     #cplot(
@@ -55,15 +142,15 @@
       xtick-step: 1,
       ytick-step: 2,
       xlabel: "aika (s)",
-      ylabel: "matka (m)",
+      ylabel: "sijainti (cm)",
       show-grid: "both",
       minor-grid-step: 2,
       axis-x-pos: "bottom",
       axis-y-pos: "left",
       width: 7.5,
       height: 7,
-      //(fn: x => 4*x, stroke: black + 1.5pt),
-      //(fn: x => 2*x + 7, stroke: blue + 1.5pt)
+      (fn: x => 4*x, stroke: a(transparent, black) + 1.5pt),
+      (fn: x => 2*x + 7, stroke: a(transparent, red) + 1.5pt)
       
       
     )]
@@ -148,14 +235,14 @@
           float(p.at(0).replace(",", ".")),
           float(p.at(1).replace(",", ".")),
         ))
-        
+      
       #grid(
       columns: (0.5fr, 1fr),
       gutter: 2mm,
       align: top,
       [
         //#let data = []
-        
+        #v(4em)
         #table(
                 columns: (5em, 5em),
                 inset: 5pt,
@@ -181,8 +268,8 @@
             axis-y-pos: "left",
             width: 8.9,
             height: 7.5,
-            //scatter(data),
-            //(fn: x => 1.2*x, stroke: blue + 1.5pt)
+            scatter(data, mark-fill: a(transparent, blue), mark-stroke: a(transparent, blue)),
+            (fn: x => 1.2*x, stroke: a(transparent, blue) + 1.5pt)
             
           )
           
@@ -203,15 +290,15 @@
             ytick-step: 2,
             xtick-step: 1,
             xlabel: "aika (s)",
-            ylabel: "sijainti (m)",
+            ylabel: "sijainti (cm)",
             show-grid: "both",
             minor-grid-step: 2,
             axis-x-pos: "bottom",
             axis-y-pos: "left",
             width: 9,
             height: 7.5,
-            //(fn: x => 4*x+2, stroke: black + 1.5pt),
-            //(fn: x => -2*x+20, stroke: red + 1.5pt)
+            (fn: x => 4*x+2, stroke:  a(transparent, black) + 1.5pt),
+            (fn: x => -2*x+20, stroke: a(transparent, red) + 1.5pt)
             
           )]
 ],
@@ -275,8 +362,20 @@
             axis-y-pos: "left",
             width: 6,
             height: 6,
-            (fn: x => 2.5*x+20, stroke: blue + 1.5pt),           
+            (fn: x => 2.5*x+20, stroke: blue + 1.5pt),
+            line-plot(
+            ((10,45), (20, 45), (20, 70)), mark-size: 0, stroke: (paint: a(transparent, red), dash: "dashed")
+            ),
           )
+  #answer[
+    $Delta t = 20 "s" - 10 "s" = 10 "s"$
+    
+    $Delta s = 70 "m" - 45 "m" = 35 "m"$
+
+    $
+      v = frac(Delta s, Delta t) = frac(35 "m", 10 "s" ) = 3.5 thin "m"/"s"
+    $
+  ]
   #colbreak()
   #cplot(
             xmin: 0, xmax: 8,
@@ -291,17 +390,51 @@
             axis-y-pos: "left",
             width: 6,
             height: 6,
-            (fn: x => -2*x+26, stroke: blue + 1.5pt),           
+            (fn: x => -2*x+26, stroke: blue + 1.5pt),   
+            line-plot(
+            ((2,22), (2, 14), (6, 14)), mark-size: 0, stroke: (paint: a(transparent, red), dash: "dashed")
+            )
           )
+    #answer[
+      $Delta t = 6 "s" - 2 "s" = 4 "s"$
+      
+      $Delta s = 22 "m" - 14 "m" = 8 "m"$
+  
+      $
+        v = frac(Delta s, Delta t) = frac(8 "m", 4 "s" ) = 2 thin "m"/"s"
+      $
+    ]
   
 ]
 \
 \
 \
 \
-],[Autoilija lähti ajamaan Helsingistä kohti Tamperetta. Klo 11.30 auto oli 80 km päässä Helsingistä. Klo 11.45 auto oli 110 km päässä Helsingistä. Laske auton nopeus tällä aikavälillä yksikössä km/h.],[
+],[
+  Autoilija lähti ajamaan Helsingistä kohti Tamperetta. Klo 11.30 auto oli 80 km päässä Helsingistä. Klo 11.45 auto oli 100 km päässä Helsingistä. Laske auton nopeus tällä aikavälillä yksikössä km/h.
+
+  #answer[
+    $Delta s = 100 "km" - 80 "km" = 20 "km"$
+
+    $Delta t = 15 "min" = 0.25 "h"$ (Huomaa, että 15 min on vartti eli neljäsosatunti)
+
+    $
+      v = frac(Delta s, Delta t) = frac(20 "km", 0.25 "h") = 120 thin "km"/"h"
+    $
+  ]
+
+  ],[
   Juna lähti Helsingistä kohti Turkua. 20 minuutin kuluttua juna oli 30 km päässä Helsingistä. 50 minuutin kuluttua lähdöstä juna oli 90 km päässä Helsingistä. Laske junan nopeus tällä aikavälillä yksikössä km/h.
 
+  #answer[
+    $Delta s = 90 "km" - 30 "km" = 60 "km"$
+
+    $Delta t = 50 "min" - 20 "min" = 30 "min" = 0.5 "h"$
+
+    $
+      v = frac(Delta s, Delta t) = frac(60 "km", 0.5 "h") = 120 thin "km"/"h"
+    $
+  ]
 ]
 )
 
@@ -329,13 +462,15 @@
           )
 
 ], [
-  Mäyräkoiran syntymäpaino oli 300 grammaa ja mäyräkoiran paino oli 2,5 kg 2 kuukauden kuluttua syntymästä. Laske mäyräkoiran (keskimääräinen) kasvunopeus yksikössä g/vko.
+  Mäyräkoiran syntymäpaino oli 300 grammaa. Mäyräkoiran paino oli 2,5 kg kahden kuukauden kuluttua syntymästä. Laske mäyräkoiran (keskimääräinen) kasvunopeus yksikössä g/vko.
 
   Käytä seuraavia suureiden tunnuksia: $g$ = kasvunopeus (engl. _growth rate_), $m$ = mäyräkoiran paino ja $t$ = aika.
 
-  *Vinkki!* Katso esimerkistä #example-ref(<using_symbols>) mallia suureiden tunnusten käytöstä (sivu #pageref(<using_symbols_page>)).
+  *Vinkki!* Katso esimerkistä #example-ref(optional: "1.11",<using_symbols>) mallia suureiden tunnusten käytöstä (sivu #pageref(optional: 10, <using_symbols_page>)).
   
-], [ Tutkittiin, miten vedenkeittimessä olevan veden lämpötila muuttui kun vedenkeitin laitettiin päälle. Ensimmäisen 20 sekunnin aikana veden lämpötila kasvaa tasaisesti. Määritä lämpenemisnopeus ($degree"C/s"$) tällä aikavälillä.
+], [ Tutkittiin, miten vedenkeittimessä olevan veden lämpötila muuttui, kun vedenkeitin laitettiin päälle. Ensimmäisen 20 sekunnin aikana veden lämpötila kasvaa tasaisesti. 
+
+#enum_abc[Määritä lämpenemisnopeus ($degree"C/s"$) ensimmäisen 20 sekunnin aikana.][Määritä keskimääräinen lämpenemisnopeus aikavälillä 20... 50 s.]
 
 Käytä seuraavia suureiden tunnuksia: $r$ = lämpenemisnopeus, $T$ = lämpötila ja $t$ = aika.
 
@@ -370,7 +505,7 @@ Käytä seuraavia suureiden tunnuksia: $r$ = lämpenemisnopeus, $T$ = lämpötil
     Jos putoavan omenan liike on tasaisesti kiihtyvää ja kappaleen kiihtyvyys on $10 thin frac("m", " s"^2 )$, päättele kuinka suuri nopeus omenalla on, kun se on pudonnut 8 sekuntia. 
   ],
   [
-    Kappale lähtee paikoiltaan liikkeelle. Alla on kappaleen liikettä esittävä kuvaaja aika-matka-koordinaatistossa. 
+    Kappale lähtee paikoiltaan liikkeelle. Alla on kappaleen liikettä esittävä kuvaaja aika-matka–koordinaatistossa. 
     
     #enum_abc[Kuvaile kappaleen liikettä aikaväleillä 0…4 s ja 4 … 8 s.][
       Määritä kappaleen nopeus välillä 4 ... 8 s.
@@ -433,9 +568,19 @@ Käytä seuraavia suureiden tunnuksia: $r$ = lämpenemisnopeus, $T$ = lämpötil
     )
     \
   ],[
-    Audin nopeus on 15 m/s. Audi-kuski näkee edessään hidastelevan Ford Fiestan ja Audi-kuski painaa tallan pohjaan ohittaakseen heittämällä Fiestan. 3,5 sekunnin kuluttua Audin nopeus on 25  m/s. Laske Audin kiihtyvyys.
+    Audin nopeus on 15 m/s. Audi-kuski näkee edessään hidastelevan Ford Fiestan ja Audi-kuski painaa tallan pohjaan ohittaakseen Fiestan. 2,5 sekunnin kuluttua Audin nopeus on 25  m/s. Laske Audin kiihtyvyys.
   ], [
     Auton nopeus on 100 km/h (noin 28 m/s) ja auto törmää kallioleikkaukseen. Törmäys kestää 120 ms. Laske auton kiihtyvyys yksikössä m/s#super[2].
+
+    #answer[
+      $Delta v = 28 thin "m"/"s" - 0 thin "m"/"s" = 28 thin "m"/"s"$
+      
+      $Delta t = 120 "ms" = 0.120 "s"$
+    
+      $
+        a = frac(Delta v, Delta t) = frac(28 thin "m"/"s", 0.120 "s") = 233.33 ... "m"/"s" approx 230 thin "m"/"s"^2 
+      $
+    ]
   ],[
     #grid(columns: (1fr, 1fr), gutter: 1em, [
 
@@ -476,11 +621,11 @@ Käytä seuraavia suureiden tunnuksia: $r$ = lämpenemisnopeus, $T$ = lämpötil
       
     ])
   ], [
-    Bussikuski jarruttaa saapuessaan bussipysäkille. Ohessa on aika-nopeus-koordinaatiston kuvaaja, joka kuvaa bussin liikettä tilanteessa.
+    Bussikuski jarruttaa saapuessaan bussipysäkille. Ohessa on aika-nopeus-koordinaatiston kuvaaja, joka kuvaa bussin nopeutta tilanteessa.
 
     #grid(columns: (1fr, 1fr), gutter: 1em )[
       #enum_abc[
-        Määritä keskikiihtyvyys välillä 2...7 s
+        Määritä keskikiihtyvyys välillä 1...7 s
         
         \
         \
@@ -496,11 +641,13 @@ Käytä seuraavia suureiden tunnuksia: $r$ = lämpenemisnopeus, $T$ = lämpötil
       ][
         Millaista bussin liike vaikuttaa olevan aikavälillä 3...5 s?
 
-        \
+    
         \
 
       ][
         Pohdi miksi bussikuskin pitää höllätä jarrupoljinta jarrutuksen lopussa?
+        
+        \
       ]
     ][
     #cplot(
@@ -532,8 +679,48 @@ Käytä seuraavia suureiden tunnuksia: $r$ = lämpenemisnopeus, $T$ = lämpötil
 
             
           )]
+  ],[
+
+    #grid(
+      columns: (1fr, 1fr), gutter: 1em
+    )[
+      Tutkittiin radio-ohjattavan auton liikettä ultraäänianturin avulla.
+      #enum_abc[
+        Kuvaile kappaleen liikettä aikaväleillä 0...2 s, 2...4 s ja 4...9 s.
+      ][
+        Määritä nopeus aikavälillä 4...9 s.
+      ][
+        Piirrä kuvaaja, joka esittää kappaleen liikettä *aika-nopeus*–koordinaatistossa. Oletetaan että aikavälillä 2...4 s kappaleen liike on tasaisesti kiihtyvää.
+      ]
+    ][
+    #cplot(
+            xmin: 0, xmax: 9,
+            ymin: 0, ymax: 20,
+            ytick-step: 5,
+            xtick-step: 1,
+            ytick-label-step: 1,
+            xlabel: "aika (s)",
+            ylabel: "etäisyys (cm)",
+            show-grid: "both",
+            minor-grid-step: 5,
+            axis-x-pos: "bottom",
+            axis-y-pos: "left",
+            width: 6.5,
+            height: 5.8,
+            (fn: t => {
+              if t <= 2 {
+                2
+              } else if t <= 4 {
+                let x = t - 2
+                0.75 * x * x + 2
+              } else {
+                3 + 3 * (t - 4) + 2
+              }
+            })
+
+            
+          )]
   ]
   
 )
 
-#pagebreak()

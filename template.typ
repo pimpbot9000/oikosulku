@@ -1,9 +1,17 @@
 #import "@preview/wrap-it:0.1.1"
 #import "@preview/simple-plot:1.0.0": plot, scatter, line-plot
 
-#let save_taxpayer_money = false
+#let save_taxpayer_money = true
+#let show-answers = true
 #let cols = 2
-#let example_bg_color = if save_taxpayer_money { rgb("#fff") } else { rgb("#eef7ff") }
+#let example_bg_color = if save_taxpayer_money { rgb("#fff") } else { rgb("#fcfeff") } 
+
+/*
+#eef7ff – alkuperäinen
+#f4faff – hieman vaaleampi
+#f8fcff – hyvin lähellä valkoista
+#fcfeff – lähes valkoinen, aavistus sinistä
+*/
 #let example-counter = counter("example")
 
 #let oikosulku(body) = {
@@ -17,13 +25,14 @@
       right: 3cm,
     )
   )
-  
+
+
   set page(
   header: context {
     
       align(right)[
         #text(size: 9pt)[
-          Oikosulku · sivu #counter(page).display()
+          sivu #counter(page).display()
         ]
       ]
     
@@ -45,11 +54,39 @@
     size: 11pt,
     lang: "fi", weight: "regular"
   )
-  
+
   set par(leading: 0.6em)
   
+  /*set text(size: 10.5pt)
+  set page(
+  width: 19cm,
+  height: 27cm,
+  margin: (
+    top: 1.5cm,
+    bottom: 1.5cm,
+    left: 2cm,
+    right: 1.5cm,
+  )
+  )*/
+  
+ 
+  /*set text(size: 10.5pt)
+
+  set page(
+  paper: "a4",
+  margin: (
+    top: 3.35cm,
+    bottom: 3.35cm,
+    inside: 3.2cm,
+    outside: 2.8cm,
+  ),
+  )*/
+  
+  
+
+  
   show table: set align(center)
-  set par(justify: true)
+  set par(justify: true, linebreaks: "optimized",)
   
   show figure.caption: set align(left)
   show figure.caption: text.with(size: 9pt)
@@ -69,6 +106,22 @@
     )
     #v(0.0em)
   ]
+
+  // Numerointi muodossa luku.juokseva-numero
+  set figure(
+    numbering: (n) => context {
+      let chapter = counter(heading).get().first()
+      [#chapter.#n]
+    }
+  )
+  
+  // Nollaa kuvat ja taulukot aina uuden 1. tason otsikon alussa
+  show heading.where(level: 1): it => {
+    counter(figure.where(kind: image)).update(0)
+    counter(figure.where(kind: table)).update(0)
+  
+    it
+  }
 
   // nollaa example-counterin aina uuden level 1 headingin kohdalla.
   show heading.where(level: 1): it => {
@@ -96,17 +149,24 @@
   body
 }
 
-#let example-ref(label) = context {
-  let item = query(label).first()
-  link(label)[#item.value]
+#let example-ref(optional: none, label) = context {
+  let items = query(label)
+
+  if items.len() == 0 {
+    optional
+  } else {
+    let item = items.first()
+    link(label)[#item.value]
+  }
 }
 
 #let fig_num(label) = ref(label, supplement: [])
 
 #let important_border_color = rgb("#4a90e2")
+#let important-bg-color = if save_taxpayer_money {rgb("#fcfeff")} else {rgb("#EAF0F9")}
 
 #let important = block.with(
-  fill: rgb("#EAF0F9"),
+  fill: important-bg-color,
   stroke: (
     left: 0.5pt + rgb("#5BA9B8"),
     right: 1pt + rgb("#5BA9B8"),
@@ -115,7 +175,9 @@
   ),
   radius: 1pt,
   inset: 10pt,
-  width: 100%
+  width: 100%,
+  //above: 1.5em,
+  //below: 1.5em,
 )
 
 #let extra_border_color = rgb("#9bc4a6")
@@ -133,13 +195,9 @@
     radius: 1pt,
     inset: 10pt,
     width: 100%,
-    body,
+    [*Extra!* #body],
   )
 }
-
-
-
-
 
 #let example_border_color = rgb("#4a90e2")
 #let numbered-example(title: "", label: none, body) = {
@@ -168,7 +226,7 @@
           
           [
             *Esimerkki #full-number#dot #title*
-            
+            #v(-0.5em)
             #body
 
             #if label != none {
@@ -183,8 +241,14 @@
   ]
 }
 
-#let pageref(label) = context {
-  counter(page).at(locate(label)).first()
+#let pageref(label, optional: none) = context {
+  let items = query(label)
+
+  if items.len() == 0 {
+    optional
+  } else {
+    counter(page).at(locate(label)).first()
+  }
 }
 
 #let underlined(body) = {
@@ -195,7 +259,7 @@
       length: 100%,
       stroke: 0.8pt + rgb("#5BA9B8"),
     )
-    #v(0.0em)]
+    #v(-0.2em)]
 }
 
 #let desimal_comma(x) = str(x).replace(".", ",")
@@ -222,3 +286,31 @@
   numbering: "a)",
   ..items,
 )
+
+#let answer-line(length: 1cm) = box(
+  baseline: 0.1em,
+  line(length: length, stroke: 0.7pt),
+)
+
+
+
+#let answer(optional: none, body) = context {
+  if show-answers { 
+    text(fill: red)[#body]
+  } else {optional}
+}
+
+#let a(default, answer) = if show-answers { 
+    answer
+  } else {default}
+
+#let transparent = luma(0%,0%)
+
+#let h2(body) = heading(
+  level: 2,
+  numbering: none,
+  outlined: false,
+  body,
+)
+
+#let l(length) = [#box[#line(length: length)] #h(0.0em) ]
