@@ -1,4 +1,72 @@
+
 #import "template.typ": *
+#import "roadmap.typ": *
+
+#let electricity-roadmap = (
+  (
+    q: [Mitä sähkövirta on? Mitä sähkövirran synnyt-tämiseksi tarvitaan?],
+    a: [*Sähkövirta* on sähkövarausten liikettä. Sähkövirta vaatii suljetun virtapiirin ja virtalähteen.  
+    
+    Sähkövirran yksikkö on *ampeeri* (A).],
+  ), (
+    q:[Mistä virtapiiri koostuu? Voidaanko virtapiiri rakentaa eri tavoin?],
+    a: [Virtapiiri koostuu virtalähteestä, johtimista ja komponenteista. Komponentteja voidaan kytkeä sarjaan ja rinnan.]
+  ),
+  (
+    q: [Mikä saa sähkövirran aikaan?],
+    a: [Virtapiirin napojen välinen *jännite* eli lähdejännite saa aikaan sähkövirran suljetussa virtapiirissä. Yleisemmin jännite on virtapiirissä kahden pisteen välinen ominaisuus.
+    
+    Jännitteen yksikkö on *voltti* (V).],
+  ),
+  (
+    q: [Mikä vaikuttaa sähkövirran suuruuteen?],
+    a: [Mitä suurempi lähdejännite on, sitä suurempi sähkövirta virtapiirissä kulkee. Mitä suurempi virtapiirin *kokonaisresistanssi* on, sitä pienempi sähkövirta virtapiirissä kulkee.],
+  ),
+  (
+    q: [Miten sähkövirta, jännite ja resistanssi riippuvat toisistaan?],
+    a: [
+      *Ohmin laki* määrittelee resistanssin:
+      $ R = U / I $
+      Ohmin laki kuvaa täsmällisesti, miten jännite, sähkövirta ja resistanssi riippuvat toisistaan. 
+      
+      Resistanssin yksikkö on *ohmi* ($Omega$)
+    ],
+  ),
+  (
+    q: [Miten virtapiirin kokonais-resistanssi lasketaan?],
+    a: [
+
+    Vastusten sarjaankytkentä, kun vastuksia on $n$ kappaletta:
+    $
+      R_("kok") = R_1 + R_2 + ... + R_n
+    $
+    Vastusten rinnankytkentä, kun vastuksilla on yhtä suuret resistanssit:
+    $
+      R_("kok") = R/n
+    $
+    ],
+  ),
+  (q: [Miten paristoja voidaan kytkeä toisiinsa?], a: [Sarjaankytkentä kasvattaa jännitettä. 
+  
+  Rinnankytkennällä ei ole vaikutusta jännitteeseen mutta useampaan paristoon on varastoitunut enemmän energiaa kuin yhteen paristoon.]),
+  /*(
+    q: [Mitä jos sähkövirta kasvaa liian suureksi virtapiirissä?],
+    a: [
+      Suuri sähkövirta kuumentaa johtimia. Sulake suojaa
+      virtapiiriä liian suurelta sähkövirralta.
+    ],
+  ),*/
+  
+)
+
+#roadmap(
+  [Virtapiirit ja sähkövirta],
+  electricity-roadmap,
+  mode: "answers"
+
+)
+
+#pagebreak()
 
 = Virtapiiri ja sähkövirta
 == Virtapiiri
@@ -254,7 +322,7 @@ Tässä osiossa esitellään matemaattinen määritelmä resistanssille. Jotta m
   $
     y/x="vakio"
   $
-  Vakiota kutsutaan nimellä *verrannollisuuskerroin*. Merkitään tätä vakiota tunnuksella $k$.
+  Vakiota kutsutaan nimellä *verrannollisuuskerroin*. 
 
 - Kun yllä olevaa vakiota eli verrannollisuuskerrointa merkitään muuttujakirjaimella $k$, voidaan suureiden $x$ ja $y$ välinen riippuvuus esittää muodossa
 
@@ -332,7 +400,7 @@ Tässä osiossa esitellään matemaattinen määritelmä resistanssille. Jotta m
   _Banaanien hinta kasvaa 2 €, kun banaanien määrä kasvaa yhden kilogramman_.
 
   #important[
-    Verrannollisuuskerroin on *vakio*, joka tässä tilanteessa kuvaa luomubanaaneihin liittyvää ominaisuutta, *kilohintaa*.
+    Verrannollisuuskerroin on *vakio*, joka tässä tilanteessa on luomubanaanien *kilohinta*.
   ]
 
   Suureiden välinen riippuvuus voidaan esittää muodossa $y = k dot x$, eli tässä tilanteessa
@@ -463,7 +531,7 @@ Yllä olevaa kutsutaan Ohmin laiksi.
   missä $U$ on vastuksen jännitehäviö ja $I$ vastuksen läpi kulkeva sähkövirta. 
 ]
 
-Ohmin laki on perustavanlaatuinen virtapiireihin liittyvä fysiikan laki, sillä se antaa täsmällisen määritelmän resistanssille ja lisäksi kertoo miten jännite, sähkövirta ja resistanssi riippuvat toisistaan.
+Ohmin laki yksi keskeisimmistä virtapiireihin liittyvistä fysiikan laeista, sillä se antaa täsmällisen määritelmän resistanssille ja lisäksi kuvaa miten jännite, sähkövirta ja resistanssi riippuvat toisistaan.
 
 #important[
   Resistanssin yksikkö on ohmi ($Omega$):

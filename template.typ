@@ -6,6 +6,8 @@
 #let cols = 2
 #let example_bg_color = if save_taxpayer_money { rgb("#fff") } else { rgb("#fcfeff") } 
 
+
+#let extra_color = if save_taxpayer_money { rgb("#f0faf3") } else {rgb("#d5f0dc")}
 /*
 #eef7ff – alkuperäinen
 #f4faff – hieman vaaleampi
@@ -185,7 +187,7 @@
   set text(size:9.5pt)
 
   block(
-    fill: rgb("#d5f0dc"),
+    fill: extra_color,
     stroke: (
       left: 0.5pt + extra_border_color,
       right: 1pt + extra_border_color,

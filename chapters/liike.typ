@@ -44,7 +44,7 @@ Edellä esitetty määritelmä kappaleen nopeudelle voidaan esittää käyttäm�
 #extra[#set text(size: 9.9pt)
   *Vauhti ja nopeus* 
 
-  Joskus yläkoulun fysiikan kirjoissa hifistellään käyttämällä erikseen termejä vauhti ja nopeus. Lyhyesti: Vauhti on *skalaarisuure*, jolla on ominaisuutena ainoastaan suuruus. Nopeus taas on *vektorisuure*, jolla on ominaisuuksina suuruus ja suunta.
+  Joskus yläkoulun fysiikan kirjoissa käytetään erikseen termejä vauhti ja nopeus. Lyhyesti: Vauhti on *skalaarisuure*, jolla on ominaisuutena ainoastaan suuruus. Nopeus taas on *vektorisuure*, jolla on ominaisuuksina suuruus ja suunta. Tässä materiaalissa on hieman oikaistu ja käytetään termiä nopeus kuvaamaan myös edellä mainittua skalaarisuuretta eli vauhtia.
 
 ]
 
@@ -94,7 +94,7 @@ On huomattava että tasainen liike on *malli*, jonka avulla kappaleen liikettä 
   image("../images/motion/uniform motion.png", width: 85%), caption: [Leppäkerttu juoksee suoraviivaisesti viivoittimen reunaa myöden. Leppäkertun sijainnit on merkitty kuvaan sekunnin välein. ]
 )<uniform_motion>
 
-Kuvassa #fig_num(<uniform_motion>) on kipittävän leppäkertun sijainnit#footnote[Voidaankin jatkossa ajatella, että tunnus $s$ tarkoittaa _sijaintia_.] merkitty sekunnin välein. Voidaan havaita että ainakin likimain leppäkerttu liikkuu sekunnin välein yhtä pitkän matkan (n. 3 cm). Leppäkertun liikettä voidaan siis *mallintaa* tasaisena liikkeenä.
+Kuvassa #fig_num(<uniform_motion>) on merkitty sekunnin välein, missä kohtaa viivoitinta leppäkerttu on. Voidaan havaita että ainakin likimain leppäkerttu liikkuu sekunnin välein yhtä pitkän matkan (n. 3 cm). Leppäkertun liikettä voidaan siis *mallintaa* tasaisena liikkeenä.
 
 
 #figure(
@@ -108,14 +108,14 @@ Kuvassa #fig_num(<uniform_motion>) on kipittävän leppäkertun sijainnit#footno
     #table(columns: (6em, 8em),
           stroke: 0.5pt,
           [*aika* 
-          (s)],[*sijainti*  (cm)  ],
+          (s)],[*matka*  (cm)  ],
           [0], [0], 
-          [0], [3,3], 
-          [1], [6,2], 
-          [2], [8,9], 
-          [3], [12,2], 
-          [4], [15,0], 
-          [5], [17,8]
+          [1], [3,3], 
+          [2], [6,2], 
+          [3], [8,9], 
+          [4], [12,2], 
+          [5], [15,0], 
+          [6], [17,8]
           )
         ],
     [
@@ -133,7 +133,7 @@ Kuvassa #fig_num(<uniform_motion>) on kipittävän leppäkertun sijainnit#footno
       ymin: 0, ymax: 18,
       xtick-step: 1,
       xlabel: "aika (s)",
-      ylabel: "sijainti (cm)",
+      ylabel: "matka (cm)",
       show-grid: "both",
       minor-grid-step: 1,
       axis-x-pos: "bottom",
@@ -150,7 +150,7 @@ Kuvassa #fig_num(<uniform_motion>) on kipittävän leppäkertun sijainnit#footno
       height: 5
       
     )
-  ]), caption: [Leppäkertun sijainnit taulukoituna. Taulukon arvot on piirretty koordinaatistoon. Pisteisiin on sovitettu suora eli liikettä on mallinnettu tasaisena liikkeenä.]
+  ]), caption: [Leppäkertun kulkemat matkat taulukoituna. Taulukon arvot on piirretty koordinaatistoon. Pisteisiin on sovitettu suora eli liikettä on mallinnettu tasaisena liikkeenä.]
 )
 
 
@@ -199,7 +199,7 @@ Kun kappaleen liike on tasaista, _aika-matka_–koordinaatistosta voidaan määr
       $t = 4 "s"$
         ]
       $
-        v = s/t = frac(10 "cm", 4 "s")= 2.5 med "m"/"s"
+        v = s/t = frac(10 "cm", 4 "s")= 2.5 med "cm"/"s"
       $
       
       #align(left)[
@@ -293,7 +293,7 @@ Alla on esimerkkinä 1-ulotteisesta liikkeestä kahden leppäkertun juoksukilpai
 )
 == Nopeus tietyllä aikavälillä
 
-Seuraavaksi esitellään hieman täsmällisempi määritelmä nopeudelle:
+Seuraavassa esitellään hieman täsmällisempi määritelmä nopeudelle:
 #important[
   *Kappaleen nopeus tietyllä aikavälillä*:
 
@@ -302,7 +302,7 @@ Seuraavaksi esitellään hieman täsmällisempi määritelmä nopeudelle:
   $
 ]
 
-Nyt tulee ensimmäistä kertaa vastaan matematiikassa yleisesti käytössä oleva symboli delta ($Delta$).
+Aiemmin käytettiin termiä matka, nyt puhutaan täsmällisemmin kappaleen sijainnista. Käytämme tässä materiaalissa sijainnille tunnusta $s$. Lisäksi nyt tulee ensimmäistä kertaa vastaan matematiikassa yleisesti käytössä oleva symboli delta ($Delta$).
 
 #important[*Delta* ($Delta$) *symboloi suureen muutosta*
 
@@ -325,7 +325,7 @@ aikaväli: $Delta t = 8 "s" - 4 "s" = 4 "s"$
 
 nopeus:
 $
-  v = frac(Delta s, Delta t) = frac(6 "cm", 4 "s") =1.5 med "m"/"s"  
+  v = frac(Delta s, Delta t) = frac(6 "cm", 4 "s") =1.5 med "cm"/"s"  
 $
 Nokkela lukija huomaa, että leppäkertun liike on tasaista, joten tässä tilanteessa ei ole merkitystä millä aikavälillä nopeus määritetään.
 ]
@@ -343,7 +343,7 @@ Nokkela lukija huomaa, että leppäkertun liike on tasaista, joten tässä tilan
 ]
 
 == Nopeuden määritys kuvaajasta - yleinen tapaus
-Tarkastellaan vielä, miten nopeus tietyllä aikavälillä määritetään kuvaajasta. Huomaa, että tällä menetelmällä voidaan määrittää nopeus myös tapauksissa, joissa kappaleen sijainti ajanhetkellä 0 on origossa (ks. esimerkki #example-ref(<determine_velocity_from_graph>)).
+Tarkastellaan vielä, miten nopeus tietyllä aikavälillä määritetään kuvaajasta. Huomaa, että tällä menetelmällä voidaan määrittää nopeus myös tapauksissa, joissa kappaleen sijainti ajanhetkellä 0 ei ole origossa (vrt. esimerkki #example-ref(<determine_velocity_from_graph>)).
 #numbered-example[
 
 #grid(
@@ -388,7 +388,10 @@ Tarkastellaan vielä, miten nopeus tietyllä aikavälillä määritetään kuvaa
       
 ])
 ]
+
+#v(1em)
 Tätä menetelmää matematiikassa kutsutaan *kulmakertoimen* määrittämiseksi. Kulmakerroin voidaan siis määrittää kuvaajasta riippumatta siitä mitä kuvaaja esittää (kunhan kyseessä on suora).
+#v(1em)
 
 #numbered-example[
 
@@ -439,7 +442,7 @@ Oheinen kuvaaja esittää miten Tier-sähköpotkulaudalla tehdyn matkan hinta ri
 
 Aiemmat osiot käsittelivät ainoastaan tasaista liikettä. Nyt siirrämme mielenkiintomme liikkeen yleisempään lajiin, joka on nimeltään kiihtyvä liike.
 
-#important[*Kiihtyvä liike* on yleisnimitys seuraavalla kolmelle asialle:
+#important[*Kiihtyvä liike* on yleisnimitys seuraavalle kolmelle tapaukselle:
 -	Kappaleen nopeus kasvaa
 -	Kappaleen nopeus pienenee
 -	Kappaleen liikesuunta muuttuu
@@ -706,7 +709,7 @@ $
 ]
 Tasaisesti kiihtyvä liike on kiihtyvän liikkeen erityistapaus. Esimerkiksi putoavan kappaleen liike, mikäli kappaleeseen vaikuttava ilmanvastus ei ole merkittävän iso#footnote[toisin sanoen, kappaleella on melko pieni pinta-ala suhteessa sen massaan ja kappaleen nopeus ei ole vielä kovin suuri.], on tasaisesti kiihtyvää liikettä.
 
-_Aika-matka_-koordinaatiston kuvaajasta ei voida mitenkään nähdä (ainakaan silmämääräisesti) onko kyseessä tasaisesti kiihtyvä liike. Sen sijaan, mikäli kyseessä on aika-nopeus-koordinaatisto, kyseessä on suora.
+_Aika-matka_-koordinaatiston kuvaajasta ei voida ainakaan silmämääräisesti nähdä onko kyseessä tasaisesti kiihtyvä liike. Sen sijaan, mikäli kyseessä on aika-nopeus-koordinaatisto, kyseessä on suora.
 
 #important[
   Tasaisesti kiihtyvän liikkeen kuvaaja _aika-nopeus_–koordinaatistossa on *suora*.
@@ -764,7 +767,7 @@ _Aika-matka_-koordinaatiston kuvaajasta ei voida mitenkään nähdä (ainakaan s
 
   #v(0.8em)
   
-  Merkitään lämpötilan kasvunopeutta tunnuksella $r$ (engl. _*rate* of temperature increase_), lämpötilaa tunnuksella $T$ ja aikaa tunnuksella $t$.
+  Merkitään lämpötilan kasvunopeutta tunnuksella $r$ (engl. _*rate* of temperature change_), lämpötilaa tunnuksella $T$ (engl. _temperature_) ja aikaa tunnuksella $t$.
 
   #grid(columns: (1fr,1fr))[
   #v(0.8em)

@@ -20,7 +20,7 @@
     #important[
     *Tieteellinen menetelmä* on järjestelmällinen tapa hankkia uutta tietoa. Tieteellisen menetelmän ydin on luonnon ilmiöiden tutkiminen havaintojen, mittausten ja kokeiden avulla.]
     
-    Yksinkertaistaen voidaan sanoa, että tieteellinen menetelmä syntyi vuosina 1500–1700 Euroopassa. Tätä ajanjaksoa, jolloin menetelmä kehittyi, kutsutaan nimellä *tieteellinen vallankumous*. Ajanjaksolla ihmisen tapa ymmärtää luontoa ja maailmaa muuttui perusteellisesti.
+    Yksinkertaistaen voidaan sanoa, että nykyaikainen tieteellinen menetelmä syntyi vuosina 1500–1700 Euroopassa. Tätä ajanjaksoa, jolloin menetelmä kehittyi, kutsutaan nimellä *tieteellinen vallankumous*. Ajanjaksolla ihmisen tapa ymmärtää luontoa ja maailmaa muuttui perusteellisesti.
 
     Viereisissä kuvissa on tieteellisen menetelmän kehittymiseen voimakkaasti vaikuttaneita henkilöitä. 
     
@@ -121,13 +121,13 @@
   [
     Tässä osiossa tarkastellaan sitä, miten yksinkertainen kokeellinen tutkimus suoritetaan.
     #important[
-      Fysiikan kokeellisessa tutkimuksessa tyypillisesti tutkitaan miten kaksi *suuretta*#footnote[Suure on jonkin asian mitattava ominaisuus] riippuvat toisistaan jossain ilmiössä.
+      Fysiikan kokeellisessa tutkimuksessa tyypillisesti tutkitaan miten kaksi *suuretta*#footnote[Suure on jonkin asian mitattava ominaisuus. Suureista lisää myöhemmin.] riippuvat toisistaan jossain ilmiössä. 
     ] 
     Ilmiöksi tässä on valittu jousi, joka venyy sitä enemmän mitä raskaampi punnus laitetaan roikkumaan jousesta.
 
     Mittaus suoritetaan laittamalla eri painoisia punnuksia roikkumaan jousesta ja kirjataan joka kerralla punnuksen massa ja jousen venymä ylös.
 
-    Jotta suureiden välinen riippuvuus voitaisiin paremmin hahmottaa, mittauspisteet piirretään koordinaatistoon.
+    Jotta suureiden välinen riippuvuus voitaisiin paremmin hahmottaa, mittauspisteet piirretään *koordinaatistoon*.
 
     #important[Kun mittauspisteet piirretään koordinaatistoon, pisteisiin *sovitetaan* jonkinlainen *käyrä* tai suora. Sovitettu käyrä tai suora kuvaa suureiden välistä riippuvuutta.
     ]
@@ -189,8 +189,8 @@
           [0], [0],
           [50], [4],
           [100], [7],
-          [150], [14],
-          [200], [18],
+          [150], [11],
+          [200], [14],
     ), )
   }
   #align(center)[*3. Kuvaajan piirto*]
@@ -250,17 +250,17 @@
 
 Voimmeko tietää, kuvaavatko fysiikan lait absoluuttisen tarkasti havaittuja ilmiöitä?
 
-Vastaus on: ei. 
-Ensinnäkin emme pysty mittaamaan emmekä tutkimaan ilmiöitä äärettömän tarkasti, joten täytyy tyytyä siihen, että fysiikan lait kuvaavat ilmiöitä vain rajallisella tarkkuudella.
+ 
+On mahdotonta tutkia ilmiöitä äärettömän tarkasti, joten täytyykö tyytyä vain siihen, että fysiikan lait kuvaavat ilmiöitä vain rajallisella tarkkuudella? Toisaalta joidenkin fysiikan lakien uskotaan olevan universaaleja eli yleispäteviä, ja luonnon uskotaan noudattavan niitä täsmällisesti.
 
-Toiseksi  maailma on useimmissa tilanteissa melko monimutkainen, joten usein joudutaan tyytymään siihen, että ilmiöitä kuvatessa joudutaan tekemään yksinkertaistuksia.
+Lisäksi maailma on useimmissa tilanteissa melko monimutkainen, joten usein on pakko tyytyä siihen, että ilmiöitä kuvatessa joudutaan tekemään yksinkertaistuksia.
 
 
 ],[
   \
 
   #figure(
-    image("../images/intro to physics/Law of reflection.png"), caption: [Valon kulkuun liittyvä _heijastuslaki_ sanoo, että valonsäteen tulokulma ($alpha$) on aina yhtä suuri kuin heijastuskulma ($beta$). Laki on melko helppo esittää matemaattisesti: $alpha = beta $.]
+    image("../images/intro to physics/Law of reflection.png"), caption: [Valon kulkuun liittyvä _heijastuslaki_ sanoo, että valonsäteen tulokulma ($alpha$) on aina yhtä suuri kuin heijastuskulma ($beta$). Heijastuslaki on malli, joka olettaa valon koostuvan valonsäteistä.]
   )
   
 ])
@@ -313,7 +313,7 @@ Mallien avulla pyritään kuitenkin kuvaamaan luonnon toimintaa mahdollisimman t
     #figure(
       pad(
         top: 4.6mm,
-        bottom: 12mm,
+        bottom: 8mm,
         image("../images/intro to physics/Atmosphere grid.png")
       
       )
@@ -326,12 +326,65 @@ Mallien avulla pyritään kuitenkin kuvaamaan luonnon toimintaa mahdollisimman t
     ]
     )
   ])
-#extra[
-  *Laki, malli, teoria vai hypoteesi?*
+#important[
+
   
-Teorialla usein tarkoitetaan laajasti hyväksyttyä selitysmallia jollekin ilmiölle tai ilmiöjoukolle. Lain voidaan ajatella tarkoittavan yksittäiseen tilanteeseen tai ilmiöön liittyvää säännönmukaisuutta.  Hypoteesi on taas jonkinlainen oletus tai ehdotettu selitys jollekin ilmiölle.
+*Teorialla* usein tarkoitetaan yleisesti hyväksyttyä selitystä jollekin ilmiölle tai ilmiöjoukolle. *Laki* kuvaa yksittäiseen tilanteeseen tai ilmiöön liittyvää säännönmukaisuutta.  *Hypoteesi* on taas jonkinlainen oletus tai ehdotettu selitys jollekin ilmiölle tai ilmiön taustalla olevalle periaatteelle.
 
 ]
+#pagebreak()
+== Havainnoista teorioihin
+
+Aiemmin esitettiin miten yksinkertainen kokeellinen tutkimus suoritettiin. 
+Pelkkä yksittäisten ilmiöiden tutkiminen ei kuitenkaan ole tapa, jolla tiede on kehittynyt.
+
+#important[
+  Tiede kehittyy ennen kaikkea, kun muodostetaan *teorioita*, jotka selittävät yksittäisiä havaintoja. Teoria pyrkii antamaan selityksen suurelle joukolle toisiinsa liittyviä ilmiöitä. Lisäksi teorian avulla voidaan tehdä ennusteita ja tuottaa uusia testattavia *hypoteeseja*.
+]
+
+Uudet havainnot voivat tarjota tukea olemassa olevalle teorialle tai joissain tapauksessa pakottavat muuttamaan teoriaa tai jopa heittämään koko teorian romukoppaan.
+
+On huomattava, että teoriat eivät useimmiten ole olleet johtopäätöksiä, jotka on voitu suoraan vetää yksittäisten ilmiöiden tutkimisen pohjalta. Joskus on tarvittu rohkeita arvauksia, villejä veikkauksia ja uusia tapoja katsoa tuttuja ilmiöitä.
+
+Monet fysiikan ja yleensä tieteen tärkeimmistä teorioista on syntynyt niin, että joku on uskaltanut esittää täysin uudenlaisen idean eli hypoteesin. Uusi ajatus on saattanut kohdata vastustusta, ja joskus sen esittäjä on joutunut jopa pilkan kohteeksi. 
+
+#important[Tieteessä hypoteesi ei voi olla pelkkä arvaus. Tieteessä hypoteesista tulee voida johtaa ennusteita, joita voidaan verrata havaintoihin. Hypoteesia on siis pystyttävä *testaamaan*.]
+
+Osa hypoteeseista on osoittautunut vääriksi, mutta monet aikanaan mahdottomilta kuulostaneet ajatukset ovat nykyään tieteellisen tiedon kulmakiviä.
+
+Tieteen historiaan mahtuu kuitenkin myös valtavasti hiljaista puurtamista, vähittäistä kehitystä ja aikaisempien tutkimustulosten tarkentamista. Suuretkin tieteelliset läpimurrot rakentuvat aina aiemman tutkimuksen varaan. Oppikirjoista saattaa usein saada sellaisen käsityksen, että tieteen historia on vain joukko yksittäisten sankaritiedemiesten neronleimauksia.
+
+== Mahdoton ajatuskin!
+
+#grid(
+  columns: (3fr, 1fr), gutter: 1em
+)[
+Alla on muutamia uusia ajatuksia, jotka ovat tieteen historiassa kohdanneet vastustusta.
+
+
+
+- *Ignaz Semmelweis* ehdotti vuonna 1847, että kuolleiden ruumiita käsitelleiden lääkärien kannattaa pestä kädet ennen kuin lääkärit avustivat synnytyksissä. Semmelweis ehdotti selitykseksi, että kuolleiden ruumiista siirtyy "kalmanhiukkasia" lääkärien käsien välityksellä.
+
+- *Alfred Wegener* ehdotti 1910-luvulla, että mantereet liikkuvat. Ajatusta pidettiin pitkään mahdottomana.
+
+- *Charles Darwinin* evoluutioteoria (1859) sai monelta aamuteen menemään väärään kurkkuun, vaikka toisaalta teoria saavutti nopeasti tiedeyhteisöltä tukea.
+
+- *Ludwig Boltzman* esitteli vuonna 1870-luvulla teorian, joka selitti kaasujen ominaisuudet atomijoukon käyttäytymisenä. Teoriaa vastustettiin, koska atomien olemassaolo oli vielä kiistanalainen asia.
+
+][
+  #figure(
+    image("../images/intro to physics/darwin tree.png"),
+    caption: [Kuva Darwinin muistikirjasta, johon hän hahmotteli hypoteesin "elämänpuusta." Sivun ylälaidassa lukee vain "I think."]
+  )
+  //https://commons.wikimedia.org/wiki/File%3ADarwin_Tree_1837.png
+]
+
+
+
+
+
+
+
 #pagebreak()
 == Kontrolloitu koejärjestely
 
@@ -347,7 +400,7 @@ Mittaus suoritetaan siten, että muut tekijät pidetään samana, ja ammutaan li
 
 
 
-#important[*Kontrolloidussa kokeessa* muutetaan (_varioidaan_) vain yhtä suuretta kerrallaan ja pidetään kaikki muut ilmiöön vaikuttavat suureet samoina (_vakioidaan_). Näin voidaan selvittää, miten muutettava suure vaikuttaa mitattavaan suureeseen.]
+#important[*Kontrolloidussa kokeessa* muutetaan (_varioidaan_) vain yhtä suuretta kerrallaan ja pidetään muut ilmiöön vaikuttavat suureet samoina (_vakioidaan_ muut suureet). Näin voidaan selvittää, miten muutettava suure vaikuttaa mitattavaan suureeseen.]
 #colbreak()
 Noudattamalla edellä kuvattua tapaa mittaus siis suoritetaan kontrolloidusti seuraavasti:
 - *varioidaan* (muutellaan) ritsan venymää,
@@ -356,7 +409,7 @@ Noudattamalla edellä kuvattua tapaa mittaus siis suoritetaan kontrolloidusti se
 - mitataan lentomatka eri suuruisilla ritsan venymillä.
 
 
-#important[Puutteellisesti toteutettu tai huonosti suunniteltu koejärjestely, joka ei ole kontrolloitu, on yleensä syy mittauksen epäonnistumiseen tai mittausvirheisiin.]
+#important[Puutteellisesti toteutettu tai huonosti suunniteltu koejärjestely, joka ei ole kontrolloitu, on usein syy mittauksen epäonnistumiseen tai mittausvirheisiin.]
 ]
 == Kuvaajakin on malli
 
@@ -552,7 +605,7 @@ Jotta suureen arvo voidaan määrittää, täytyy määritellä mittayksikkö. *
     [massa], [kilogramma (kg)],
     [lämpötila], [kelvin (K)]
     
-  )}, caption: [SI-järjestelmän perussuureita ja yksiköitä. ])
+  )}, caption: [SI-järjestelmän perussuureita ja yksiköitä. Kaksi SI-järjestelmän yksikköä on jätetty taulukosta pois, sillä ne eivät esiinny missään vaiheessa yläkoulun fysiikan opiskelua. ])
 
 
 
@@ -614,10 +667,10 @@ SI-järjestelmän suureiden lisäksi on johdannaissuureita, jotka muodostetaan l
 ]
 
 #numbered-example[
-  Coca-cola-tölkissä lukee että 100 grammaa Coca-colaa sisältää 4000 cal energiaa. Lasketaan kuinka paljon Coca-colassa on energiaa grammaa kohti.
+  Coca-cola-tölkissä lukee että 100 grammaa Coca-colaa sisältää 40000 cal energiaa. Lasketaan kuinka paljon Coca-colassa on energiaa grammaa kohti.
 
   $
-    frac(4000 "cal", 100 "g") = 40 thin "cal"/"g"
+    frac(40 thin 000 "cal", 100 "g") = 400 thin "cal"/"g"
   $
 
   Tulos siis kertoo, että Coca-Colassa on 40 kaloria energiaa (yhtä) grammaa kohti. Yksikkö luetaan ”kaloria grammaa kohti” tai arkikielisemmin ”kaloria per gramma”.
@@ -627,7 +680,7 @@ SI-järjestelmän suureiden lisäksi on johdannaissuureita, jotka muodostetaan l
   Käytetään esimerkin 2 tulosta hyväksi ja lasketaan kuinka paljon energiaa on 250 grammassa Coca-Colaa:
 
   $ 
-  250 "g" dot  40 thin "cal"/"g" = 1000 "cal"
+  250 "g" dot  400 thin "cal"/"g" = 100 thin 000 "cal"
   $
 
   Huomaa että laskussa grammat *supistuvat*, joten tuloksen yksikkö on $"cal"$. Supistuminen perustuu seuraavaan *murtolukujen laskusääntöön*:
@@ -686,7 +739,7 @@ table(
   [*mega*],          [M],  [1 000 000],         [miljoona],
   [*giga*],          [G],  [1 000 000 000],     [miljardi],
   [*tera*],          [T],  [1 000 000 000 000], [biljoona],
-), caption: [Etuliittetä. *Lihavoitujen* välillä on tuhatkertainen ero. ]
+), caption: [Etuliitteitä. *Lihavoitujen* välillä on tuhatkertainen ero. ]
 )
 }
 #v(1em)
@@ -695,15 +748,16 @@ table(
 
   $ 3 "km" = "3 000 m"$
 
+  $9 "kV" = "9 000" "V" $
+
   $"120 000 J" = 120 "kJ"$
   
   $4 "mA" = 0.004 "A"$
-
-  $100 "kV" = "100 000" "V" $
+ 
 
   $6 "GW" = "6 000 000 000 W"$
 
-  Huomaa, että vaikka yksiköt J (joule), V (voltti) ja W (watti) eivät ole tässä vaiheessa lukijalle tuttuja, yksikkömuunnoksen kannalta tällä ei ole mitään merkitystä!
+  Huomaa, että vaikka yksiköt J (joule), V (voltti), W (watti) ja A (ampeeri) eivät ole tässä vaiheessa lukijalle tuttuja, yksikkömuunnoksen kannalta tällä ei ole mitään merkitystä!
     
 ]
 

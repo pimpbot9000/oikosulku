@@ -85,7 +85,7 @@ Esimerkiksi jokaiselle sähkölaitteelle on ilmoitettu teho eli ”energiankulut
 ],[
   #v(1em)
   #figure(
-    image("../images/energy/watt.jpg", width: 90%), caption: [James Watt]
+    image("../images/energy/watt.jpg", width: 90%), caption: [James Watt#footnote[Watt ei keksinyt höyrykonetta niinkuin joskus luullaan.]]
   )
   
 ]
@@ -118,7 +118,7 @@ Energialajeja ovat mm. *lämpöenergia, liike-energia, potentiaalienergia, pyör
     E = frac(m dot v^2 ,2)
   $
 ]
-Yhtälö paljastaa, että kappaleen liike-energian määrä on verrannollinen nopeuden neliöön. Käytännössä tämä tarkoittaa sitä, että jos kappaleen nopeus kymmenkertaistuu, liike-energian määrä satakertaistuu, sillä $10^2$ = 100.
+Yhtälö paljastaa, että kappaleen liike-energian määrä on _verrannollinen nopeuden neliöön_. Käytännössä tämä tarkoittaa sitä, että jos kappaleen nopeus kymmenkertaistuu, liike-energian määrä satakertaistuu, sillä $10^2$ = 100.
 Tästä esimerkiksi käytännön seuraus on se, että jois esimerkiksi auton nopeus kolminkertaistuu, sen jarrutusmatka yhdeksänkertaistuu ($3^2=9$)!
 
 
@@ -161,10 +161,11 @@ Alla on vielä esitettynä yksinkertaistettu energiakaavio polttomoottorille.
 #extra[
   *Mitä on kemiallinen energia?*
   #columns(2)[
-  Useimmiten potentiaalienergialla viitataan siihen, että kysymys on jonkin kappaleen potentiaalienergiasta maapallon painovoimakentässä. Mutta yhtä lailla myös esimerkiksi jännitettyyn jouseen on varastoitunut potentiaalienergiaa.
+  Useimmiten potentiaalienergialla viitataan siihen, että kysymys on jonkin kappaleen potentiaalienergiasta maapallon painovoimakentässä. Mutta yhtä lailla esimerkiksi jännitettyyn jouseen on varastoitunut potentiaalienergiaa.
   
-  Myös *kemiallinen energia on potentiaalienergiaa*. Omenan tapauksessa potentiaalienergia on kytköksissä omenan ja maapallon väliseen gravitaatiovuorovaikutukseen. 
-   
+  Myös *kemiallinen energia on potentiaalienergiaa*. 
+  
+  Omenan tapauksessa potentiaalienergia on kytköksissä omenan ja maapallon väliseen gravitaatiovuorovaikutukseen. 
   Kemiallisen energian tapauksessa potentiaalienergia liittyy atomiydinten ja elektronien väliseen sähköiseen vuorovaikutukseen. 
   #colbreak()
   Muistathan että atomiytimien protoneilla on positiivinen sähkövaraus ja elektroneilla negatiivinen varaus. Erimerkkisesti varautuneet hiukkaset vetävät toisiaan puoleensa samoin kuin maapallo ja omena vetävät toisiaan puoleensa. Elektronien sijaintiin atomiytimien suhteen liittyy siis potentiaalienergiaa.
@@ -184,7 +185,7 @@ Tarkastellaan esimerkkinä ampuma-aseen toimintaa (kuva #fig_num(<bullet>)). Ase
 Palokaasujen luotiin kohdistama voima vaikuttaa luotiin aseen piipun pituisen matkan, jonka seurauksena osa kemiallisessa reaktiossa vapautuvasta energiasta muuttuu luodin liike-energiaksi.
 
 #extra[
-  *Miksi näin sotaisa esimerkki?*
+  Miksi näin sotaisa esimerkki?
   
   Ensimmäinen ihmisen keksimä kone, joka muutti lämpöenergian liike-energiaksi lienee *tykki* ja myöhemmin ampuma-ase.
 ]
@@ -277,9 +278,9 @@ Yksinkertaiset koneet ovat mekaanisia laitteita, jotka muuttavat tarvittavan voi
   #align(center)[*Minkä voimassa voittaa, sen matkassa menettää!*]
 ]
 
-Alla on vielä esimerkkinä kalteva taso. Kaltevalla tasolla toimii sama periaate kuin esimerkiksi taljassa. Matka on pitempi kuin nostettaessa kappale suoraan ylös, mutta tarvittava voima on pienempi. Molemmissa tapauksissa työn määrä on kuitenkin yhtä suuri. 
+Alla on vielä esimerkkinä kalteva taso. Kaltevalla tasolla toimii sama periaate kuin esimerkiksi taljassa. Matka on kaltevaa tasoa pitkin on pidempi kuin nostettaessa kappale suoraan ylös, mutta tarvittava voima on pienempi. Molemmissa tapauksissa tehdyn työn suuruus on kuitenkin yhtä suuri. 
 
-Osaatko päätellä työperiaatteen perusteella kuinka suuri voima tarvitaan #footnote[Nostettaessa kappaletta suoraan ylöspäin tarvitaan nostotyö on $W = "250 N" dot "2 m" = "500 J" $. Voidaan siis päätellä että kaltevalla tasolla tarvitaan 100 newtonin suuruinen voima, sillä $W = "100 N" dot "5 m" = 500 "J"$.], kun kappale työnnetään kaltevaa tasoa ylöspäin?
+Osaatko päätellä työperiaatteen perusteella kuinka suuri voima tarvitaan #footnote[Nostettaessa kappaletta suoraan ylöspäin tarvitaan nostotyö on $W = "250 N" dot "2 m" = "500 J" $. Voidaan siis päätellä että kaltevalla tasolla tarvitaan 100 newtonin suuruinen voima, sillä $W = "100 N" dot "5 m" = 500 "J"$.], kun kappale työnnetään kuvan tilanteessa kaltevaa tasoa ylöspäin?
 
 #figure(
   image("../images/energy/inclined plane.png", width: 60%), caption: [Kaltevalla tasolla tarvitaan kappaleen ylös siirtämiseen sama määrä energiaa kuin nostettaessa kappale suoraan ylös, mikäli energiahäviöitä ei tapahdu.]
@@ -672,4 +673,3 @@ Johtumisessa *lämmön siirtymisnopeuteen* vaikuttaa kolme tekijää:
   )<water_expansion>
 ]
 
-#pagebreak()
